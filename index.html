@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blue Text</title>
+</head>
+<body>
+
+    <h2 style="color: blue;">District HPV List/CCW</h2>
+
+</body>
+</html>
+ 
+
+
+<p>"Kindly click on the district to check against your name and view a potential beneficiary eligible for HPV vaccination.<br> Track whether the beneficiary has been vaccinated for the 1st, 2nd, or 3rd doses, and take note of the vaccination dates. <br>Please report this information to your FCW".</p>
+
+  <ul>
+    <li><a href="mpon.html">Mpongwe </a></li>
+    <li><a href="Lua.html"> Luanshya</a></li>
+   </ul>
+
+
+</body>
+
+
+
+
+
+<h2>Onlie reports</h2>
+<h3>DESPF:  <a href=https://docs.google.com/spreadsheets/d/1pS2zQzJgUXRqEt5s8OxJXmsSG1nFHv8n/edit#gid=777782370">https://despf@online.click</h3></a>
+<h3> FCW:    <a href= https://docs.google.com/spreadsheets/d/1Yay_uu6FCQTfFREAYorw8hEP0wIV6ZfPtTqAj1KJH2s/edit#gid=0">https://fcw@online.click</h3></a>
+
+<body>
+  <h3>Data Entry Performance </h3>
+ <ul><a href="ccw.html">CCWS </a></ul>
+
+
+
+</body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Calendar and Time</title>
+    <style>
+        #calendar, #clock {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="calendar"></div>
+    <div id="clock"></div>
+
+    <script>
+        function updateDateTime() {
+            // Get current date and time
+            var now = new Date();
+
+            // Format date as yyyy-mm-dd
+            var date = now.toISOString().split('T')[0];
+
+            // Format time as hh:mm:ss
+            var time = now.toLocaleTimeString();
+
+            // Update calendar and clock elements
+            document.getElementById('calendar').innerText = 'Date: ' + date;
+            document.getElementById('clock').innerText = 'Time: ' + time;
+
+            // Update every second (1000 milliseconds)
+            setTimeout(updateDateTime, 1000);
+        }
+
+        // Initial call to start updating
+        updateDateTime();
+    </script>
+
+</body>
+</html>
