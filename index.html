@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Set the position to absolute */
+        img {
+            position: absolute;
+            /* Set the distance from the top and left edges */
+            top: 10px;
+            left: 10px;
+        }
+
+        h2 {
+            color: blue;
+        }
+
+        #calendar, #clock {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+    </style>
+    <title>Web Page Design</title>
+</head>
+<body>
+
+    <!-- Replace 'path/to/your/image.jpg' with the actual path to your image -->
+    <img src="bm.jpg">
+<br>
+
+    <section>
+        <h2>Information </h2>
+        <table border="1">
+            <tr>
+                <td>
+                    <p>"Kindly click on the district to check against your name and view a potential beneficiary eligible for HPV vaccination.<br> Track whether the beneficiary has been vaccinated for the 1st, 2nd, or 3rd doses, and take note of the vaccination dates. <br>Please report this information to your FCW".</p>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <section>
+        <h2>Online Reports</h2>
+        <ul>
+            <li><a href="mpon.html">Mpongwe</a></li>
+            <li><a href="Lua.html">Luanshya</a></li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Data Entry Performance</h2>
+        <ul><a href="ccw.html">CCWS</a></ul>
+        <ul><a href="FY24 home final.html">FY24 Targets</a></ul>
+    </section>
+
+    <section>
+        <h2>Calendar and Time</h2>
+        <div id="calendar"></div>
+        <div id="clock"></div>
+
+        <script>
+            function updateDateTime() {
+                var now = new Date();
+                var date = now.toISOString().split('T')[0];
+                var time = now.toLocaleTimeString();
+
+                document.getElementById('calendar').innerText = 'Date: ' + date;
+                document.getElementById('clock').innerText = 'Time: ' + time;
+
+                setTimeout(updateDateTime, 1000);
+            }
+
+            updateDateTime();
+        </script>
+    </section>
+
+</body>
+</html>
+
