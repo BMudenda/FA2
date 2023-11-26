@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Protected Link</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        input {
+            padding: 8px;
+            margin-right: 10px;
+        }
+
+        button {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Password Protected Link</h2>
+
+    <h1> Data Entry Module<h1> <h4>please enter the password to access the links<h4>
+
+    <div id="password-form">
+        <label for="password">Enter the password:</label>
+        <input type="password" id="password" name="password">
+        <button onclick="checkPassword()">Submit</button>
+    </div>
+
+    <div id="protected-content" style="display: none;">
+        <p>Welcome! Here is the protected link:</p>
+        <h2>ENTER DATA</h2>
+    <h3>FCW</h3>
+<ul><a href="https://docs.google.com/spreadsheets/d/1Yay_uu6FCQTfFREAYorw8hEP0wIV6ZfPtTqAj1KJH2s/edit?usp=drivesdk.html">Taonga</a></ul>
+ <ul><a href="https://docs.google.com/spreadsheets/d/1wxuOeBSNF6-We7Gkfic_LnFfeo1fGii-1hw-CFwDAbY/edit?usp=drivesdk.html">Lizzy</a></ul>
+ <ul><a href="https://docs.google.com/spreadsheets/d/1lq4KPrRYFLmQ7j13iBWTFNVCj6iynecCJ8LTfy2cEjc/edit?usp=drivesdk.html">Nachi</a></ul>
+ <ul><a href="https://docs.google.com/spreadsheets/d/1HgKKELS8Mxec9cG9OTHRMuViWHfFGK2vl_e7UAIyq2M/edit?usp=drivesdk.html">laureen</a></ul>
+     
+    <ul><a href="https://docs.google.com/forms/d/e/1FAIpQLSe0Fxenvy_YXXx_bILfJQ2cXhtLXj0C4KSvZydAJkNUpSSFdA/viewform">hpv_online_form_submit</a></ul> 
+    <h3>DESPF</h3>
+        
+ <ul><a href="https://docs.google.com/spreadsheets/d/1pS2zQzJgUXRqEt5s8OxJXmsSG1nFHv8n/edit?usp=drivesdk&ouid=113414090337812376156&rtpof=true&sd=true.html">SWIFT</a></ul>
+ <ul><a href="https://docs.google.com/spreadsheets/d/1xMfdwsDWyr3fuojM20m3bF3aca_i6DCM/edit?usp=drivesdk&ouid=113414090337812376156&rtpof=true&sd=true.html">WANNA</a></ul>
+  
+<h3>CESPF</h3>
+        <ul><a href="HPF home final.html">CESPF</a></ul>
+    <h3>CCW</h3>
+        <ul><a href="DESPL.html">CCWS</a></ul>
+    </div>
+
+    <script>
+        function checkPassword() {
+            var enteredPassword = document.getElementById("password").value;
+
+            // Replace "data123" with the actual password
+            if (enteredPassword === "data123") {
+                document.getElementById("password-form").style.display = "none";
+                document.getElementById("protected-content").style.display = "block";
+            } else {
+                alert("Incorrect password. Please try again.");
+            }
+        }
+    </script>
+
+</body>
+</html>
