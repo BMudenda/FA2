@@ -1,37 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Page Design</title>
     <style>
-        /* Set the position to absolute */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
         img {
+            width: 80px; /* Adjust the size as needed */
             position: absolute;
-            /* Set the distance from the top and left edges */
             top: 10px;
             left: 10px;
+            border-radius: 50%; /* Make the image round */
+        }
+
+        section {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         h2 {
-            color: blue;
+            color: #e74c3c; /* Red color for major headers */
         }
 
-        #calendar, #clock {
+        table {
+            width: 100%;
+            margin-top: 10px;
+            border-collapse: collapse;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #ddd;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #3498db; /* Blue color for links */
+            font-weight: bold;
+        }
+
+        #calendar,
+        #clock {
             font-size: 18px;
-            margin-bottom: 20px;
+            margin-top: 20px;
         }
     </style>
-    <title>Web Page Design</title>
 </head>
+
 <body>
 
-    <!-- Replace 'path/to/your/image.jpg' with the actual path to your image -->
-    <img src="bm.jpg">
-<br>
+    <img src="bm.jpg" alt="Banner Image">
 
     <section>
-        <h2>Information </h2>
-        <table border="1">
+        <h2>District HPV list view</h2>
+        <ul>
+            <li>🔗 <a href="mpon.html">Mpongwe</a></li>
+            <li>🔗 <a href="Lua.html">Luanshya</a></li>
+        </ul>
+    </section>
+
+    <section>
+        <h4>Information </h4>
+        <table>
             <tr>
                 <td>
                     <p>"Kindly click on the district to check against your name and view a potential beneficiary eligible for HPV vaccination.<br> Track whether the beneficiary has been vaccinated for the 1st, 2nd, or 3rd doses, and take note of the vaccination dates. <br>Please report this information to your FCW".</p>
@@ -41,20 +99,12 @@
     </section>
 
     <section>
-        <h2>District HPV list view</h2>
+        <h2>Data Entry Performance</h2>
         <ul>
-            <li><a href="mpon.html">Mpongwe</a></li>
-            <li><a href="Lua.html">Luanshya</a></li>
+            <li>🔗 <a href="ccw.html">CCWS</a></li>
+            <li>🔗 <a href="FY24_home_final.html">DATA entry Online & FY24 Targets</a></li>
         </ul>
     </section>
-
-    <section>
-        <h2>Data Entry Performance</h2>
-        <ul><a href="ccw.html">CCWS</a></ul>
-        <ul><a href="FY24 home final.html">DATA enty Online & FY24 Targets</a></ul>
-      
-    </section>
-  
 
     <section>
         <h2>Calendar and Time</h2>
@@ -78,5 +128,5 @@
     </section>
 
 </body>
-</html>
 
+</html>
