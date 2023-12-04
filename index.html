@@ -1,26 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Page Design</title>
+    <title>Combined Web Page</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            margin: 20px;
-            padding: 0;
-            background-color: #f4f4f4;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
         }
 
-        img {
-            width: 80px; /* Adjust the size as needed */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        #search-box {
+            padding: 10px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 3px;
+            font-size: 1em;
+            width: 60%;
+        }
+
+        .animated-text-container {
+            white-space: nowrap;
+            overflow: hidden;
             position: absolute;
-            top: 10px;
-            left: 10px;
-            border-radius: 50%; /* Make the image round */
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 100%;
+            animation: moveLeftToRight 10s linear infinite;
         }
 
+        .animated-text {
+            font-size: 1.2em;
+            color: #ff6600;
+            background-color: #333;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        @keyframes moveLeftToRight {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(100%);
+            }
+        }
+
+        /* Additional styling for the content */
         section {
             background-color: #fff;
             padding: 20px;
@@ -30,7 +68,7 @@
         }
 
         h2 {
-            color: #e74c3c; /* Red color for major headers */
+            color: #e74c3c;
         }
 
         table {
@@ -63,7 +101,7 @@
 
         a {
             text-decoration: none;
-            color: #3498db; /* Blue color for links */
+            color: #3498db;
             font-weight: bold;
         }
 
@@ -72,12 +110,53 @@
             font-size: 18px;
             margin-top: 20px;
         }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .footer-link {
+            text-decoration: none;
+            color: #fff;
+            font-size: 0.9em;
+        }
+
+        img {
+            width: 80px; /* Adjust the size as needed */
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            border-radius: 50%; /* Make the image round */
+        }
+
+        /* Media queries for responsive design */
+        @media screen and (max-width: 768px) {
+            #search-box {
+                width: 80%;
+            }
+        }
     </style>
 </head>
-
 <body>
 
-    <img src="bm.jpg" alt="Banner Image">
+    <header>
+        <img src="bm.jpg" alt="Banner Image">
+        <input type="text" id="search-box" placeholder="Search">
+        <div class="animated-text-container">
+            <div class="animated-text">Welcome to Data Update</div>
+        </div>
+    </header>
+
+    <!-- Rest of your webpage content goes here -->
 
     <section>
         <h2>District HPV list view</h2>
@@ -126,6 +205,13 @@
         </script>
     </section>
 
+    <footer>
+        <div class="footer-links">
+            <a href="#" class="footer-link">CCW Page</a>
+            <a href="#" class="footer-link">FCW Page</a>
+            <a href="#" class="footer-link">Contact Us</a>
+            <a href="#" class="footer-link">About Us</a>
+        </div>
+    </footer>
 </body>
-
 </html>
