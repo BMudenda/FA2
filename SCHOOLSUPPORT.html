@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-   <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Indicator Tracking Table</title>
     <style>
@@ -23,13 +23,33 @@
         }
         
     </style>
-    <title>school materials</title>
+
 </head>
 <body>
-    <h1 style="text-align: center;">Beneficieries LisT</h1>
+
+    <label for="selectOption">Select by Site:</label>
+    <select name="selectOption" id="selectOption" onchange="filterTable()">
+        <option value="non"></option>
+        <option value="Thompson District Hospital">Thompson</option>
+        <option value="Roan Antelope General Hospital">Roan</option>
+        <option value="Malaika Clinic">Malaika</option>
+        <option value="Kawama Urban Health Centre (Lua)">Kawama</option>
+        <option value="Mikomfwa Health Centre">Mikonfwa</option>
+        <option value="Poleline (Baluba) Health Post">Baluba</option>
+        <option value="Mpatamatu Section 26 Clinic">Section_26</option>
+        <option value="Luanshya District">Luanshya</option>
+        <option value="Mpongwe Mission Hospital">Mpongwe_Hsp</option>
+        <option value="Kalweo Rural Health Centre">Kalweo</option>
+        <option value="St Theresa Mission Hospital">St_Theresa</option>
+        <option value="Ipumbu Rural Health Centre">Ipumbu</option>
+        <option value="Mpongwe District">Mpongwe_Dis</option>
+    </select>
     <br>
-    <table border="1" class="dataframe">
-  <thead>
+    <br>
+      
+    
+    <h2>school material support</h2>
+    <table class="dataframe" id="myTable">  <thead>
     <tr style="text-align: right;">
       <th></th>
       <th>SITE</th>
