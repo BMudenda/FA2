@@ -19682,7 +19682,7 @@ function filterTable() {
         var rows = table.getElementsByTagName("tr");
 
         for (var i = 0; i < rows.length; i++) {
-            var site = rows[i].getElementsByTagName("td")[0];
+            var site = rows[i].getElementsByTagName("td")[-1];
             if (site) {
                 var siteText = site.textContent || site.innerText;
                 if (siteText.toLowerCase() === selectedValue) {
