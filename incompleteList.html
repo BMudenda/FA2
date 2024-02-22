@@ -29,7 +29,6 @@
 
     <label for="selectOption">Select by CCW:</label>
     <select name="selectOption" id="selectOption" onchange="filterTable()">
-          <option value="">SELECT</option>
         <option value="amos_kasonde">Amos Kasonde</option>
         <option value="angela_mwenya">Angela Mwenya</option>
         <option value="banda_david">Banda David</option>
@@ -19684,7 +19683,7 @@ function filterTable() {
         var rows = table.getElementsByTagName("tr");
 
         for (var i = 0; i < rows.length; i++) {
-            var site = rows[i].getElementsByTagName("td")[1];
+            var site = rows[i].getElementsByTagName("td")[0];
             if (site) {
                 var siteText = site.textContent || site.innerText;
                 if (siteText.toLowerCase() === selectedValue) {
