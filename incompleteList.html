@@ -1,20 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <title>CCWACTIVESERACH</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indicator Tracking Table</title>
     <style>
-        thead {background-color:aqua;text: wrap 4px;text-align: justify;}
-        td {text-align: center;}
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;width: 10px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+
+        }
+        
     </style>
+
 </head>
 <body>
-    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for your name...">
-    <h6>NOTE: Type your name in the search bar and scroll(up/down) to see the list of your active Household</h6>
-<br>
 
+    <label for="selectOption">Select by Site:</label>
+    <select name="selectOption" id="selectOption" onchange="filterTable()">
+        <option value="non"></option>
+        <option value="Thompson District Hospital">Thompson</option>
+        
+    </select>
+    <br>
+    <br>
+      
     
-      <br>
+    <h2>incomplete and invalid date service list</h2>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
