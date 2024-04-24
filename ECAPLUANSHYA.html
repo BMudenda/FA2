@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indicator Tracking Table</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;width: 10px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+
+        }
+        
+    </style>
+
+</head>
+<body>
+   <hr>
+    <br>
+    <label for="selectOption">Select by CCW:</label>
+    <br>
+    <select name="selectOption" id="selectOption" onchange="filterTable()">
+        <option value="amos_kasonde">Amos Kasonde</option>
+        <option value="angela_mwenya">Angela Mwenya</option>
+        <option value="banda_david">Banda David</option>
+        <option value="banda_misozi">Banda Misozi</option>
+        <option value="brandina_tembo">Brandina Tembo</option>
+        <option value="bwalya_kaziya">Bwalya Kaziya</option>
+        <option value="chitambala_stanslous">Chitambala Stanslous</option>
+        <option value="dyness_phiri">Dyness Phiri</option>
+        <option value="emmanuel_kapambwe">Emmanuel Kapambwe</option>
+        <option value="gondwe_fanny">Gondwe Fanny</option>
+        <option value="grace_kebende">Grace Kebende</option>
+        <option value="hector_banda">Hector Banda</option>
+        <option value="hellen_mwansa">Hellen Mwansa</option>
+        <option value="jane_kasaka1">Jane Kasaka1</option>
+        <option value="janny_mutampuka">Janny Mutampuka</option>
+        <option value="joe_nyanga">Joe Nyanga</option>
+        <option value="jonathan_mugala">Jonathan Mugala</option>
+        <option value="joseph_kaimana">Joseph Kaimana</option>
+        <option value="joshua_malole">Joshua Malole</option>
+        <option value="kabesha_mary">Kabesha Mary</option>
+        <option value="kapasula_edith">Kapasula Edith</option>
+        <option value="kumwenda_mary">Kumwenda Mary</option>
+        <option value="makashini_christopher">Makashini Christopher</option>
+        <option value="mary_mwape">Mary Mwape</option>
+        <option value="mikabo_mildred">Mikabo Mildred</option>
+        <option value="musa_joyce">Musa Joyce</option>
+        <option value="mwaba_rodgers">Mwaba Rodgers</option>
+        <option value="natasha_musonda">Natasha Musonda</option>
+        <option value="sakala_veronica">Sakala Veronica</option>
+        <option value="samusole_wisdom">Samusole Wisdom</option>
+        <option value="soteli_winfridah">Soteli Winfridah</option>
+        <option value="tembo_ireen">Tembo Ireen</option>
+    </select>
+    <br>
+    <br>
+      
+    
+    <h2 style="color: red;">BENEFICIERIES LUANSHYA LIST FY24-ACTIVE</h2>
+        <h2>(extracted and updated on 24-04-2024: time 18:50 )</h2>
+        <h3>(Note!: ensure that a BENEFICIERY receives a atleast a service in a quarter )</h3>
+    
+<table border="1" class="dataframe" id="myTable">
+ 
+<thead>
+</table>
+   
+
+<script>
+function filterTable() {
+        var selectElement = document.getElementById("selectOption");
+        var selectedValue = selectElement.options[selectElement.selectedIndex].value.toLowerCase();
+        var table = document.getElementById("myTable");
+        var rows = table.getElementsByTagName("tr");
+
+        for (var i = 0; i < rows.length; i++) {
+            var site = rows[i].getElementsByTagName("td")[0];
+            if (site) {
+                var siteText = site.textContent || site.innerText;
+                if (siteText.toLowerCase() === selectedValue) {
+                    rows[i].style.display = "";
+                } else {
+                    rows[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>
+
+
+</body>
+</html>

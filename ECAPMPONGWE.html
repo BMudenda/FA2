@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indicator Tracking Table</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;width: 10px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+
+        }
+        
+    </style>
+
+</head>
+<body>
+   <hr>
+    <br>
+    <label for="selectOption">Select by CCW:</label>
+    <br>
+    <select name="selectOption" id="selectOption" onchange="filterTable()">
+
+        <option value="chewe_chileshe">Chewe Chileshe</option>
+        <option value="chibuye_musonda">Chibuye Musonda</option>
+        <option value="daniel_kankomba">Daniel Kankomba</option>
+        <option value="deborah_kapwepwe">Deborah Kapwepwe</option>
+        <option value="francis_malengo">Francis Malengo</option>
+        <option value="jimmy_kaoma">Jimmy Kaoma</option>
+        <option value="kenox_luwawa">Kenox Luwawa</option>
+        <option value="mercy_pampa">Mercy Pampa</option>
+        <option value="mitren_nalwimba">Mitren Nalwimba</option>
+        <option value="natasha_mungu">Natasha Mungu</option>
+        <option value="obedient_miyoba">Obedient Miyoba</option>
+        <option value="paxina_chitashi">Paxina Chitashi</option>
+        <option value="phebby_mpumpule">Phebby Mpumpule</option>
+        <option value="rhodes_ndhlovu">Rhodes Ndhlovu</option>
+        <option value="stephen_katongo">Stephen Katongo</option>
+         <option value="wilson_kaina">Wilson Kaina</option>
+    </select>
+    <br>
+    <br>
+      
+    
+    <h2 style="color: red;">BENEFICIERIES MPONGWE LIST FY24-ACTIVE</h2>
+        <h2>(extracted and updated on 24-04-2024: time 18:50 )</h2>
+        <h3>(Note!: ensure that a BENEFICIERY receives a atleast a service in a quarter )</h3>
+    
+<table border="1" class="dataframe" id="myTable">
+ 
+<thead>
+</table>
+   
+
+<script>
+function filterTable() {
+        var selectElement = document.getElementById("selectOption");
+        var selectedValue = selectElement.options[selectElement.selectedIndex].value.toLowerCase();
+        var table = document.getElementById("myTable");
+        var rows = table.getElementsByTagName("tr");
+
+        for (var i = 0; i < rows.length; i++) {
+            var site = rows[i].getElementsByTagName("td")[0];
+            if (site) {
+                var siteText = site.textContent || site.innerText;
+                if (siteText.toLowerCase() === selectedValue) {
+                    rows[i].style.display = "";
+                } else {
+                    rows[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>
+
+
+</body>
+</html>
