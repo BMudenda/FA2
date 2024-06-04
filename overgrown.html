@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indicator Tracking Table</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;width: 10px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+
+        }
+        
+    </style>
+
+</head>
+<body>
+   <hr>
+    <br>
+    <label for="selectOption">Select by CCW:</label>
+    <br>
+    <select name="selectOption" id="selectOption" onchange="filterTable()">
+        <option value="amos_kasonde">Amos Kasonde</option>
+        <option value="angela_mwenya">Angela Mwenya</option>
+        <option value="banda_david">Banda David</option>
+        <option value="banda_misozi">Banda Misozi</option>
+        <option value="brandina_tembo">Brandina Tembo</option>
+        <option value="bwalya_kaziya">Bwalya Kaziya</option>
+        <option value="chitambala_stanslous">Chitambala Stanslous</option>
+        <option value="dyness_phiri">Dyness Phiri</option>
+        <option value="emmanuel_kapambwe">Emmanuel Kapambwe</option>
+        <option value="gondwe_fanny">Gondwe Fanny</option>
+        <option value="grace_kebende">Grace Kebende</option>
+        <option value="hector_banda">Hector Banda</option>
+        <option value="hellen_mwansa">Hellen Mwansa</option>
+        <option value="jane_kasaka1">Jane Kasaka1</option>
+        <option value="janny_mutampuka">Janny Mutampuka</option>
+        <option value="joe_nyanga">Joe Nyanga</option>
+        <option value="jonathan_mugala">Jonathan Mugala</option>
+        <option value="joseph_kaimana">Joseph Kaimana</option>
+        <option value="joshua_malole">Joshua Malole</option>
+        <option value="kabesha_mary">Kabesha Mary</option>
+        <option value="kapasula_edith">Kapasula Edith</option>
+        <option value="kumwenda_mary">Kumwenda Mary</option>
+        <option value="makashini_christopher">Makashini Christopher</option>
+        <option value="mary_mwape">Mary Mwape</option>
+        <option value="mikabo_mildred">Mikabo Mildred</option>
+        <option value="musa_joyce">Musa Joyce</option>
+        <option value="mwaba_rodgers">Mwaba Rodgers</option>
+        <option value="natasha_musonda">Natasha Musonda</option>
+        <option value="sakala_veronica">Sakala Veronica</option>
+        <option value="samusole_wisdom">Samusole Wisdom</option>
+        <option value="soteli_winfridah">Soteli Winfridah</option>
+        <option value="tembo_ireen">Tembo Ireen</option>
+    </select>
+    <br>
+    <br>
+      
+    <h2 style="color: rgb(4, 0, 255);">BENEFICIERIES LUANSHYA LIST FY24-ACTIVE</h2>
+        <h2>(extracted and updated on 04-06-2024: time 11:00 )</h2>
+    
+    <h2>NOTE</h2>
+    
+
+    <section>
+        <h2>KEY NOTE</h2>
+        <ul>
+            
+            <li>🔗 The list of the beneficiary_type are age 21+ and need to be indicated as caregivers</li>
+            
+        </ul>
+    </section>
+    
+<table border="1" class="dataframe" id="myTable">
+ <!--Paste list start here-->
+ 
+ <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>owner_name</th>
+      <th>Overgrown-VCA</th>
+      <th>gender</th>
+      <th>dob</th>
+      <th>Age</th>
+      <th>beneficiary_type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>amos_kasonde</td>
+      <td>Threasa Chungu</td>
+      <td>female</td>
+      <td>2003-04-01</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>angela_mwenya</td>
+      <td>GEORGE SAKALA</td>
+      <td>male</td>
+      <td>2003-08-03</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>angela_mwenya</td>
+      <td>Shadrick Chanda</td>
+      <td>male</td>
+      <td>2003-09-02</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>angela_mwenya</td>
+      <td>KELVIN SIAME</td>
+      <td>male</td>
+      <td>2003-11-09</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>angela_mwenya</td>
+      <td>ESTELLA MUMBI</td>
+      <td>female</td>
+      <td>2003-12-09</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>banda_misozi</td>
+      <td>gift mulubwa</td>
+      <td>female</td>
+      <td>2003-06-10</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>brandina_tembo</td>
+      <td>Kasusu Ntambikila</td>
+      <td>female</td>
+      <td>2003-09-13</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>brandina_tembo</td>
+      <td>Lister Chimfutumba</td>
+      <td>female</td>
+      <td>2003-04-08</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>brandina_tembo</td>
+      <td>Lukundo Nakamba</td>
+      <td>female</td>
+      <td>2003-07-07</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>brandina_tembo</td>
+      <td>Dorcas Musonda</td>
+      <td>female</td>
+      <td>1983-01-01</td>
+      <td>41</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>brandina_tembo</td>
+      <td>Chibesa Mbulo</td>
+      <td>male</td>
+      <td>2002-12-02</td>
+      <td>22</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>brandina_tembo</td>
+      <td>Kamfwa Kangwa</td>
+      <td>male</td>
+      <td>2003-03-05</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>brandina_tembo</td>
+      <td>Lina Chungu</td>
+      <td>female</td>
+      <td>2002-12-16</td>
+      <td>22</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>brandina_tembo</td>
+      <td>Carol Chisanga</td>
+      <td>female</td>
+      <td>1976-04-25</td>
+      <td>48</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>bwalya_kaziya</td>
+      <td>Lillian Chitalu</td>
+      <td>female</td>
+      <td>1982-06-06</td>
+      <td>42</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>bwalya_kaziya</td>
+      <td>liness Mausala</td>
+      <td>female</td>
+      <td>2002-05-05</td>
+      <td>22</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>bwalya_kaziya</td>
+      <td>Mirriam Zyambo</td>
+      <td>female</td>
+      <td>2002-09-23</td>
+      <td>22</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>bwalya_kaziya</td>
+      <td>natasha mukanga</td>
+      <td>female</td>
+      <td>2002-02-22</td>
+      <td>22</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>bwalya_kaziya</td>
+      <td>Joseph Chibuye</td>
+      <td>male</td>
+      <td>1993-08-04</td>
+      <td>31</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>chitambala_stanslous</td>
+      <td>Chilufya Kabanda</td>
+      <td>male</td>
+      <td>2003-09-22</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>chitambala_stanslous</td>
+      <td>Aissata Bar</td>
+      <td>female</td>
+      <td>2003-08-01</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>chitambala_stanslous</td>
+      <td>Mulenga Kabwe</td>
+      <td>male</td>
+      <td>2003-12-07</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>chitambala_stanslous</td>
+      <td>Suzyo Kafunda</td>
+      <td>male</td>
+      <td>2003-07-19</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>chitambala_stanslous</td>
+      <td>Tamiwe M'tambo</td>
+      <td>female</td>
+      <td>2001-11-10</td>
+      <td>23</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>dyness_phiri</td>
+      <td>mary banda</td>
+      <td>female</td>
+      <td>2003-08-07</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>emmanuel_kapambwe</td>
+      <td>Wendy Nakamba</td>
+      <td>female</td>
+      <td>1996-10-04</td>
+      <td>28</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>emmanuel_kapambwe</td>
+      <td>Mulenga Kapambwa</td>
+      <td>male</td>
+      <td>2002-10-15</td>
+      <td>22</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>emmanuel_kapambwe</td>
+      <td>Joseph Ndekela</td>
+      <td>male</td>
+      <td>1998-11-30</td>
+      <td>26</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>emmanuel_kapambwe</td>
+      <td>Fortune Kachepela</td>
+      <td>male</td>
+      <td>2003-04-03</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>emmanuel_kapambwe</td>
+      <td>Phillimon Chongo</td>
+      <td>male</td>
+      <td>2003-09-23</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>gondwe_fanny</td>
+      <td>Musenge Chibuye</td>
+      <td>male</td>
+      <td>2003-07-18</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>gondwe_fanny</td>
+      <td>Prisca Kabaso</td>
+      <td>female</td>
+      <td>1986-06-25</td>
+      <td>38</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>gondwe_fanny</td>
+      <td>Precious Mulenga</td>
+      <td>female</td>
+      <td>2003-06-20</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>gondwe_fanny</td>
+      <td>Ronald Sinzumwa</td>
+      <td>male</td>
+      <td>2003-10-03</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>gondwe_fanny</td>
+      <td>Noria Malama</td>
+      <td>female</td>
+      <td>2003-06-10</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td>hector_banda</td>
+      <td>Racheal Lwani</td>
+      <td>female</td>
+      <td>2003-06-09</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>36</th>
+      <td>hector_banda</td>
+      <td>Mavelous Musonda</td>
+      <td>female</td>
+      <td>1999-02-02</td>
+      <td>25</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>37</th>
+      <td>hector_banda</td>
+      <td>Jonathan Bwalya</td>
+      <td>male</td>
+      <td>1996-09-05</td>
+      <td>28</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>38</th>
+      <td>hector_banda</td>
+      <td>Agness Kabobo</td>
+      <td>female</td>
+      <td>1964-10-10</td>
+      <td>60</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>39</th>
+      <td>hector_banda</td>
+      <td>kangwa Conrad</td>
+      <td>male</td>
+      <td>2003-04-20</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>40</th>
+      <td>hector_banda</td>
+      <td>Ireen Mwila</td>
+      <td>female</td>
+      <td>2002-01-16</td>
+      <td>22</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>41</th>
+      <td>hellen_mwansa</td>
+      <td>chishimba kalungulungu</td>
+      <td>female</td>
+      <td>2003-10-02</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>42</th>
+      <td>hellen_mwansa</td>
+      <td>lameck mbuzi</td>
+      <td>male</td>
+      <td>2003-09-28</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>43</th>
+      <td>jane_kasaka1</td>
+      <td>Rex Chavinda</td>
+      <td>male</td>
+      <td>2003-06-27</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>44</th>
+      <td>jane_kasaka1</td>
+      <td>Grace Botha</td>
+      <td>female</td>
+      <td>2003-05-20</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>45</th>
+      <td>jane_kasaka1</td>
+      <td>Marget Botha</td>
+      <td>female</td>
+      <td>2003-05-20</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>46</th>
+      <td>janny_mutampuka</td>
+      <td>evelyn mpundu</td>
+      <td>female</td>
+      <td>1981-09-23</td>
+      <td>43</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td>janny_mutampuka</td>
+      <td>ackson phiri</td>
+      <td>male</td>
+      <td>2003-03-04</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>48</th>
+      <td>janny_mutampuka</td>
+      <td>Isaac Banda</td>
+      <td>male</td>
+      <td>2002-05-10</td>
+      <td>22</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>49</th>
+      <td>janny_mutampuka</td>
+      <td>Enness Chitalu</td>
+      <td>female</td>
+      <td>2002-11-28</td>
+      <td>22</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>50</th>
+      <td>janny_mutampuka</td>
+      <td>Mary Mali</td>
+      <td>female</td>
+      <td>1968-10-24</td>
+      <td>56</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>51</th>
+      <td>janny_mutampuka</td>
+      <td>Bervin Chabala</td>
+      <td>male</td>
+      <td>2003-06-06</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>52</th>
+      <td>janny_mutampuka</td>
+      <td>Jane Nyirenda</td>
+      <td>female</td>
+      <td>2002-08-04</td>
+      <td>22</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>53</th>
+      <td>janny_mutampuka</td>
+      <td>beatrice miyoba</td>
+      <td>female</td>
+      <td>2003-02-27</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>54</th>
+      <td>janny_mutampuka</td>
+      <td>Dyness Ndelekwa</td>
+      <td>female</td>
+      <td>2002-06-14</td>
+      <td>22</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>55</th>
+      <td>janny_mutampuka</td>
+      <td>Mwitwa Kasunka</td>
+      <td>female</td>
+      <td>2003-10-28</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>56</th>
+      <td>janny_mutampuka</td>
+      <td>florence phiri</td>
+      <td>male</td>
+      <td>2002-07-25</td>
+      <td>22</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>57</th>
+      <td>janny_mutampuka</td>
+      <td>Brenda Chabala</td>
+      <td>female</td>
+      <td>2003-05-25</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>58</th>
+      <td>joe_nyanga</td>
+      <td>GRACE ZUZE</td>
+      <td>female</td>
+      <td>2003-12-25</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>59</th>
+      <td>joe_nyanga</td>
+      <td>Martha Mukwela</td>
+      <td>female</td>
+      <td>2003-09-23</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>60</th>
+      <td>joe_nyanga</td>
+      <td>Hildah Kabonde</td>
+      <td>female</td>
+      <td>2003-08-15</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>61</th>
+      <td>joe_nyanga</td>
+      <td>Chemba Kapambwe</td>
+      <td>male</td>
+      <td>2003-06-15</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>62</th>
+      <td>joe_nyanga</td>
+      <td>kelvin ngoma</td>
+      <td>male</td>
+      <td>2003-07-17</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>63</th>
+      <td>joe_nyanga</td>
+      <td>MERCY ZUZE</td>
+      <td>female</td>
+      <td>2003-12-25</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>64</th>
+      <td>jonathan_mugala</td>
+      <td>Henry Sangowa</td>
+      <td>male</td>
+      <td>2003-06-19</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>65</th>
+      <td>jonathan_mugala</td>
+      <td>Kapuka Chibala</td>
+      <td>male</td>
+      <td>2003-06-03</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>66</th>
+      <td>joseph_kaimana</td>
+      <td>Racheal phiri</td>
+      <td>female</td>
+      <td>2003-06-15</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>67</th>
+      <td>joshua_malole</td>
+      <td>joseph masanta</td>
+      <td>male</td>
+      <td>2003-11-09</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>68</th>
+      <td>joshua_malole</td>
+      <td>Loveness Lukonde</td>
+      <td>female</td>
+      <td>2002-01-09</td>
+      <td>22</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>69</th>
+      <td>joshua_malole</td>
+      <td>Kombe Chama</td>
+      <td>female</td>
+      <td>2003-03-27</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>70</th>
+      <td>joshua_malole</td>
+      <td>mike kamoza</td>
+      <td>male</td>
+      <td>2003-02-23</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>71</th>
+      <td>joshua_malole</td>
+      <td>Chisha Ephraim</td>
+      <td>male</td>
+      <td>2002-02-08</td>
+      <td>22</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>72</th>
+      <td>joshua_malole</td>
+      <td>inoccent letho</td>
+      <td>male</td>
+      <td>2003-09-08</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>73</th>
+      <td>joshua_malole</td>
+      <td>Purity Ndebele</td>
+      <td>female</td>
+      <td>2003-05-24</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>74</th>
+      <td>kabesha_mary</td>
+      <td>Mary Chinunka</td>
+      <td>female</td>
+      <td>1973-09-20</td>
+      <td>51</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>75</th>
+      <td>kabesha_mary</td>
+      <td>Mary Musonda</td>
+      <td>female</td>
+      <td>2001-10-02</td>
+      <td>23</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>76</th>
+      <td>kapasula_edith</td>
+      <td>Kunda Mwale</td>
+      <td>female</td>
+      <td>2003-03-08</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>77</th>
+      <td>kumwenda_mary</td>
+      <td>Esther Namukoko</td>
+      <td>female</td>
+      <td>2003-06-02</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>78</th>
+      <td>kumwenda_mary</td>
+      <td>Febby Mwansa</td>
+      <td>female</td>
+      <td>2003-12-21</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>79</th>
+      <td>kumwenda_mary</td>
+      <td>JULIET CHISHIMBA</td>
+      <td>female</td>
+      <td>2003-12-10</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>80</th>
+      <td>kumwenda_mary</td>
+      <td>Cleopatra Zulu</td>
+      <td>female</td>
+      <td>2003-06-29</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>81</th>
+      <td>kumwenda_mary</td>
+      <td>VINORAH CHAMA</td>
+      <td>female</td>
+      <td>2003-09-07</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>82</th>
+      <td>kumwenda_mary</td>
+      <td>Milica Mvula</td>
+      <td>female</td>
+      <td>1956-12-24</td>
+      <td>68</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>83</th>
+      <td>kumwenda_mary</td>
+      <td>Izamba Sinyinza</td>
+      <td>male</td>
+      <td>2003-07-27</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>84</th>
+      <td>kumwenda_mary</td>
+      <td>RHONTIA MUNSELE</td>
+      <td>female</td>
+      <td>1994-05-22</td>
+      <td>30</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>85</th>
+      <td>kumwenda_mary</td>
+      <td>Lillian Chanda</td>
+      <td>male</td>
+      <td>1983-08-30</td>
+      <td>41</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>86</th>
+      <td>kumwenda_mary</td>
+      <td>MEMORY C MATANDA</td>
+      <td>female</td>
+      <td>1994-09-28</td>
+      <td>30</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>87</th>
+      <td>makashini_christopher</td>
+      <td>Majory musonda</td>
+      <td>female</td>
+      <td>2003-12-17</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>88</th>
+      <td>makashini_christopher</td>
+      <td>Christina Yowane</td>
+      <td>female</td>
+      <td>1960-01-01</td>
+      <td>64</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>89</th>
+      <td>makashini_christopher</td>
+      <td>BEATRICE MWABA</td>
+      <td>female</td>
+      <td>2003-08-09</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>90</th>
+      <td>mary_mwape</td>
+      <td>Emeldah Chileshe</td>
+      <td>female</td>
+      <td>2003-09-08</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>91</th>
+      <td>mary_mwape</td>
+      <td>Hope Namukonda</td>
+      <td>female</td>
+      <td>2002-03-26</td>
+      <td>22</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>92</th>
+      <td>mary_mwape</td>
+      <td>Mercy Mulenga</td>
+      <td>female</td>
+      <td>2003-05-11</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>93</th>
+      <td>mary_mwape</td>
+      <td>Nobert Mulenga</td>
+      <td>male</td>
+      <td>2002-08-09</td>
+      <td>22</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>94</th>
+      <td>mary_mwape</td>
+      <td>Anastasia Chiluba</td>
+      <td>female</td>
+      <td>2003-06-14</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>95</th>
+      <td>mary_mwape</td>
+      <td>Constance Muletele</td>
+      <td>female</td>
+      <td>2003-12-26</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>96</th>
+      <td>mary_mwape</td>
+      <td>Clara Masimba</td>
+      <td>female</td>
+      <td>2003-06-16</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>97</th>
+      <td>mary_mwape</td>
+      <td>Judith Kalumba</td>
+      <td>female</td>
+      <td>2003-09-14</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>98</th>
+      <td>mary_mwape</td>
+      <td>Temwani Chanda</td>
+      <td>female</td>
+      <td>2003-06-14</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>99</th>
+      <td>mary_mwape</td>
+      <td>Darius Chansa</td>
+      <td>male</td>
+      <td>2003-06-16</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>100</th>
+      <td>mary_mwape</td>
+      <td>Grace Situlo</td>
+      <td>female</td>
+      <td>2003-09-12</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>101</th>
+      <td>mary_mwape</td>
+      <td>Angel Chileshe</td>
+      <td>female</td>
+      <td>2002-12-03</td>
+      <td>22</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>102</th>
+      <td>mikabo_mildred</td>
+      <td>Judith Nkhoma</td>
+      <td>female</td>
+      <td>2003-06-24</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>103</th>
+      <td>mikabo_mildred</td>
+      <td>Peggy Kabila</td>
+      <td>female</td>
+      <td>2003-12-07</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>104</th>
+      <td>mikabo_mildred</td>
+      <td>Jushua Mumba</td>
+      <td>male</td>
+      <td>2003-12-05</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>105</th>
+      <td>musa_joyce</td>
+      <td>Daniel Chansa</td>
+      <td>male</td>
+      <td>2003-07-12</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>106</th>
+      <td>musa_joyce</td>
+      <td>Screvenar Mweetwa</td>
+      <td>male</td>
+      <td>2003-05-23</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>107</th>
+      <td>musa_joyce</td>
+      <td>Prudence chilimuna</td>
+      <td>female</td>
+      <td>2003-06-01</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>108</th>
+      <td>musa_joyce</td>
+      <td>Bright Makungu</td>
+      <td>male</td>
+      <td>2003-12-05</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>109</th>
+      <td>musa_joyce</td>
+      <td>Crenton Mulenga</td>
+      <td>male</td>
+      <td>2003-10-17</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>110</th>
+      <td>mwaba_rodgers</td>
+      <td>GOERGE MUKONDE</td>
+      <td>male</td>
+      <td>2002-08-31</td>
+      <td>22</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>111</th>
+      <td>mwaba_rodgers</td>
+      <td>tikambenji banda</td>
+      <td>female</td>
+      <td>2003-11-21</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>112</th>
+      <td>mwaba_rodgers</td>
+      <td>mubanga chilando</td>
+      <td>female</td>
+      <td>2003-04-22</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>113</th>
+      <td>mwaba_rodgers</td>
+      <td>mwape chilesha</td>
+      <td>female</td>
+      <td>2003-12-08</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>114</th>
+      <td>mwaba_rodgers</td>
+      <td>ANNIE MULENGA</td>
+      <td>female</td>
+      <td>1988-09-27</td>
+      <td>36</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>115</th>
+      <td>mwaba_rodgers</td>
+      <td>bertha nalengo</td>
+      <td>female</td>
+      <td>2003-06-16</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>116</th>
+      <td>natasha_musonda</td>
+      <td>Lilian Mulenga</td>
+      <td>female</td>
+      <td>2003-07-22</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>117</th>
+      <td>natasha_musonda</td>
+      <td>Charity Mwelwa</td>
+      <td>female</td>
+      <td>2003-03-20</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>118</th>
+      <td>natasha_musonda</td>
+      <td>Koleta Mwila</td>
+      <td>female</td>
+      <td>1959-10-10</td>
+      <td>65</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>119</th>
+      <td>natasha_musonda</td>
+      <td>frank ngandwe</td>
+      <td>male</td>
+      <td>2003-02-21</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>120</th>
+      <td>natasha_musonda</td>
+      <td>Royce Kangwa</td>
+      <td>female</td>
+      <td>2003-09-10</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>121</th>
+      <td>natasha_musonda</td>
+      <td>Mwamba mulenga</td>
+      <td>male</td>
+      <td>2003-06-16</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>122</th>
+      <td>sakala_veronica</td>
+      <td>Micheal Phiri</td>
+      <td>male</td>
+      <td>2003-10-27</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>123</th>
+      <td>sakala_veronica</td>
+      <td>Beatrice mwila</td>
+      <td>female</td>
+      <td>2003-03-03</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>124</th>
+      <td>sakala_veronica</td>
+      <td>Fidelis Mwansa</td>
+      <td>male</td>
+      <td>2003-06-07</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>125</th>
+      <td>samusole_wisdom</td>
+      <td>patricia mukuka</td>
+      <td>female</td>
+      <td>1996-06-10</td>
+      <td>28</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>126</th>
+      <td>samusole_wisdom</td>
+      <td>mercy kalela</td>
+      <td>female</td>
+      <td>2003-01-16</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>127</th>
+      <td>tembo_ireen</td>
+      <td>Antonette Mwanza</td>
+      <td>female</td>
+      <td>2003-08-30</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>128</th>
+      <td>tembo_ireen</td>
+      <td>ISAAC PHIRI</td>
+      <td>male</td>
+      <td>2003-08-24</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+    <tr>
+      <th>129</th>
+      <td>tembo_ireen</td>
+      <td>BLESSINGS MUSONDA</td>
+      <td>female</td>
+      <td>2003-03-03</td>
+      <td>21</td>
+      <td>vca</td>
+    </tr>
+  </tbody>
+</table>
+ <!--Paste list end here-->
+<script>
+function filterTable() {
+        var selectElement = document.getElementById("selectOption");
+        var selectedValue = selectElement.options[selectElement.selectedIndex].value.toLowerCase();
+        var table = document.getElementById("myTable");
+        var rows = table.getElementsByTagName("tr");
+
+        for (var i = 0; i < rows.length; i++) {
+            var site = rows[i].getElementsByTagName("td")[0];
+            if (site) {
+                var siteText = site.textContent || site.innerText;
+                if (siteText.toLowerCase() === selectedValue) {
+                    rows[i].style.display = "";
+                } else {
+                    rows[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>
+
+
+</body>
+</html>
