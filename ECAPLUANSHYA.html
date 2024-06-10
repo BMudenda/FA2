@@ -5,34 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Indicator Tracking Table</title>
     <style>
-               
+       body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h2 {
+            color: #e74c3c;
+        }
+        .header, .footer {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .instructions, .filter-section {
+            font-size: 14px;
+            margin-bottom: 20px;
         }
         table {
             border-collapse: collapse;
             width: 100%;
+            margin-bottom: 20px;
         }
         th, td {
-            border: 1px solid black;
+            border: 1px solid #ddd;
             padding: 8px;
-            text-align: center;width: 10px;
+            text-align: center;
         }
         th {
             background-color: #f2f2f2;
+            color: #333;
         }
         tr:nth-child(even) {
-            background-color: #f2f2f2;
-
+            background-color: #f9f9f9;
+        }
+        select {
+            padding: 5px;
+            font-size: 14px;
         }
         
     </style>
 
 </head>
-<body>
-   <hr>
-    <br>
-    
-    <div><h2 style="color: red;text-align: center"> 👥BENEFICIERIES LUANSHYA LIST FY24-REPORTED AS ACTIVE</h2>
-   </div>
+ <div class="header">
+        <h2>👥 BENEFICIARIES LUANSHYA LIST FY24 - REPORTED AS ACTIVE</h2>
+    </div>
     <label for="selectOption">Select by CCW:</label>
     <br>
     <select name="selectOption" id="selectOption" onchange="filterTable()">
@@ -72,15 +87,14 @@
         
   
     <br>
-    <div><div> 
-    <h2>👀This list was extracted and updated on 09-06-2024, time 22:45.👉Ensure that a benefeciery receives a atleast a service in each quarter </h2>
- </div>
-        <div>
+     <section class="instructions">
+        <h2>👀 This list was extracted and updated on 09-06-2024, time 22:45.</h2>
+        <p>👉 Ensure that a beneficiary receives at least a service in each quarter.</p>
         <ul>
-            <li>🔗 NO= DID NOT RECEIVE ANY SERVICE IN A PARTCULAR MONTH OF A QUARTER</li>
-            <li>🔗 YES= RECEIVED A SERVICE IN A PARTCULAR MONTH OF A QUARTER</li>
+            <li>🔗 <strong>NO</strong> = DID NOT RECEIVE ANY SERVICE IN A PARTICULAR MONTH OF A QUARTER</li>
+            <li>🔗 <strong>YES</strong> = RECEIVED A SERVICE IN A PARTICULAR MONTH OF A QUARTER</li>
         </ul>
-    </div></div>
+    </section>
     
 <table border="1" class="dataframe" id="myTable">
  <!--Paste Here-->
@@ -61651,6 +61665,7 @@
 </table>
    
  <!--Paste up-->
+    </section>
 <script>
 function filterTable() {
         var selectElement = document.getElementById("selectOption");
@@ -61673,5 +61688,9 @@ function filterTable() {
 </script>
 
 
+    
+    <div class="footer">
+        <p>&copy; 2024 Indicator Tracking System</p>
+    </div>
 </body>
 </html>
