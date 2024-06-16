@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flexed datalist</title>
+  <style>
+
+header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .animated-text-container {
+            white-space: nowrap;
+            overflow: hidden;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 100%;
+            animation: moveLeftToRight 10s linear infinite;
+        }
+
+        .animated-text {
+            font-size: 1.2em;
+            color: #ff6600;
+            background-color: #333;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        @keyframes moveLeftToRight {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(100%);
+            }
+        }
+ 
+
+footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .footer-link {
+            text-decoration: none;
+            color: #fff;
+            font-size: 0.9em;
+        }
+
+
+
+        /* Additional styling for the content */
+        section {
+            
+            background-color: #fff;
+            padding: 10px;
+            
+            margin-bottom: 20px;
+            border-radius: 2px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+         li{text-align: left;}
+          
+  </style>
+</head>
+<body>
+  <header>
+    <div class="animated-text-container">
+        <div class="animated-text">Welcome to Data Update</div>
+    </div>
+</header>
+  
+  <br>
+  <div>
+   
+  </div>
+  <br>
+ 
+  <div style="display: flex;border-radius: 2pc;">
+       
+    <div style= "width: 25%;text-align: center;word-wrap: break-word;padding: 10px;border-color: black;border: 2px;">
+      
+      <h4 style="color: aqua;">Extra information</h4>
+
+  
+      <br>
+      
+      <br>
+
+      <section>
+        <div id="calendar"></div>
+        <div id="clock"></div>
+    
+          <script>
+              function updateDateTime() {
+                  var now = new Date();
+                  var date = now.toISOString().split('T')[0];
+                  var time = now.toLocaleTimeString();
+    
+                  document.getElementById('calendar').innerText = 'Date: ' + date;
+                  document.getElementById('clock').innerText = 'Time: ' + time;
+    
+                  setTimeout(updateDateTime, 1000);
+              }
+    
+              updateDateTime();
+          </script>
+          <br>
+          <br>
+          
+      </section>
+      <section>
+        <h1 >FY 24 TARGETS</h1>
+
+<ol>
+    
+<a href= "ref.html"><li> Summary </li></a>
+<a href= "fac.html"><li> Facility </li></a>
+<a href= "mer.html"><li> PEPFAR MER </li></a>
+<a href= "wrap.html"><li> Wrap Around </li></a>
+<a href= "sum.html"><li> Result Framework </li></a>
+
+</ol>
+      </section>
+      <br>
+      <section>
+        <h3>TRACKING TABLE</h3>
+        <ul style="text-align: left;">
+            <li> <a href="TablePresentation.html">HEALTH</a></li>
+            <li> <a href="SAFEINFO.html">SAFE</a></li>
+            <li> <a href="SCHOOLINFO.html">SCHOOL</a></li>
+            <li> <a href="STABLEINFO.html">STABLE</a></li>
+            <hr>
+            <li>  <a href="ALEJO.html">ALEJO</a></li>
+            <li>  <a href="SKILLS.html">Skills support</a></li>
+            <li>  <a href="SCHOOLSUPPORT.html">School Materials</a></li>
+             <hr>
+            
+        </ul>
+      </section>
+    </div>
+
+    <section style="width: 10%;background-color: azure;"></section>
+      
+  <div style= "width: 100%;height:100%; center;word-wrap: break-word;padding: 2px;">
+    <section>
+      <div style= "width: 100%;height:50pc; center;word-wrap: break-word;padding: 2px">
+        <section>
+          <h1>GENERAL INFORMATION </h1>
+            <ul>
+              <li>🔗 <a href="graduationotes.html">Graduations </a></li>
+              <li>🔗 <a href="tryccw.html">Active Household Service provision </a></li>
+            </ul>
+        </section>
+        <section>
+          <h1>LIST OF INCOMPLETE BENEFICIARY </h1>
+            <ul>
+              <li>🔗 <a href="ECAPLUANSHYA.html">Luanshya Active</a></li>
+              <li>🔗 <a href="overgrown.html">Over Grown VCAs(21years or Over)</a></li>
+            </ul>
+        </section>
+        <section>
+    <br>
+          <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OVC SERV COMP-Data Selection</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        #data-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>OVC SERV COMP-Data Selection</h2>
+
+    <label for="name-select">Select a Name:</label>
+    <select id="name-select" onchange="displayData()">
+        <option value="Thompson District Hospital">Thompson District Hospital</option>
+        <option value="Roan Antelope General Hospital">Roan Antelope General Hospital</option>
+        <option value="Mpatamatu Section 26 Clinic">Mpatamatu Section 26 Clinic</option>
+        <option value="Malaika Clinic">Malaika Clinic</option>
+        <option value="Mikomfwa Health Centre">Mikomfwa Health Centre</option>
+        <option value="Kawama Urban Health Centre (Lua)">Kawama Urban Health Centre (Lua)</option>
+        <option value="Poleline (Baluba) Health Post">Poleline (Baluba) Health Post</option>
+        <option value="Mpongwe Mission Hospital">Mpongwe Mission Hospital</option>
+        <option value="St Theresa Mission Hospital">St Theresa Mission Hospital</option>
+        <option value="Kalweo Rural Health Centre">Kalweo Rural Health Centre</option>
+        <option value="Ipumbu Rural Health Centre">Ipumbu Rural Health Centre</option>
+        <option value="Luanshya">Luanshya</option>
+        <option value="Mpongwe District">Mpongwe District</option>
+    </select>
+
+    <div id="data-container"></div>
+
+    <script>
+        function displayData() {
+            var selectedName = document.getElementById("name-select").value;
+
+            var data = {
+                "Thompson District Hospital": ["1900", "1738", "162", "91%", "9%"],
+                "Roan Antelope General Hospital": ["1786", "1727", "59", "97%", "3%"],
+                "Mpatamatu Section 26 Clinic": ["624", "790", "-166", "127%", "-27%"],
+                "Malaika Clinic": ["442", "537", "-95", "121%", "-21%"],
+                "Mikomfwa Health Centre": ["613", "618", "-5", "101%", "-1%"],
+                "Kawama Urban Health Centre (Lua)": ["262", "284", "-22", "108%", "-8%"],
+                "Poleline (Baluba) Health Post": ["418", "561", "-143", "134%", "-34%"],
+                "Mpongwe Mission Hospital": ["1527", "1320", "207", "86%", "14%"],
+                "St Theresa Mission Hospital": ["943", "982", "-39", "104%", "-4%"],
+                "Kalweo Rural Health Centre": ["569", "747", "-178", "131%", "-31%"],
+                "Ipumbu Rural Health Centre": ["216", "283", "-67", "131%", "-31%"],
+                "Luanshya": ["6045", "6255", "-210", "103%", "-3%"],
+                "Mpongwe District": ["3255", "3332", "-77", "102%", "-2%"]
+            };
+
+            var selectedData = data[selectedName];
+
+            var html = "<h3>Data for " + selectedName + ":</h3>";
+            html += "<table>";
+            html += "<tr><th>Target</th><th>Reach</th><th>Unreached</th><th>Percentage Reach</th><th>Percentage Unreached</th></tr>";
+            html += "<tr>";
+
+            for (var i = 0; i < selectedData.length; i++) {
+                html += "<td>" + selectedData[i] + "</td>";
+            }
+
+            html += "</tr></table>";
+
+            document.getElementById("data-container").innerHTML = html;
+        }
+    </script>
+
+</body>
+</html>
+
+        </section>
+      </div>
+    </section>
+    
+  </div>
+  
+</div>
+<footer>
+  <div class="footer-links">
+      <a href="ccwdetails.html"> CCW Page:</a>
+      <a href="FCWDESPF.html"> FCW/DESPF Page </a>
+      <a href="#" class="footer-link"> Contact Us: </a>
+      <a href="#" class="footer-link"> About Us:</a>
+  </div>
+</footer>
+</body>
+</html>
