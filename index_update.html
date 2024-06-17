@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BMsiterii</title>
+    <title>BMsiteRii</title>
     <style>
         /* Global styles */
         body {
             margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
+            background-color: #f2f2f2; /* Background color for the body */
         }
 
         header {
@@ -95,6 +96,7 @@
             text-align: center;
             margin-top: 20px;
             position: relative;
+            clear: both; /* Clear floats */
         }
 
         .footer-links {
@@ -109,6 +111,42 @@
             color: #fff;
             font-size: 0.9em;
             margin: 0 15px;
+        }
+
+        /* Responsive design */
+        @media only screen and (max-width: 768px) {
+            .animated-text {
+                font-size: 1em;
+            }
+
+            section {
+                margin: 10px;
+                padding: 15px;
+            }
+
+            footer {
+                padding: 15px;
+            }
+        }
+
+        @media only screen and (max-width: 480px) {
+            .animated-text {
+                font-size: 0.8em;
+            }
+
+            section {
+                margin: 5px;
+                padding: 10px;
+            }
+
+            footer {
+                padding: 10px;
+            }
+
+            .footer-link {
+                font-size: 0.8em;
+                margin: 0 10px;
+            }
         }
     </style>
 </head>
@@ -204,11 +242,4 @@
     <div class="footer-links">
         <a href="ccwdetails.html" class="footer-link">CCW Page</a>
         <a href="FCWDESPF.html" class="footer-link">FCW/DESPF Page</a>
-        <a href="#" class="footer-link">About Us</a>
-        <a href="#" class="footer-link">Contact</a>
-    </div>
-    <p>&copy; BM Inc. All rights reserved.</p>
-</footer>
-
-</body>
-</html>
+        <a
