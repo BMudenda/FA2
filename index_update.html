@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMsite</title>
     <style>
+        /* Global styles */
         body {
             margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -17,36 +18,6 @@
             padding: 15px;
             text-align: center;
             box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
-            position: relative;
-        }
-
-        .animated-text-container {
-            white-space: nowrap;
-            overflow: hidden;
-            position: absolute;
-            top: 50%;
-            left: 0;
-            transform: translateY(-50%);
-            width: 100%;
-            animation: moveLeftToRight 10s linear infinite;
-        }
-
-        .animated-text {
-            font-size: 1.2em;
-            color: #ff6600;
-            background-color: #333;
-            padding: 15px;
-            border-radius: 5px;
-            text-align: center;
-        }
-
-        @keyframes moveLeftToRight {
-            from {
-                transform: translateX(-100%);
-            }
-            to {
-                transform: translateX(100%);
-            }
         }
 
         section {
@@ -89,34 +60,40 @@
             font-weight: bold;
         }
 
-        #calendar, #clock {
-            font-size: 18px;
-            margin-top: 20px;
-        }
-
         footer {
             background-color: #333;
             color: #fff;
             padding: 20px;
             text-align: center;
+            margin-top: 20px;
+            position: relative;
         }
 
         .footer-links {
             display: flex;
-            justify-content: space-around;
-            margin-top: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 10px;
         }
 
         .footer-link {
             text-decoration: none;
             color: #fff;
             font-size: 0.9em;
+            margin: 0 15px;
         }
 
+        #calendar, #clock {
+            font-size: 18px;
+            margin-top: 20px;
+            text-align: center;
+            color: #333;
+        }
+
+        /* Media query for responsive design */
         @media screen and (max-width: 768px) {
             .footer-links {
                 flex-direction: column;
-                align-items: center;
             }
         }
     </style>
@@ -229,7 +206,23 @@
         <h2>Calendar and Time</h2>
         <div id="calendar"></div>
         <div id="clock"></div>
+
+        <script>
+            function updateDateTime() {
+                var now = new Date();
+                var date = now.toISOString().split('T')[0];
+                var time = now.toLocaleTimeString();
+
+                document.getElementById('calendar').innerText = 'Date: ' + date;
+                document.getElementById('clock').innerText = 'Time: ' + time;
+
+                setTimeout(updateDateTime, 1000);
+            }
+
+            updateDateTime();
+        </script>
     </section>
 
     <footer>
         <div class="footer-links">
+            <a href="ccwdetails.html" class="footer-link">CCW Page</a>
