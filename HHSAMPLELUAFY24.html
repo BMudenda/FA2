@@ -1,0 +1,1738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luasamplefy24</title>
+  <style>
+ table {
+            border-collapse: collapse;
+            
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+            color: #333;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        select {
+            padding: 5px;
+            font-size: 14px;
+        }
+
+
+        /* Additional styling for the content */
+        section {
+            
+            background-color: #fff;
+            padding: 10px;
+            
+            margin-bottom: 20px;
+            border-radius: 2px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+
+
+  </style>
+</head>
+<body>
+  <div style="text-align: center;word-wrap: break-word; padding: 3px;color: red;">SELECT 25 HH FOR EACH MODULE-INCLUDE THE COMPULSORY</div>
+  <br>
+  <div>
+    <label for="selectOption">YOUR FACILITY:</label>
+    <br>
+    <select name="selectOption" id="selectOption" onchange="filterTable()">
+      <option value="">Select All</option>
+      <option value="Thomson District Hospital">Thomson District Hospital</option>
+      <option value="Malaika Clinic">Malaika Clinic</option>
+      <option value="Kawama Urban Health Centre (Lua)">Kawama Urban Health Centre (Lua)</option>
+      <option value="Poleline (Baluba) Health Post">Poleline (Baluba) Health Post</option>
+      <option value="Roan Antelope Referral Hospital">Roan Antelope Referral Hospital</option>
+      <option value="Mikomfwa Health Centre">Mikomfwa Health Centre</option>
+      <option value="Mpatamatu Section 26 Urban Health Centre">Mpatamatu Section 26 Urban Health Centre</option>
+    </select>
+  </div>
+  <br>
+
+  <div style="display: flex;border-radius: 2pc;">
+
+    <div style= "width: 25%;text-align: center;word-wrap: break-word;padding: 10px;border-color: black;border: 2px;">
+      
+      
+
+  
+      <br>
+      <section>
+      <div style="font-size: x-small;">
+      
+        
+          
+          <li>🔗 Filter by your site to select the List of your Sampled Househod.</li>
+      
+    
+    </div>
+  </section>
+    <br>
+    <section>
+    <div style="font-size: x-small;"> Remember to Survey the All HH with a compulsory comment find out the owner from the "FCW"</div>
+  </section>
+<section>
+    <div style="font-size: x-small;"> <p>&copy;</p>As you are aware, you are required to administer a minimum of 25 questionnaires for each module. This means you will conduct:
+
+      - 25 questionnaires for caregivers
+      - 25 questionnaires for livestock
+      - 25 questionnaires for adolescents
+      - 25 questionnaires for under-five children
+      
+      Please stand by for the list of sampled households. Remember that if a sampled household does not have adolescents or under-five children, you will need to replace it with another household for the module to be applicable. </div>
+  </section>
+    </div>
+      
+  <div style= "width: 100%;text-align: center;word-wrap: break-word;padding: 2px;">
+    <table border="1" class="dataframe" id="myTable">
+  
+
+      <thead>
+        <tr style="text-align: right;">
+          <th></th>
+          <th>Site</th>
+          <th>Caregiver</th>
+          <th>enumalator</th>
+          <th>CCW_owner_HH</th>
+          <th>Comment</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>0</th>
+          <td>Kawama Urban Health Centre (Lua)</td>
+          <td>silla Nalusinje</td>
+          <td>aliyah_daka</td>
+          <td>aliyah_daka</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>1</th>
+          <td>Kawama Urban Health Centre (Lua)</td>
+          <td>Caroline Kabechi</td>
+          <td>aliyah_daka</td>
+          <td>aliyah_daka</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>2</th>
+          <td>Kawama Urban Health Centre (Lua)</td>
+          <td>Brenda Mubanga</td>
+          <td>aliyah_daka</td>
+          <td>angela_mwenya</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>3</th>
+          <td>Kawama Urban Health Centre (Lua)</td>
+          <td>Memory Kunda</td>
+          <td>aliyah_daka</td>
+          <td>aliyah_daka</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>4</th>
+          <td>Kawama Urban Health Centre (Lua)</td>
+          <td>kunda mwape</td>
+          <td>aliyah_daka</td>
+          <td>aliyah_daka</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>5</th>
+          <td>Kawama Urban Health Centre (Lua)</td>
+          <td>Agatha Bwalya</td>
+          <td>aliyah_daka</td>
+          <td>aliyah_daka</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>6</th>
+          <td>Kawama Urban Health Centre (Lua)</td>
+          <td>Veronica Kalima</td>
+          <td>aliyah_daka</td>
+          <td>angela_mwenya</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>7</th>
+          <td>Kawama Urban Health Centre (Lua)</td>
+          <td>Martha Chande</td>
+          <td>aliyah_daka</td>
+          <td>aliyah_daka</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>8</th>
+          <td>Kawama Urban Health Centre (Lua)</td>
+          <td>Mary Nkhoma</td>
+          <td>aliyah_daka</td>
+          <td>angela_mwenya</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>9</th>
+          <td>Kawama Urban Health Centre (Lua)</td>
+          <td>Bridget mutasha</td>
+          <td>aliyah_daka</td>
+          <td>angela_mwenya</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>10</th>
+          <td>Kawama Urban Health Centre (Lua)</td>
+          <td>Sarah Mwape</td>
+          <td>aliyah_daka</td>
+          <td>aliyah_daka</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>11</th>
+          <td>Kawama Urban Health Centre (Lua)</td>
+          <td>Faides Kayombo</td>
+          <td>aliyah_daka</td>
+          <td>aliyah_daka</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>12</th>
+          <td>Kawama Urban Health Centre (Lua)</td>
+          <td>Ireen Chanda</td>
+          <td>aliyah_daka</td>
+          <td>angela_mwenya</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>13</th>
+          <td>Kawama Urban Health Centre (Lua)</td>
+          <td>peggy chipalata</td>
+          <td>aliyah_daka</td>
+          <td>angela_mwenya</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>14</th>
+          <td>Kawama Urban Health Centre (Lua)</td>
+          <td>Prisca Mukupa</td>
+          <td>aliyah_daka</td>
+          <td>aliyah_daka</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>15</th>
+          <td>Kawama Urban Health Centre (Lua)</td>
+          <td>Suzen Chibambo</td>
+          <td>aliyah_daka</td>
+          <td>aliyah_daka</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>16</th>
+          <td>Kawama Urban Health Centre (Lua)</td>
+          <td>Malisa Simwanza</td>
+          <td>aliyah_daka</td>
+          <td>angela_mwenya</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>17</th>
+          <td>Kawama Urban Health Centre (Lua)</td>
+          <td>Martha Kalunga</td>
+          <td>aliyah_daka</td>
+          <td>aliyah_daka</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>18</th>
+          <td>Kawama Urban Health Centre (Lua)</td>
+          <td>Carol Chilufya</td>
+          <td>aliyah_daka</td>
+          <td>aliyah_daka</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>19</th>
+          <td>Kawama Urban Health Centre (Lua)</td>
+          <td>Delphister lungu</td>
+          <td>aliyah_daka</td>
+          <td>angela_mwenya</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>20</th>
+          <td>Kawama Urban Health Centre (Lua)</td>
+          <td>Annie Chibeka</td>
+          <td>aliyah_daka</td>
+          <td>aliyah_daka</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>21</th>
+          <td>Kawama Urban Health Centre (Lua)</td>
+          <td>Regina Bwalya</td>
+          <td>aliyah_daka</td>
+          <td>aliyah_daka</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>22</th>
+          <td>Kawama Urban Health Centre (Lua)</td>
+          <td>Paulina makowela</td>
+          <td>aliyah_daka</td>
+          <td>angela_mwenya</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>23</th>
+          <td>Kawama Urban Health Centre (Lua)</td>
+          <td>Greena Nakamba</td>
+          <td>aliyah_daka</td>
+          <td>angela_mwenya</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>24</th>
+          <td>Kawama Urban Health Centre (Lua)</td>
+          <td>ROSMARY NKALAMO</td>
+          <td>aliyah_daka</td>
+          <td>angela_mwenya</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>25</th>
+          <td>Malaika Clinic</td>
+          <td>sharon chishamba</td>
+          <td>joe_nyanga</td>
+          <td>joe_nyanga</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>26</th>
+          <td>Malaika Clinic</td>
+          <td>Witika Kampambwe</td>
+          <td>joe_nyanga</td>
+          <td>joe_nyanga</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>27</th>
+          <td>Malaika Clinic</td>
+          <td>Elizabeth Chibola</td>
+          <td>joe_nyanga</td>
+          <td>joe_nyanga</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>28</th>
+          <td>Malaika Clinic</td>
+          <td>SANDRA KAOMA</td>
+          <td>joe_nyanga</td>
+          <td>joe_nyanga</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>29</th>
+          <td>Malaika Clinic</td>
+          <td>BEAUTY MuBANGA</td>
+          <td>joe_nyanga</td>
+          <td>joe_nyanga</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>30</th>
+          <td>Malaika Clinic</td>
+          <td>Patrica Choba</td>
+          <td>joe_nyanga</td>
+          <td>joe_nyanga</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>31</th>
+          <td>Malaika Clinic</td>
+          <td>elizabeth sakala</td>
+          <td>joe_nyanga</td>
+          <td>matildah_kunda</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>32</th>
+          <td>Malaika Clinic</td>
+          <td>gloria simwanza</td>
+          <td>joe_nyanga</td>
+          <td>matildah_kunda</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>33</th>
+          <td>Malaika Clinic</td>
+          <td>Esther Banda</td>
+          <td>joe_nyanga</td>
+          <td>joe_nyanga</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>34</th>
+          <td>Malaika Clinic</td>
+          <td>Rhodah Kabala</td>
+          <td>joe_nyanga</td>
+          <td>matildah_kunda</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>35</th>
+          <td>Malaika Clinic</td>
+          <td>Elizabeth Sakala</td>
+          <td>joe_nyanga</td>
+          <td>joe_nyanga</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>36</th>
+          <td>Malaika Clinic</td>
+          <td>GRACE ZUZE</td>
+          <td>joe_nyanga</td>
+          <td>joe_nyanga</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>37</th>
+          <td>Malaika Clinic</td>
+          <td>IREEN ZULU</td>
+          <td>joe_nyanga</td>
+          <td>joe_nyanga</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>38</th>
+          <td>Malaika Clinic</td>
+          <td>mable muletete</td>
+          <td>joe_nyanga</td>
+          <td>matildah_kunda</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>39</th>
+          <td>Malaika Clinic</td>
+          <td>Idah Mutambo</td>
+          <td>joe_nyanga</td>
+          <td>joe_nyanga</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>40</th>
+          <td>Malaika Clinic</td>
+          <td>Mary Muwana</td>
+          <td>joe_nyanga</td>
+          <td>joe_nyanga</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>41</th>
+          <td>Malaika Clinic</td>
+          <td>Hildah Kabonde</td>
+          <td>joe_nyanga</td>
+          <td>joe_nyanga</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>42</th>
+          <td>Malaika Clinic</td>
+          <td>Mwansa Kabwe</td>
+          <td>joe_nyanga</td>
+          <td>matildah_kunda</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>43</th>
+          <td>Malaika Clinic</td>
+          <td>Martha Mutobola</td>
+          <td>joe_nyanga</td>
+          <td>joe_nyanga</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>44</th>
+          <td>Malaika Clinic</td>
+          <td>mirriam Kalobwe</td>
+          <td>joe_nyanga</td>
+          <td>joe_nyanga</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>45</th>
+          <td>Malaika Clinic</td>
+          <td>martha kabwela</td>
+          <td>joe_nyanga</td>
+          <td>matildah_kunda</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>46</th>
+          <td>Malaika Clinic</td>
+          <td>precious Malata</td>
+          <td>joe_nyanga</td>
+          <td>joe_nyanga</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>47</th>
+          <td>Malaika Clinic</td>
+          <td>jane kamoza</td>
+          <td>joe_nyanga</td>
+          <td>matildah_kunda</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>48</th>
+          <td>Malaika Clinic</td>
+          <td>Samantha mambwe</td>
+          <td>joe_nyanga</td>
+          <td>joe_nyanga</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>49</th>
+          <td>Malaika Clinic</td>
+          <td>Beatrice Kaumba</td>
+          <td>joe_nyanga</td>
+          <td>joe_nyanga</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>50</th>
+          <td>Mikomfwa Health Centre</td>
+          <td>Aminata juma</td>
+          <td>natasha_musonda</td>
+          <td>martha_muchimba</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>51</th>
+          <td>Mikomfwa Health Centre</td>
+          <td>Maybin Mungambata</td>
+          <td>natasha_musonda</td>
+          <td>mary_mwape</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>52</th>
+          <td>Mikomfwa Health Centre</td>
+          <td>Justina Mulenga</td>
+          <td>natasha_musonda</td>
+          <td>mary_mwape</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>53</th>
+          <td>Mikomfwa Health Centre</td>
+          <td>Mercy Mulenga</td>
+          <td>natasha_musonda</td>
+          <td>mary_mwape</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>54</th>
+          <td>Mikomfwa Health Centre</td>
+          <td>Majory Mwansa</td>
+          <td>natasha_musonda</td>
+          <td>natasha_musonda</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>55</th>
+          <td>Mikomfwa Health Centre</td>
+          <td>Martha Nyirenda</td>
+          <td>natasha_musonda</td>
+          <td>martha_muchimba</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>56</th>
+          <td>Mikomfwa Health Centre</td>
+          <td>Ruth Chilaka</td>
+          <td>natasha_musonda</td>
+          <td>mary_mwape</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>57</th>
+          <td>Mikomfwa Health Centre</td>
+          <td>Mirriam Chilufya</td>
+          <td>natasha_musonda</td>
+          <td>mary_mwape</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>58</th>
+          <td>Mikomfwa Health Centre</td>
+          <td>Lillian Lungu</td>
+          <td>natasha_musonda</td>
+          <td>natasha_musonda</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>59</th>
+          <td>Mikomfwa Health Centre</td>
+          <td>Justina Banda</td>
+          <td>natasha_musonda</td>
+          <td>natasha_musonda</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>60</th>
+          <td>Mikomfwa Health Centre</td>
+          <td>Abigail Chola</td>
+          <td>natasha_musonda</td>
+          <td>natasha_musonda</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>61</th>
+          <td>Mikomfwa Health Centre</td>
+          <td>Judith Nalungwe</td>
+          <td>natasha_musonda</td>
+          <td>mary_mwape</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>62</th>
+          <td>Mikomfwa Health Centre</td>
+          <td>Charity Mofya</td>
+          <td>natasha_musonda</td>
+          <td>martha_muchimba</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>63</th>
+          <td>Mikomfwa Health Centre</td>
+          <td>Beauty Chibale</td>
+          <td>natasha_musonda</td>
+          <td>natasha_musonda</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>64</th>
+          <td>Mikomfwa Health Centre</td>
+          <td>Faides Kunda</td>
+          <td>natasha_musonda</td>
+          <td>martha_muchimba</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>65</th>
+          <td>Mikomfwa Health Centre</td>
+          <td>Mercy Musonda</td>
+          <td>natasha_musonda</td>
+          <td>mary_mwape</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>66</th>
+          <td>Mikomfwa Health Centre</td>
+          <td>Febby Chipeta</td>
+          <td>natasha_musonda</td>
+          <td>natasha_musonda</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>67</th>
+          <td>Mikomfwa Health Centre</td>
+          <td>Nancy Shatontola</td>
+          <td>natasha_musonda</td>
+          <td>natasha_musonda</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>68</th>
+          <td>Mikomfwa Health Centre</td>
+          <td>frank ngandwe</td>
+          <td>natasha_musonda</td>
+          <td>natasha_musonda</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>69</th>
+          <td>Mikomfwa Health Centre</td>
+          <td>liness Mausala</td>
+          <td>natasha_musonda</td>
+          <td>martha_muchimba</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>70</th>
+          <td>Mikomfwa Health Centre</td>
+          <td>Salifyanji Changala</td>
+          <td>natasha_musonda</td>
+          <td>natasha_musonda</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>71</th>
+          <td>Mikomfwa Health Centre</td>
+          <td>Clara Masimba</td>
+          <td>natasha_musonda</td>
+          <td>mary_mwape</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>72</th>
+          <td>Mikomfwa Health Centre</td>
+          <td>Catherine Chishimba</td>
+          <td>natasha_musonda</td>
+          <td>natasha_musonda</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>73</th>
+          <td>Mikomfwa Health Centre</td>
+          <td>Norah Mweta</td>
+          <td>natasha_musonda</td>
+          <td>martha_muchimba</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>74</th>
+          <td>Mikomfwa Health Centre</td>
+          <td>Thelma Chupa</td>
+          <td>natasha_musonda</td>
+          <td>martha_muchimba</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>75</th>
+          <td>Mpatamatu Section 26 Urban Health Centre</td>
+          <td>JEANY Munkupuli</td>
+          <td>banda_david</td>
+          <td>makashini_christopher</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>76</th>
+          <td>Mpatamatu Section 26 Urban Health Centre</td>
+          <td>LINESS MUTALE</td>
+          <td>banda_david</td>
+          <td>makashini_christopher</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>77</th>
+          <td>Mpatamatu Section 26 Urban Health Centre</td>
+          <td>MARY SICHALWE</td>
+          <td>banda_david</td>
+          <td>tembo_ireen</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>78</th>
+          <td>Mpatamatu Section 26 Urban Health Centre</td>
+          <td>Bridget Meki</td>
+          <td>banda_david</td>
+          <td>banda_david</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>79</th>
+          <td>Mpatamatu Section 26 Urban Health Centre</td>
+          <td>Daudi Jeston Kunda</td>
+          <td>banda_david</td>
+          <td>gondwe_fanny</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>80</th>
+          <td>Mpatamatu Section 26 Urban Health Centre</td>
+          <td>Albina Kabwe</td>
+          <td>banda_david</td>
+          <td>makashini_christopher</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>81</th>
+          <td>Mpatamatu Section 26 Urban Health Centre</td>
+          <td>Brenda Namunji</td>
+          <td>banda_david</td>
+          <td>makashini_christopher</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>82</th>
+          <td>Mpatamatu Section 26 Urban Health Centre</td>
+          <td>PATIENCE DAKA</td>
+          <td>banda_david</td>
+          <td>tembo_ireen</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>83</th>
+          <td>Mpatamatu Section 26 Urban Health Centre</td>
+          <td>Bertha Chungu</td>
+          <td>banda_david</td>
+          <td>banda_david</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>84</th>
+          <td>Mpatamatu Section 26 Urban Health Centre</td>
+          <td>Catherine Musonda</td>
+          <td>banda_david</td>
+          <td>tembo_ireen</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>85</th>
+          <td>Mpatamatu Section 26 Urban Health Centre</td>
+          <td>Naomi Sando  Kapusa</td>
+          <td>banda_david</td>
+          <td>makashini_christopher</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>86</th>
+          <td>Mpatamatu Section 26 Urban Health Centre</td>
+          <td>Dorcus Mulala</td>
+          <td>banda_david</td>
+          <td>makashini_christopher</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>87</th>
+          <td>Mpatamatu Section 26 Urban Health Centre</td>
+          <td>JOYCE MWILA</td>
+          <td>banda_david</td>
+          <td>makashini_christopher</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>88</th>
+          <td>Mpatamatu Section 26 Urban Health Centre</td>
+          <td>Odrin mwandila</td>
+          <td>banda_david</td>
+          <td>makashini_christopher</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>89</th>
+          <td>Mpatamatu Section 26 Urban Health Centre</td>
+          <td>Mavies Nakawala</td>
+          <td>banda_david</td>
+          <td>tembo_ireen</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>90</th>
+          <td>Mpatamatu Section 26 Urban Health Centre</td>
+          <td>Secilia Kalulu</td>
+          <td>banda_david</td>
+          <td>makashini_christopher</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>91</th>
+          <td>Mpatamatu Section 26 Urban Health Centre</td>
+          <td>Faless Kapandula</td>
+          <td>banda_david</td>
+          <td>banda_david</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>92</th>
+          <td>Mpatamatu Section 26 Urban Health Centre</td>
+          <td>Royda Zulu</td>
+          <td>banda_david</td>
+          <td>banda_david</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>93</th>
+          <td>Mpatamatu Section 26 Urban Health Centre</td>
+          <td>Angela Mulyato</td>
+          <td>banda_david</td>
+          <td>banda_david</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>94</th>
+          <td>Mpatamatu Section 26 Urban Health Centre</td>
+          <td>KAREN MASIKOLO</td>
+          <td>banda_david</td>
+          <td>tembo_ireen</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>95</th>
+          <td>Mpatamatu Section 26 Urban Health Centre</td>
+          <td>Rozaria Nkhoma</td>
+          <td>banda_david</td>
+          <td>gondwe_fanny</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>96</th>
+          <td>Mpatamatu Section 26 Urban Health Centre</td>
+          <td>Inonge Simakando</td>
+          <td>banda_david</td>
+          <td>makashini_christopher</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>97</th>
+          <td>Mpatamatu Section 26 Urban Health Centre</td>
+          <td>Suzen Sampa</td>
+          <td>banda_david</td>
+          <td>banda_david</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>98</th>
+          <td>Mpatamatu Section 26 Urban Health Centre</td>
+          <td>Annie Mulenga</td>
+          <td>banda_david</td>
+          <td>makashini_christopher</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>99</th>
+          <td>Mpatamatu Section 26 Urban Health Centre</td>
+          <td>Danger Mwanza</td>
+          <td>banda_david</td>
+          <td>tembo_ireen</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>100</th>
+          <td>Poleline (Baluba) Health Post</td>
+          <td>Jean Lwandu</td>
+          <td>amos_kasonde</td>
+          <td>amos_kasonde</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>101</th>
+          <td>Poleline (Baluba) Health Post</td>
+          <td>Threasa Chungu</td>
+          <td>amos_kasonde</td>
+          <td>amos_kasonde</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>102</th>
+          <td>Poleline (Baluba) Health Post</td>
+          <td>Catherine Kasongo</td>
+          <td>amos_kasonde</td>
+          <td>amos_kasonde</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>103</th>
+          <td>Poleline (Baluba) Health Post</td>
+          <td>josephine kayombo</td>
+          <td>amos_kasonde</td>
+          <td>amos_kasonde</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>104</th>
+          <td>Poleline (Baluba) Health Post</td>
+          <td>Enessy Siamusunga</td>
+          <td>amos_kasonde</td>
+          <td>hector_banda</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>105</th>
+          <td>Poleline (Baluba) Health Post</td>
+          <td>SANDRA SONDASHI</td>
+          <td>amos_kasonde</td>
+          <td>grace_kebende</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>106</th>
+          <td>Poleline (Baluba) Health Post</td>
+          <td>kangwa Conrad</td>
+          <td>amos_kasonde</td>
+          <td>hector_banda</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>107</th>
+          <td>Poleline (Baluba) Health Post</td>
+          <td>Beauty Chilekwa</td>
+          <td>amos_kasonde</td>
+          <td>amos_kasonde</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>108</th>
+          <td>Poleline (Baluba) Health Post</td>
+          <td>Memory Kalunga</td>
+          <td>amos_kasonde</td>
+          <td>hector_banda</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>109</th>
+          <td>Poleline (Baluba) Health Post</td>
+          <td>MARGARET BUPE</td>
+          <td>amos_kasonde</td>
+          <td>grace_kebende</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>110</th>
+          <td>Poleline (Baluba) Health Post</td>
+          <td>Nelia Kalunga</td>
+          <td>amos_kasonde</td>
+          <td>amos_kasonde</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>111</th>
+          <td>Poleline (Baluba) Health Post</td>
+          <td>yvonnie Kaira</td>
+          <td>amos_kasonde</td>
+          <td>hector_banda</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>112</th>
+          <td>Poleline (Baluba) Health Post</td>
+          <td>FLORENCE CHIKASA</td>
+          <td>amos_kasonde</td>
+          <td>grace_kebende</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>113</th>
+          <td>Poleline (Baluba) Health Post</td>
+          <td>Enika Mbewe</td>
+          <td>amos_kasonde</td>
+          <td>amos_kasonde</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>114</th>
+          <td>Poleline (Baluba) Health Post</td>
+          <td>HELLEN KOPA</td>
+          <td>amos_kasonde</td>
+          <td>grace_kebende</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>115</th>
+          <td>Poleline (Baluba) Health Post</td>
+          <td>Bridget Michelo</td>
+          <td>amos_kasonde</td>
+          <td>hector_banda</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>116</th>
+          <td>Poleline (Baluba) Health Post</td>
+          <td>Sandra Mambwe</td>
+          <td>amos_kasonde</td>
+          <td>hector_banda</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>117</th>
+          <td>Poleline (Baluba) Health Post</td>
+          <td>ANGELA TAISALA SUMANI</td>
+          <td>amos_kasonde</td>
+          <td>grace_kebende</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>118</th>
+          <td>Poleline (Baluba) Health Post</td>
+          <td>Eunice Mwape</td>
+          <td>amos_kasonde</td>
+          <td>hector_banda</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>119</th>
+          <td>Poleline (Baluba) Health Post</td>
+          <td>LAUREN L.M.MUGONKI</td>
+          <td>amos_kasonde</td>
+          <td>grace_kebende</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>120</th>
+          <td>Poleline (Baluba) Health Post</td>
+          <td>Mary Ng'andu</td>
+          <td>amos_kasonde</td>
+          <td>hector_banda</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>121</th>
+          <td>Poleline (Baluba) Health Post</td>
+          <td>Mary Nkaka</td>
+          <td>amos_kasonde</td>
+          <td>hector_banda</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>122</th>
+          <td>Poleline (Baluba) Health Post</td>
+          <td>Jacquicline Mwape</td>
+          <td>amos_kasonde</td>
+          <td>hector_banda</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>123</th>
+          <td>Poleline (Baluba) Health Post</td>
+          <td>Gean Bwalya</td>
+          <td>amos_kasonde</td>
+          <td>amos_kasonde</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>124</th>
+          <td>Poleline (Baluba) Health Post</td>
+          <td>CLEOPATRA ZOZI</td>
+          <td>amos_kasonde</td>
+          <td>grace_kebende</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>125</th>
+          <td>Roan Antelope Referral Hospital</td>
+          <td>Agatha Chinokoro</td>
+          <td>banda_misozi</td>
+          <td>banda_misozi</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>126</th>
+          <td>Roan Antelope Referral Hospital</td>
+          <td>Chalwe Christine</td>
+          <td>banda_misozi</td>
+          <td>moses_banda</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>127</th>
+          <td>Roan Antelope Referral Hospital</td>
+          <td>PRICILLA MPUNDU</td>
+          <td>banda_misozi</td>
+          <td>mwaba_rodgers</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>128</th>
+          <td>Roan Antelope Referral Hospital</td>
+          <td>Florence Mwenya</td>
+          <td>banda_misozi</td>
+          <td>soteli_winfridah</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>129</th>
+          <td>Roan Antelope Referral Hospital</td>
+          <td>Josephine Njobvu</td>
+          <td>banda_misozi</td>
+          <td>kapasula_edith</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>130</th>
+          <td>Roan Antelope Referral Hospital</td>
+          <td>Annie Tembo</td>
+          <td>banda_misozi</td>
+          <td>banda_misozi</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>131</th>
+          <td>Roan Antelope Referral Hospital</td>
+          <td>Dyness Nsofwa</td>
+          <td>banda_misozi</td>
+          <td>kapasula_edith</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>132</th>
+          <td>Roan Antelope Referral Hospital</td>
+          <td>Sara Mbewe</td>
+          <td>banda_misozi</td>
+          <td>mikabo_mildred</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>133</th>
+          <td>Roan Antelope Referral Hospital</td>
+          <td>Christine Matesa</td>
+          <td>banda_misozi</td>
+          <td>hellen_mwansa</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>134</th>
+          <td>Roan Antelope Referral Hospital</td>
+          <td>Mercy chola</td>
+          <td>banda_misozi</td>
+          <td>banda_misozi</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>135</th>
+          <td>Roan Antelope Referral Hospital</td>
+          <td>rossariass phiri</td>
+          <td>banda_misozi</td>
+          <td>hellen_mwansa</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>136</th>
+          <td>Roan Antelope Referral Hospital</td>
+          <td>Dorcas Musonda</td>
+          <td>banda_misozi</td>
+          <td>brandina_tembo</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>137</th>
+          <td>Roan Antelope Referral Hospital</td>
+          <td>Pricila Mubanga</td>
+          <td>banda_misozi</td>
+          <td>chitambala_stanslous</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>138</th>
+          <td>Roan Antelope Referral Hospital</td>
+          <td>joel simukoko</td>
+          <td>banda_misozi</td>
+          <td>hellen_mwansa</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>139</th>
+          <td>Roan Antelope Referral Hospital</td>
+          <td>Carol Chama</td>
+          <td>banda_misozi</td>
+          <td>brandina_tembo</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>140</th>
+          <td>Roan Antelope Referral Hospital</td>
+          <td>Alice Simaundu</td>
+          <td>banda_misozi</td>
+          <td>brandina_tembo</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>141</th>
+          <td>Roan Antelope Referral Hospital</td>
+          <td>Evealyn Musonda</td>
+          <td>banda_misozi</td>
+          <td>brandina_tembo</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>142</th>
+          <td>Roan Antelope Referral Hospital</td>
+          <td>mable mambwe</td>
+          <td>banda_misozi</td>
+          <td>jane_kasaka1</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>143</th>
+          <td>Roan Antelope Referral Hospital</td>
+          <td>Nelia Chibuye</td>
+          <td>banda_misozi</td>
+          <td>chitambala_stanslous</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>144</th>
+          <td>Roan Antelope Referral Hospital</td>
+          <td>mary kalela</td>
+          <td>banda_misozi</td>
+          <td>moses_banda</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>145</th>
+          <td>Roan Antelope Referral Hospital</td>
+          <td>AMOS SAKALA</td>
+          <td>banda_misozi</td>
+          <td>mwaba_rodgers</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>146</th>
+          <td>Roan Antelope Referral Hospital</td>
+          <td>judy chisanga</td>
+          <td>banda_misozi</td>
+          <td>moses_banda</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>147</th>
+          <td>Roan Antelope Referral Hospital</td>
+          <td>christina cheuka</td>
+          <td>banda_misozi</td>
+          <td>mwaba_rodgers</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>148</th>
+          <td>Roan Antelope Referral Hospital</td>
+          <td>Kelvin Mukuka</td>
+          <td>banda_misozi</td>
+          <td>soteli_winfridah</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>149</th>
+          <td>Roan Antelope Referral Hospital</td>
+          <td>patricia bweupe</td>
+          <td>banda_misozi</td>
+          <td>hellen_mwansa</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>150</th>
+          <td>Thomson District Hospital</td>
+          <td>Peggy Musonda</td>
+          <td>joseph_kaimana</td>
+          <td>kabesha_mary</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>151</th>
+          <td>Thomson District Hospital</td>
+          <td>Racheal Mulenga</td>
+          <td>joseph_kaimana</td>
+          <td>joshua_malole</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>152</th>
+          <td>Thomson District Hospital</td>
+          <td>Getrude Mweemba</td>
+          <td>joseph_kaimana</td>
+          <td>joshua_malole</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>153</th>
+          <td>Thomson District Hospital</td>
+          <td>Mary Zulu</td>
+          <td>joseph_kaimana</td>
+          <td>joseph_kaimana</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>154</th>
+          <td>Thomson District Hospital</td>
+          <td>Alice Chomba</td>
+          <td>joseph_kaimana</td>
+          <td>janny_mutampuka</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>155</th>
+          <td>Thomson District Hospital</td>
+          <td>Emelia Lusambo</td>
+          <td>joseph_kaimana</td>
+          <td>kabesha_mary</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>156</th>
+          <td>Thomson District Hospital</td>
+          <td>jacqueline chitundu</td>
+          <td>joseph_kaimana</td>
+          <td>joshua_malole</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>157</th>
+          <td>Thomson District Hospital</td>
+          <td>Mary chisha</td>
+          <td>joseph_kaimana</td>
+          <td>janny_mutampuka</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>158</th>
+          <td>Thomson District Hospital</td>
+          <td>Roydah Chama</td>
+          <td>joseph_kaimana</td>
+          <td>kumwenda_mary</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>159</th>
+          <td>Thomson District Hospital</td>
+          <td>Linda Musonda</td>
+          <td>joseph_kaimana</td>
+          <td>emmanuel_kapambwe</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>160</th>
+          <td>Thomson District Hospital</td>
+          <td>Beatrice Ngulube</td>
+          <td>joseph_kaimana</td>
+          <td>kabesha_mary</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>161</th>
+          <td>Thomson District Hospital</td>
+          <td>Naomi Chisenga</td>
+          <td>joseph_kaimana</td>
+          <td>sakala_veronica</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>162</th>
+          <td>Thomson District Hospital</td>
+          <td>George Longa</td>
+          <td>joseph_kaimana</td>
+          <td>kumwenda_mary</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>163</th>
+          <td>Thomson District Hospital</td>
+          <td>Bibiana Kabonga</td>
+          <td>joseph_kaimana</td>
+          <td>sakala_veronica</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>164</th>
+          <td>Thomson District Hospital</td>
+          <td>Evalyn Loloshi</td>
+          <td>joseph_kaimana</td>
+          <td>musa_joyce</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>165</th>
+          <td>Thomson District Hospital</td>
+          <td>Esnart Banda</td>
+          <td>joseph_kaimana</td>
+          <td>sakala_veronica</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>166</th>
+          <td>Thomson District Hospital</td>
+          <td>Memory Mwila</td>
+          <td>joseph_kaimana</td>
+          <td>kabesha_mary</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>167</th>
+          <td>Thomson District Hospital</td>
+          <td>Lillian Chanda</td>
+          <td>joseph_kaimana</td>
+          <td>kumwenda_mary</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>168</th>
+          <td>Thomson District Hospital</td>
+          <td>Rachael Mwansa</td>
+          <td>joseph_kaimana</td>
+          <td>joshua_malole</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>169</th>
+          <td>Thomson District Hospital</td>
+          <td>Mercy Kasanda</td>
+          <td>joseph_kaimana</td>
+          <td>sakala_veronica</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>170</th>
+          <td>Thomson District Hospital</td>
+          <td>James Mukuka</td>
+          <td>joseph_kaimana</td>
+          <td>musa_joyce</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>171</th>
+          <td>Thomson District Hospital</td>
+          <td>Mary Mali</td>
+          <td>joseph_kaimana</td>
+          <td>janny_mutampuka</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>172</th>
+          <td>Thomson District Hospital</td>
+          <td>ELIZABETH CHONGO</td>
+          <td>joseph_kaimana</td>
+          <td>emmanuel_kapambwe</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>173</th>
+          <td>Thomson District Hospital</td>
+          <td>evelyn mpundu</td>
+          <td>joseph_kaimana</td>
+          <td>janny_mutampuka</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>174</th>
+          <td>Thomson District Hospital</td>
+          <td>Clara Chanda</td>
+          <td>joseph_kaimana</td>
+          <td>janny_mutampuka</td>
+          <td>Non</td>
+        </tr>
+        <tr>
+          <th>175</th>
+          <td>Kawama Urban Health Centre (Lua)</td>
+          <td>Nsofwa Tryness</td>
+          <td>aliyah_daka</td>
+          <td>CHECK OWNER(CCW)</td>
+          <td>compulsory</td>
+        </tr>
+        <tr>
+          <th>176</th>
+          <td>Poleline (Baluba) Health Post</td>
+          <td>Chisupa Charity</td>
+          <td>amos_kasonde</td>
+          <td>CHECK OWNER(CCW)</td>
+          <td>compulsory</td>
+        </tr>
+        <tr>
+          <th>177</th>
+          <td>Mpatamatu Section 26 Urban Health Centre</td>
+          <td>Musonda Moses</td>
+          <td>banda_david</td>
+          <td>CHECK OWNER(CCW)</td>
+          <td>compulsory</td>
+        </tr>
+        <tr>
+          <th>178</th>
+          <td>Kawama Urban Health Centre (Lua)</td>
+          <td>Lungu Deophister</td>
+          <td>aliyah_daka</td>
+          <td>CHECK OWNER(CCW)</td>
+          <td>compulsory</td>
+        </tr>
+        <tr>
+          <th>179</th>
+          <td>Mpatamatu Section 26 Urban Health Centre</td>
+          <td>Lukwesa Violet</td>
+          <td>banda_david</td>
+          <td>CHECK OWNER(CCW)</td>
+          <td>compulsory</td>
+        </tr>
+        <tr>
+          <th>180</th>
+          <td>Mpatamatu Section 26 Urban Health Centre</td>
+          <td>Chola James</td>
+          <td>banda_david</td>
+          <td>CHECK OWNER(CCW)</td>
+          <td>compulsory</td>
+        </tr>
+        <tr>
+          <th>181</th>
+          <td>Thomson District Hospital</td>
+          <td>Annie Kabamba</td>
+          <td>joseph_kaimana</td>
+          <td>CHECK OWNER(CCW)</td>
+          <td>compulsory</td>
+        </tr>
+        <tr>
+          <th>182</th>
+          <td>Roan Antelope Referral Hospital</td>
+          <td>Friday Sichela</td>
+          <td>banda_misozi</td>
+          <td>CHECK OWNER(CCW)</td>
+          <td>compulsory</td>
+        </tr>
+        <tr>
+          <th>183</th>
+          <td>Mpatamatu Section 26 Urban Health Centre</td>
+          <td>Chipasha Magdalene</td>
+          <td>banda_david</td>
+          <td>CHECK OWNER(CCW)</td>
+          <td>compulsory</td>
+        </tr>
+        <tr>
+          <th>184</th>
+          <td>Mpatamatu Section 26 Urban Health Centre</td>
+          <td>Chaida Priscila</td>
+          <td>banda_david</td>
+          <td>CHECK OWNER(CCW)</td>
+          <td>compulsory</td>
+        </tr>
+        <tr>
+          <th>185</th>
+          <td>Mpatamatu Section 26 Urban Health Centre</td>
+          <td>Chali Robina</td>
+          <td>banda_david</td>
+          <td>CHECK OWNER(CCW)</td>
+          <td>compulsory</td>
+        </tr>
+        <tr>
+          <th>186</th>
+          <td>Roan Antelope Referral Hospital</td>
+          <td>Lundu Noria</td>
+          <td>banda_misozi</td>
+          <td>CHECK OWNER(CCW)</td>
+          <td>compulsory</td>
+        </tr>
+        <tr>
+          <th>187</th>
+          <td>Mpatamatu Section 26 Urban Health Centre</td>
+          <td>Banda Tiwinenji</td>
+          <td>banda_david</td>
+          <td>CHECK OWNER(CCW)</td>
+          <td>compulsory</td>
+        </tr>
+        <tr>
+          <th>188</th>
+          <td>Mpatamatu Section 26 Urban Health Centre</td>
+          <td>Chanda Judith</td>
+          <td>banda_david</td>
+          <td>CHECK OWNER(CCW)</td>
+          <td>compulsory</td>
+        </tr>
+        <tr>
+          <th>189</th>
+          <td>Roan Antelope Referral Hospital</td>
+          <td>Bannda Margret</td>
+          <td>banda_misozi</td>
+          <td>CHECK OWNER(CCW)</td>
+          <td>compulsory</td>
+        </tr>
+        <tr>
+          <th>190</th>
+          <td>Thomson District Hospital</td>
+          <td>Mukulila Charity</td>
+          <td>joseph_kaimana</td>
+          <td>CHECK OWNER(CCW)</td>
+          <td>compulsory</td>
+        </tr>
+        <tr>
+          <th>191</th>
+          <td>Kawama Urban Health Centre (Lua)</td>
+          <td>Kafola Maureen</td>
+          <td>aliyah_daka</td>
+          <td>CHECK OWNER(CCW)</td>
+          <td>compulsory</td>
+        </tr>
+        <tr>
+          <th>192</th>
+          <td>Thomson District Hospital</td>
+          <td>Patisha Mildred</td>
+          <td>joseph_kaimana</td>
+          <td>CHECK OWNER(CCW)</td>
+          <td>compulsory</td>
+        </tr>
+        <tr>
+          <th>193</th>
+          <td>Mpatamatu Section 26 Urban Health Centre</td>
+          <td>Mulenga Patrick</td>
+          <td>banda_david</td>
+          <td>CHECK OWNER(CCW)</td>
+          <td>compulsory</td>
+        </tr>
+        <tr>
+          <th>194</th>
+          <td>Thomson District Hospital</td>
+          <td>Chitalu Judith</td>
+          <td>joseph_kaimana</td>
+          <td>CHECK OWNER(CCW)</td>
+          <td>compulsory</td>
+        </tr>
+        <tr>
+          <th>195</th>
+          <td>Mpatamatu Section 26 Urban Health Centre</td>
+          <td>Mary Bwalya Chileshe</td>
+          <td>banda_david</td>
+          <td>CHECK OWNER(CCW)</td>
+          <td>compulsory</td>
+        </tr>
+        <tr>
+          <th>196</th>
+          <td>Thomson District Hospital</td>
+          <td>Grace Kambashi</td>
+          <td>joseph_kaimana</td>
+          <td>CHECK OWNER(CCW)</td>
+          <td>compulsory</td>
+        </tr>
+        <tr>
+          <th>197</th>
+          <td>Thomson District Hospital</td>
+          <td>Myness Nawanzi</td>
+          <td>joseph_kaimana</td>
+          <td>CHECK OWNER(CCW)</td>
+          <td>compulsory</td>
+        </tr>
+        <tr>
+          <th>198</th>
+          <td>Malaika Clinic</td>
+          <td>Chitumba Mirriam</td>
+          <td>joe_nyanga</td>
+          <td>CHECK OWNER(CCW)</td>
+          <td>compulsory</td>
+        </tr>
+      </tbody>
+      
+      <!--Paste list start here-->
+
+</table
+
+        
+      <!--Paste up-->
+         </section>
+     <script>
+     function filterTable() {
+             var selectElement = document.getElementById("selectOption");
+             var selectedValue = selectElement.options[selectElement.selectedIndex].value.toLowerCase();
+             var table = document.getElementById("myTable");
+             var rows = table.getElementsByTagName("tr");
+     
+             for (var i = 0; i < rows.length; i++) {
+                 var site = rows[i].getElementsByTagName("td")[0];
+                 if (site) {
+                     var siteText = site.textContent || site.innerText;
+                     if (siteText.toLowerCase() === selectedValue) {
+                         rows[i].style.display = "";
+                     } else {
+                         rows[i].style.display = "none";
+                     }
+                 }
+             }
+         }
+     </script>
+  </div>
+</div>
+</body>
+</html>
