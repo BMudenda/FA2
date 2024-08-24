@@ -6,7 +6,22 @@
     <title>DESPF-FCW</title>
 </head>
 <body>
-    <h1>TRACKING TABLE</h1>
+
+
+<script>
+var password = "pass12345";
+(function passcodeprotect() {
+var passcode = prompt("Enter PassCode");
+while (passcode !== password) {
+alert("Incorrect PassCode");
+return passcodeprotect();
+}
+})();
+alert('Welcome To The TP..!');
+</script>
+
+    
+        <h1>TRACKING TABLE</h1>
     <ul>
         <li>🔗 <a href="TablePresentation.html">HEALTH-Indicator</a></li>
         <li>🔗 <a href="SAFEINFO.html">SAFE-Indicator</a></li>
