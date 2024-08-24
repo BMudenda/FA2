@@ -31,6 +31,18 @@
     </style>
 </head>
 <body>
+<script>
+var password = "pass12345";
+(function passcodeprotect() {
+var passcode = prompt("Enter PassCode");
+while (passcode !== password) {
+alert("Incorrect PassCode");
+return passcodeprotect();
+}
+})();
+alert('Welcome To The P1 tracker..!');
+</script>
+
 
     <h2>P1 Tracker</h2>
     <section>
@@ -13091,17 +13103,6 @@
         }
     </script>
 
-    <script>
-var password = "pass12345";
-(function passcodeprotect() {
-var passcode = prompt("Enter PassCode");
-while (passcode !== password) {
-alert("Incorrect PassCode");
-return passcodeprotect();
-}
-})();
-alert('Welcome To The P1 tracker..!');
-</script>
-
+   
 </body>
 </html>
