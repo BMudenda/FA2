@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indicator Tracking Table</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;width: 10px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+
+        }
+        
+    </style>
+
+</head>
+<body>
+  <script>
+    var password = "pass12345";
+    (function passcodeprotect() {
+    var passcode = prompt("Enter PassCode");
+    while (passcode !== password) {
+    alert("Incorrect PassCode");
+    return passcodeprotect();
+    }
+    })();
+    alert('Welcome To The P1-unsupressed tracker..!');
+    </script>
+
+
+    <label for="selectOption">Select by Site:</label>
+    <select name="selectOption" id="selectOption" onchange="filterTable()">
+        <option value="non"></option>
+        <option value="Thompson District Hospital">Thompson</option>
+        <option value="Roan A. Gen Hospital">Roan</option>
+        <option value="Malaika Clinic">Malaika</option>
+        <option value="Kawama Urban Health Centre (Lua)">Kawama</option>
+        <option value="Mikomfwa Health Centre">Mikonfwa</option>
+        <option value="Poleline (Baluba) Health Post">Baluba</option>
+        
+    </select>
+    <br>
+    <br>
+      
+    
+    <h2 style="color: red;">UNSUPRESSED</h2>
+    <table class="dataframe" id="myTable">
+      <thead>
+        <tr style="text-align: right;">
+          <th></th>
+          <th>Facility</th>
+          <th>CCW</th>
+          <th>Date of the latest case conferencing if conducted</th>
+          <th>Date When EAC was commenced if commenced</th>
+          <th>VCA full names</th>
+          <th>Comment</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>0</th>
+          <td>Roan A. Gen Hospital</td>
+          <td>chitambala_stanslous\n</td>
+          <td>NaN</td>
+          <td>21-Aug-24</td>
+          <td>David Mungala</td>
+          <td>No lastest EAC</td>
+        </tr>
+        <tr>
+          <th>1</th>
+          <td>Roan A. Gen Hospital</td>
+          <td>chitambala_stanslous\n</td>
+          <td>NaN</td>
+          <td>NaN</td>
+          <td>Kamuzati Banda</td>
+          <td>NO lastest EAC No Case-conferencing</td>
+        </tr>
+        <tr>
+          <th>2</th>
+          <td>Roan A. Gen Hospital</td>
+          <td>soteli_winfridah</td>
+          <td>18-Aug-23</td>
+          <td>15-Aug-24</td>
+          <td>Nanganga Chifita</td>
+          <td>No Case Conferencing</td>
+        </tr>
+        <tr>
+          <th>3</th>
+          <td>Roan A. Gen Hospital</td>
+          <td>mwaba_rodgers</td>
+          <td>NaN</td>
+          <td>21-May-24</td>
+          <td>Graciuos Siamakumba</td>
+          <td>NO lastest EAC No Case-conferencing</td>
+        </tr>
+        <tr>
+          <th>4</th>
+          <td>Mikomfwa Health Centre</td>
+          <td>natasha_musonda</td>
+          <td>20-Feb-24</td>
+          <td>25-Mar-24</td>
+          <td>Dagna Nakasumu</td>
+          <td>outdated EAC and Out Date Case-Conferencing</td>
+        </tr>
+        <tr>
+          <th>5</th>
+          <td>Thompson District Hospital</td>
+          <td>joseph_kaimana</td>
+          <td>04-Apr-24</td>
+          <td>04-Jul-24</td>
+          <td>Grace Nanyangwe</td>
+          <td>No Case Conferencing</td>
+        </tr>
+        <tr>
+          <th>6</th>
+          <td>Roan A. Gen Hospital</td>
+          <td>mikabo_mildred</td>
+          <td>04-Sep-24</td>
+          <td>23-Aug-24</td>
+          <td>Paul Mpundu</td>
+          <td>NaN</td>
+        </tr>
+        <tr>
+          <th>7</th>
+          <td>Roan A. Gen Hospital</td>
+          <td>moses_banda</td>
+          <td>07-Jun-24</td>
+          <td>07-Jun-24</td>
+          <td>Chola Simwanza</td>
+          <td>NaN</td>
+        </tr>
+        <tr>
+          <th>8</th>
+          <td>Mpatamatu Section 26 Clinic</td>
+          <td>gondwe_fanny</td>
+          <td>15-Mar-24</td>
+          <td>11-Jun-24</td>
+          <td>Progress Mtonga</td>
+          <td>No Case Conferencing</td>
+        </tr>
+        <tr>
+          <th>9</th>
+          <td>Mpatamatu Section 26 Clinic</td>
+          <td>banda_david\n</td>
+          <td>08-May-24</td>
+          <td>08-May-24</td>
+          <td>Messia Mumba</td>
+          <td>outdated EAC and Out Date Case-Conferencing</td>
+        </tr>
+        <tr>
+          <th>10</th>
+          <td>Mpatamatu Section 26 Clinic</td>
+          <td>banda_david\n</td>
+          <td>19-Jun-24</td>
+          <td>19-Jun-24</td>
+          <td>Chungu Kakoma</td>
+          <td>NaN</td>
+        </tr>
+        <tr>
+          <th>11</th>
+          <td>Thompson District Hospital</td>
+          <td>emmanuel_kapambwe\n</td>
+          <td>08-Jul-24</td>
+          <td>08-Jul-24</td>
+          <td>Mapalo Mutale</td>
+          <td>NaN</td>
+        </tr>
+        <tr>
+          <th>12</th>
+          <td>Thompson District Hospital</td>
+          <td>janny_mutampuka</td>
+          <td>NaN</td>
+          <td>NaN</td>
+          <td>Bukata Mbewe</td>
+          <td>NO lastest EAC No Case-conferencing</td>
+        </tr>
+        <tr>
+          <th>13</th>
+          <td>Thompson District Hospital</td>
+          <td>musa_joyce</td>
+          <td>NaN</td>
+          <td>NaN</td>
+          <td>Womba Chisakaka</td>
+          <td>NO lastest EAC No Case-conferencing</td>
+        </tr>
+        <tr>
+          <th>14</th>
+          <td>Thompson District Hospital</td>
+          <td>janny_mutampuka</td>
+          <td>NaN</td>
+          <td>NaN</td>
+          <td>Grace Mooya</td>
+          <td>NO lastest EAC No Case-conferencing</td>
+        </tr>
+        <tr>
+          <th>15</th>
+          <td>Thompson District Hospital</td>
+          <td>emmanuel_kapambwe\n</td>
+          <td>NaN</td>
+          <td>NaN</td>
+          <td>Charles Chibale</td>
+          <td>NO lastest EAC No Case-conferencing</td>
+        </tr>
+        <tr>
+          <th>16</th>
+          <td>Mikomfwa Health Centre</td>
+          <td>natasha_musonda</td>
+          <td>NaN</td>
+          <td>NaN</td>
+          <td>Bright Mwale</td>
+          <td>NO lastest EAC No Case-conferencing</td>
+        </tr>
+        <tr>
+          <th>17</th>
+          <td>Mikomfwa Health Centre</td>
+          <td>mary_mwape</td>
+          <td>NaN</td>
+          <td>NaN</td>
+          <td>Oneal Nkandu</td>
+          <td>NO lastest EAC No Case-conferencing</td>
+        </tr>
+        <tr>
+          <th>18</th>
+          <td>Roan A. Gen Hospital</td>
+          <td>soteli_winfridah</td>
+          <td>NaN</td>
+          <td>NaN</td>
+          <td>Tasila Tembo</td>
+          <td>SPLTF</td>
+        </tr>
+        <tr>
+          <th>19</th>
+          <td>Roan A. Gen Hospital</td>
+          <td>mwaba_rodgers</td>
+          <td>NaN</td>
+          <td>NaN</td>
+          <td>Beatrice Kunda</td>
+          <td>NaN</td>
+        </tr>
+        <tr>
+          <th>20</th>
+          <td>Roan A. Gen Hospital</td>
+          <td>banda_misozi \n</td>
+          <td>NaN</td>
+          <td>NaN</td>
+          <td>Samuel Mutale</td>
+          <td>NaN</td>
+        </tr>
+        <tr>
+          <th>21</th>
+          <td>Roan A. Gen Hospital</td>
+          <td>mwaba_rodgers</td>
+          <td>NaN</td>
+          <td>NaN</td>
+          <td>Emily Mukonde</td>
+          <td>NaN</td>
+        </tr>
+      </tbody>
+</table>
+   
+
+<script>
+function filterTable() {
+        var selectElement = document.getElementById("selectOption");
+        var selectedValue = selectElement.options[selectElement.selectedIndex].value.toLowerCase();
+        var table = document.getElementById("myTable");
+        var rows = table.getElementsByTagName("tr");
+
+        for (var i = 0; i < rows.length; i++) {
+            var site = rows[i].getElementsByTagName("td")[0];
+            if (site) {
+                var siteText = site.textContent || site.innerText;
+                if (siteText.toLowerCase() === selectedValue) {
+                    rows[i].style.display = "";
+                } else {
+                    rows[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>
+
+
+</body>
+</html>
