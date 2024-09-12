@@ -42,6 +42,7 @@
 				<th>Start Date</th>
 				<th>Due Date</th>
 				<th>Status</th>
+				<th>Delete</th>
 			</tr>
 		</thead>
 		<tbody id="tasks-tbody">
@@ -80,6 +81,7 @@
 				<td>${startDate}</td>
 				<td>${dueDate}</td>
 				<td>${status}</td>
+				<td><button class="delete-btn">Delete</button></td>
 			`;
 
 			// Add task to tasks list
@@ -101,6 +103,7 @@
 						<td>${task.startDate}</td>
 						<td>${task.dueDate}</td>
 						<td>${task.status}</td>
+						<td><button class="delete-btn">Delete</button></td>
 					`;
 					tasksList.appendChild(taskElement);
 				});
@@ -108,6 +111,13 @@
 				console.error('Error loading data from local storage:', error);
 			}
 		};
+
+		// Add event listener to delete buttons
+		tasksList.addEventListener('click', (e) => {
+			if (e.target.classList.contains('delete-btn')) {
+				e.target.parentNode.parentNode.remove();
+			}
+		});
 	</script>
 </body>
-</html
+</html>
