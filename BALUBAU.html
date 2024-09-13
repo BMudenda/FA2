@@ -5,8 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>my google form sheet</title>
    <style> 
+section {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
 input[type=text] {
-  width: 100%;
+  width: 25%;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
@@ -17,11 +25,14 @@ input[type=text] {
 input[type=text]:focus {
   background-color: lightblue;
 }
+input[type=email]:focus {
+  background-color: lightblue;
+}
 </style>
     
 </head>
 <body>
-    
+   <section> 
     <form id="sheetdb-form"
     method="POST" 
     action="https://script.google.com/macros/s/AKfycbwAeJu3IseMZzzhTsXUueGAp8F7RdFYa2EAVYBk5mp1aaByymCr7VEioavn_veAkOX0bA/exec"
@@ -31,7 +42,7 @@ input[type=text]:focus {
     <input name="Last Name" type="text" placeholder="Last Name" required>
     <button type="submit">Send</button>
   </form>
- 
+ </section>
 </body>
 <script>
     var form = document.getElementById('sheetdb-form');
