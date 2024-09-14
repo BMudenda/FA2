@@ -38,7 +38,19 @@ input[type=email]:focus {
 </style>
  </head>
 <body>
-    <script>
+
+    <h2>HEI form</h2>
+    <section>
+    <form id="sheetdb-form"
+    method="POST" 
+    action="https://script.google.com/macros/s/AKfycbwAeJu3IseMZzzhTsXUueGAp8F7RdFYa2EAVYBk5mp1aaByymCr7VEioavn_veAkOX0bA/exec"
+  >
+    <input name="Email" type="email" placeholder="Email" required>
+    <input name="Name" type="text" placeholder="Name" required>
+    <input name="Last Name" type="text" placeholder="Last Name" required>
+    <button type="submit">Send</button>
+  </form>
+         <script>
     var form = document.getElementById('sheetdb-form');
     form.addEventListener("submit", e => {
       e.preventDefault();
@@ -51,18 +63,7 @@ input[type=email]:focus {
         // you can put any JS code here
         alert('Submitted successfully')
        
-          </script>
-    <h2>HEI form</h2>
-    <section>
-    <form id="sheetdb-form"
-    method="POST" 
-    action="https://script.google.com/macros/s/AKfycbwAeJu3IseMZzzhTsXUueGAp8F7RdFYa2EAVYBk5mp1aaByymCr7VEioavn_veAkOX0bA/exec"
-  >
-    <input name="Email" type="email" placeholder="Email" required>
-    <input name="Name" type="text" placeholder="Name" required>
-    <input name="Last Name" type="text" placeholder="Last Name" required>
-    <button type="submit">Send</button>
-  </form>
+          </script>   
 </section>
 
 
