@@ -36,12 +36,50 @@
     }
     })();
     alert('Welcome To The P1-unsupressed tracker..!');
-    </script>
+    <section>
+        <!-- ccw Filter Dropdown -->
+        <label for="ccwSelect">CCW:</label>
+        <select id="ccwSelect" onchange="filterTable()">
+            <option value="">Select All</option>
+            <option value="amos_kasonde">Amos Kasonde</option>
+            <option value="angela_mwenya">Angela Mwenya</option>
+            <option value="banda_david">Banda David</option>
+            <option value="banda_misozi">Banda Misozi</option>
+            <option value="brandina_tembo">Brandina Tembo</option>
+            <option value="martha_muchimba">Martha Muchimba</option>
+            <option value="chitambala_stanslous">Chitambala Stanslous</option>
+            <option value="matildah_kunda">Matildah Kunda</option>
+            <option value="emmanuel_kapambwe">Emmanuel Kapambwe</option>
+            <option value="gondwe_fanny">Gondwe Fanny</option>
+            <option value="grace_kebende">Grace Kebende</option>
+            <option value="hector_banda">Hector Banda</option>
+            <option value="hellen_mwansa">Hellen Mwansa</option>
+            <option value="jane_kasaka1">Jane Kasaka1</option>
+            <option value="janny_mutampuka">Janny Mutampuka</option>
+            <option value="joe_nyanga">Joe Nyanga</option>
+            <option value="aliyah_daka">Aliyah Daka</option>
+            <option value="joseph_kaimana">Joseph Kaimana</option>
+            <option value="joshua_malole">Joshua Malole</option>
+            <option value="kabesha_mary">Kabesha Mary</option>
+            <option value="kapasula_edith">Kapasula Edith</option>
+            <option value="kumwenda_mary">Kumwenda Mary</option>
+            <option value="makashini_christopher">Makashini Christopher</option>
+            <option value="mary_mwape">Mary Mwape</option>
+            <option value="mikabo_mildred">Mikabo Mildred</option>
+            <option value="musa_joyce">Musa Joyce</option>
+            <option value="mwaba_rodgers">Mwaba Rodgers</option>
+            <option value="natasha_musonda">Natasha Musonda</option>
+            <option value="sakala_veronica">Sakala Veronica</option>
+            <option value="moses_banda">Moses Banda</option>
+            <option value="soteli_winfridah">Soteli Winfridah</option>
+            <option value="tembo_ireen">Tembo Ireen</option>
+            <!-- Add more options here -->
+        </select>
 
-
-    <label for="selectOption">Select by Site:</label>
-    <select name="selectOption" id="selectOption" onchange="filterTable()">
-        <option value="non"></option>
+        <!-- facility Filter Dropdown -->
+        <label for="facilitySelect">FACILITY:</label>
+        <select id="facilitySelect" onchange="filterTable()">
+        <option value="">Select All</option>
         <option value="Thompson District Hospital">Thompson</option>
         <option value="Roan A. Gen Hospital">Roan</option>
          <option value="Mpatamatu Section 26 Clinic">Section 26</option>
@@ -49,8 +87,17 @@
         <option value="Kawama Urban Health Centre (Lua)">Kawama</option>
         <option value="Mikomfwa Health Centre">Mikonfwa</option>
         <option value="Poleline (Baluba) Health Post">Baluba</option>
-        
-    </select>
+            <!-- Add more options here -->
+        </select>
+
+        <!-- Gender Filter Dropdown -->
+        <label for="suppresionSelect">EAC:</label>
+        <select id="suppresionSelect" onchange="filterTable()">
+            <option value="">Select All</option>
+            <option value="YES">YES</option>
+            <option value="NO">NO</option>
+        </select>
+    </section>
     <br>
     <br>
       
