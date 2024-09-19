@@ -27,40 +27,74 @@
 </head>
 <body>
 
- <label for="facilitySelect">FACILITY:</label>
-    <select id="facilitySelect" onchange="filterTable()">
+ <section>
+        <!-- ccw Filter Dropdown -->
+        <label for="ccwSelect">CCW:</label>
+        <select id="ccwSelect" onchange="filterTable()">
+            <option value="">Select All</option>
+            <option value="amos_kasonde">Amos Kasonde</option>
+            <option value="angela_mwenya">Angela Mwenya</option>
+            <option value="banda_david">Banda David</option>
+            <option value="banda_misozi">Banda Misozi</option>
+            <option value="brandina_tembo">Brandina Tembo</option>
+            <option value="martha_muchimba">Martha Muchimba</option>
+            <option value="chitambala_stanslous">Chitambala Stanslous</option>
+            <option value="matildah_kunda">Matildah Kunda</option>
+            <option value="emmanuel_kapambwe">Emmanuel Kapambwe</option>
+            <option value="gondwe_fanny">Gondwe Fanny</option>
+            <option value="grace_kebende">Grace Kebende</option>
+            <option value="hector_banda">Hector Banda</option>
+            <option value="hellen_mwansa">Hellen Mwansa</option>
+            <option value="jane_kasaka1">Jane Kasaka1</option>
+            <option value="janny_mutampuka">Janny Mutampuka</option>
+            <option value="joe_nyanga">Joe Nyanga</option>
+            <option value="aliyah_daka">Aliyah Daka</option>
+            <option value="joseph_kaimana">Joseph Kaimana</option>
+            <option value="joshua_malole">Joshua Malole</option>
+            <option value="kabesha_mary">Kabesha Mary</option>
+            <option value="kapasula_edith">Kapasula Edith</option>
+            <option value="kumwenda_mary">Kumwenda Mary</option>
+            <option value="makashini_christopher">Makashini Christopher</option>
+            <option value="mary_mwape">Mary Mwape</option>
+            <option value="mikabo_mildred">Mikabo Mildred</option>
+            <option value="musa_joyce">Musa Joyce</option>
+            <option value="mwaba_rodgers">Mwaba Rodgers</option>
+            <option value="natasha_musonda">Natasha Musonda</option>
+            <option value="sakala_veronica">Sakala Veronica</option>
+            <option value="moses_banda">Moses Banda</option>
+            <option value="soteli_winfridah">Soteli Winfridah</option>
+            <option value="tembo_ireen">Tembo Ireen</option>
+            <!-- Add more options here -->
+        </select>
+
+        <!-- facility Filter Dropdown -->
+        <label for="facilitySelect">FACILITY:</label>
+        <select id="facilitySelect" onchange="filterTable()">
         <option value="">Select All</option>
         <option value="Thompson District Hospital">Thompson</option>
-        <option value="Roan Antelope General Hospital">Roan</option>
+        <option value="Roan A. Gen Hospital">Roan</option>
+         <option value="Mpatamatu Section 26 Clinic">Section 26</option>
         <option value="Malaika Clinic">Malaika</option>
         <option value="Kawama Urban Health Centre (Lua)">Kawama</option>
         <option value="Mikomfwa Health Centre">Mikonfwa</option>
         <option value="Poleline (Baluba) Health Post">Baluba</option>
-        <option value="Mpatamatu Section 26 Clinic">Section_26</option>
-        <option value="Luanshya District">Luanshya</option>
-        <option value="Mpongwe Mission Hospital">Mpongwe_Hsp</option>
-        <option value="Kalweo Rural Health Centre">Kalweo</option>
-        <option value="St Theresa Mission Hospital">St_Theresa</option>
-        <option value="Ipumbu Rural Health Centre">Ipumbu</option>
-        <option value="Mpongwe District">Mpongwe_Dis</option>
-    </select>
-    <label for="ccwSelect">.:</label>
-    <select id="facilitySelect" onchange="filterTable()">
-        <option value="">Select All</option>
-        
-    </select>
-   <label for="genderSelect">.:</label>
-    <select id="facilitySelect" onchange="filterTable()">
-        <option value="">Select All</option>
-        
-    </select> 
-    <br>
-    <br>
-      
-    
-    <h2>school material support</h2>
+            <!-- Add more options here -->
+        </select>
+
+        <!-- Gender Filter Dropdown -->
+        <label for="suppresionSelect">GENDER:</label>
+        <select id="suppresionSelect" onchange="filterTable()">
+            <option value="">Select All</option>
+            <option value="M">M</option>
+            <option value="F">F</option>
+        </select>
+    </section>
+
+    <h2>HEI-List</h2>
+    <!-- New display for the count -->
     <p>Total Count: <span id="rowCount">0</span></p>
-    <table class="dataframe" id="myTable">  
+    <!-- Add table data frame and table head here -->
+    <table class="dataframe" id="myTable">
 <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -2163,8 +2197,8 @@
             var count = 0;
 
             for (var i = 1; i < rows.length; i++) {
-                var ccwCell = rows[i].getElementsByTagName("td")[0];
-                var facilityCell = rows[i].getElementsByTagName("td")[1];
+                var ccwCell = rows[i].getElementsByTagName("td")[1];
+                var facilityCell = rows[i].getElementsByTagName("td")[0];
                 var suppresionCell = rows[i].getElementsByTagName("td")[3];
 
                 var ccwText = ccwCell.textContent || ccwCell.innerText;
