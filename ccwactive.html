@@ -32,96 +32,154 @@
         select:focus {
             background-color: lightblue;
         }
+        .dropbtn {
+    background-color: hsl(330, 96%, 69%);
+    color: white;
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f7fc;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(9, 6, 204, 0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+  }
+  
+  .dropdown-content a:hover {background-color: #c1f5bc}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown:hover .dropbtn {
+    background-color: #f3f8f4;
+  }
+
     </style>
 </head>
 <body>
 
+      
 <section>
     <!-- ccw Filter Dropdown -->
     <section>
-      <!-- ccw Filter Dropdown -->
-      <label for="ccwSelect">CCW:</label>
-      <select id="ccwSelect" onchange="filterTable()">
-          <option value="">Select All</option>
-          <option value="amos_kasonde">Amos Kasonde</option>
-          <option value="angela_mwenya">Angela Mwenya</option>
-          <option value="banda_david">Banda David</option>
-          <option value="banda_misozi">Banda Misozi</option>
-          <option value="brandina_tembo">Brandina Tembo</option>
-          <option value="martha_muchimba">Martha Muchimba</option>
-          <option value="chitambala_stanslous">Chitambala Stanslous</option>
-          <option value="matildah_kunda">Matildah Kunda</option>
-          <option value="emmanuel_kapambwe">Emmanuel Kapambwe</option>
-          <option value="gondwe_fanny">Gondwe Fanny</option>
-          <option value="grace_kebende">Grace Kebende</option>
-          <option value="hector_banda">Hector Banda</option>
-          <option value="hellen_mwansa">Hellen Mwansa</option>
-          <option value="jane_kasaka1">Jane Kasaka1</option>
-          <option value="janny_mutampuka">Janny Mutampuka</option>
-          <option value="joe_nyanga">Joe Nyanga</option>
-          <option value="aliyah_daka">Aliyah Daka</option>
-          <option value="joseph_kaimana">Joseph Kaimana</option>
-          <option value="joshua_malole">Joshua Malole</option>
-          <option value="kabesha_mary">Kabesha Mary</option>
-          <option value="kapasula_edith">Kapasula Edith</option>
-          <option value="kumwenda_mary">Kumwenda Mary</option>
-          <option value="makashini_christopher">Makashini Christopher</option>
-          <option value="mary_mwape">Mary Mwape</option>
-          <option value="mikabo_mildred">Mikabo Mildred</option>
-          <option value="musa_joyce">Musa Joyce</option>
-          <option value="mwaba_rodgers">Mwaba Rodgers</option>
-          <option value="natasha_musonda">Natasha Musonda</option>
-          <option value="sakala_veronica">Sakala Veronica</option>
-          <option value="moses_banda">Moses Banda</option>
-          <option value="soteli_winfridah">Soteli Winfridah</option>
-          <option value="tembo_ireen">Tembo Ireen</option>
-          <!-- Add more options here -->
-      </select>
-        <!-- other options... -->
-    </select>
+      <!-- PASTE BUTTON -->
+      
+      <div class="dropdown">
+        <button class="dropbtn">SELECT HERE👈</button>
+        <div class="dropdown-content" style="text-align: center;">
+          
     
-    <!-- Facility Filter Dropdown -->
-    <label for="facilitySelect">FACILITY:</label>
-    <select id="facilitySelect" onchange="filterTable()">
-        <option value="">Select All</option>
-        <option value="Thomson District Hospital">Thompson</option>
-        <option value="Roan Antelope Referral Hospital">Roan</option>
-         <option value="Mpatamatu Section 26 Urban Health Centre">Section 26</option>
-        <option value="Malaika Clinic">Malaika</option>
-        <option value="Kawama Urban Health Centre (Lua)">Kawama</option>
-        <option value="Mikomfwa Health Centre">Mikonfwa</option>
-        <option value="Poleline (Baluba) Health Post">Baluba</option>
-        <!-- other options... -->
-    </select>
+            <!-- ccw Filter Dropdown -->
+              <!-- ccw Filter Dropdown -->
+              <label for="ccwSelect">CCW:</label>
+              <select id="ccwSelect" onchange="filterTable()">
+                  <option value="">Select All</option>
+                  <option value="amos_kasonde">Amos Kasonde</option>
+                  <option value="angela_mwenya">Angela Mwenya</option>
+                  <option value="banda_david">Banda David</option>
+                  <option value="banda_misozi">Banda Misozi</option>
+                  <option value="brandina_tembo">Brandina Tembo</option>
+                  <option value="martha_muchimba">Martha Muchimba</option>
+                  <option value="chitambala_stanslous">Chitambala Stanslous</option>
+                  <option value="matildah_kunda">Matildah Kunda</option>
+                  <option value="emmanuel_kapambwe">Emmanuel Kapambwe</option>
+                  <option value="gondwe_fanny">Gondwe Fanny</option>
+                  <option value="grace_kebende">Grace Kebende</option>
+                  <option value="hector_banda">Hector Banda</option>
+                  <option value="hellen_mwansa">Hellen Mwansa</option>
+                  <option value="jane_kasaka1">Jane Kasaka1</option>
+                  <option value="janny_mutampuka">Janny Mutampuka</option>
+                  <option value="joe_nyanga">Joe Nyanga</option>
+                  <option value="aliyah_daka">Aliyah Daka</option>
+                  <option value="joseph_kaimana">Joseph Kaimana</option>
+                  <option value="joshua_malole">Joshua Malole</option>
+                  <option value="kabesha_mary">Kabesha Mary</option>
+                  <option value="kapasula_edith">Kapasula Edith</option>
+                  <option value="kumwenda_mary">Kumwenda Mary</option>
+                  <option value="makashini_christopher">Makashini Christopher</option>
+                  <option value="mary_mwape">Mary Mwape</option>
+                  <option value="mikabo_mildred">Mikabo Mildred</option>
+                  <option value="musa_joyce">Musa Joyce</option>
+                  <option value="mwaba_rodgers">Mwaba Rodgers</option>
+                  <option value="natasha_musonda">Natasha Musonda</option>
+                  <option value="sakala_veronica">Sakala Veronica</option>
+                  <option value="moses_banda">Moses Banda</option>
+                  <option value="soteli_winfridah">Soteli Winfridah</option>
+                  <option value="tembo_ireen">Tembo Ireen</option>
+                  <!-- Add more options here -->
+              </select>
+                <!-- other options... -->
+            </select>
+            <br><br>
+            <!-- Facility Filter Dropdown -->
+            <label for="facilitySelect">FACILITY:</label>
+            <select id="facilitySelect" onchange="filterTable()">
+                <option value="">Select All</option>
+                <option value="Thomson District Hospital">Thompson</option>
+                <option value="Roan Antelope Referral Hospital">Roan</option>
+                 <option value="Mpatamatu Section 26 Urban Health Centre">Section 26</option>
+                <option value="Malaika Clinic">Malaika</option>
+                <option value="Kawama Urban Health Centre (Lua)">Kawama</option>
+                <option value="Mikomfwa Health Centre">Mikonfwa</option>
+                <option value="Poleline (Baluba) Health Post">Baluba</option>
+                <!-- other options... -->
+            </select>
+            <br><br>
+            <!-- Gender Filter Dropdown -->
+            <label for="suppresionSelect">GENDER TYPE:</label>
+            <select id="suppresionSelect" onchange="filterTable()">
+                <option value="">Select All</option>
+                <option value="M">M</option>
+                <option value="F">F</option>
+            </select>
+            <br><br>
+            <!-- Age Band Filter Dropdown -->
+            <label for="ageBandSelect">BENEFICIARY TYPE:</label>
+            <select id="ageBandSelect" onchange="filterTable()">
+                <option value="">Select All</option>
+                <option value="vca">vca</option>
+                <option value="18+">caregivers</option>
+                
+                <!-- add other age bands as necessary -->
+            </select>
+        <br><br>
+            <!-- HIV Status Filter Dropdown -->
+            <label for="hivStatusSelect">PROJECT STATUS:</label>
+            <select id="hivStatusSelect" onchange="filterTable()">
+                <option value="">Select All</option>
+                <option value="Active">Active</option>
+                <option value="Inactive">Inactive</option>
+                <option value="Graduated">Graduated</option>
+                <option value="Transfer">Transfer</option>
+            </select>
+    
+        </div>
 
-    <!-- Gender Filter Dropdown -->
-    <label for="suppresionSelect">GENDER:</label>
-    <select id="suppresionSelect" onchange="filterTable()">
-        <option value="">Select All</option>
-        <option value="M">M</option>
-        <option value="F">F</option>
-    </select>
+        <br><br>
 
-    <!-- Age Band Filter Dropdown -->
-    <label for="ageBandSelect">Beneficiary_Type:</label>
-    <select id="ageBandSelect" onchange="filterTable()">
-        <option value="">Select All</option>
-        <option value="vca">vca</option>
-        <option value="18+">caregivers</option>
-        
-        <!-- add other age bands as necessary -->
-    </select>
+  </div>
+    
 
-    <!-- HIV Status Filter Dropdown -->
-    <label for="hivStatusSelect">Project_Status:</label>
-    <select id="hivStatusSelect" onchange="filterTable()">
-        <option value="">Select All</option>
-        <option value="Active">Active</option>
-        <option value="Inactive">Inactive</option>
-        <option value="Graduated">Graduated</option>
-        <option value="Transfer">Transfer</option>
-    </select>
-
+</div>
 </section>
 <h2>Beneficiary List</h2>
 <p style="background-color: aqua;">Total Beneficiaries Filtered: <span id="rowCount">0</span></p>
@@ -61535,7 +61593,7 @@
 </script>
 <footer>
     
-   <p>&copy; BM Inc. 10-10-24.</p>
+   <p>&copy; BM Inc. 12-10-24.</p>
 </footer>
 </body>
 </html>
