@@ -44,6 +44,7 @@
                 <th>Quantity</th>
                 <th>Date</th>
                 <th>Transaction</th>
+                <th>Total</th>
             </tr>
         </thead>
         <tbody id="stock-list">
@@ -52,7 +53,6 @@
 
     <script>
         // Get elements
-        const stockForm = document.getElementById('stock-form');
         const stockNameInput = document.getElementById('stock-name');
         const quantityInput = document.getElementById('quantity');
         const stockDateInput = document.getElementById('stock-date');
@@ -76,14 +76,18 @@
 
             if (stockName && quantity && stockDate) {
                 if (!stockData[stockName]) {
-                    stockData[stockName] = {};
+                    stockData[stockName] = { total: 0, dates: {} };
                 }
 
-                if (stockData[stockName][stockDate]) {
-                    stockData[stockName][stockDate].quantity += quantity;
-                    stockData[stockName][stockDate].transaction = 'Addition';
+                // Update total quantity
+                stockData[stockName].total += quantity;
+
+                // Update quantity by date
+                if (stockData[stockName].dates[stockDate]) {
+                    stockData[stockName].dates[stockDate].quantity += quantity;
+                    stockData[stockName].dates[stockDate].transaction = 'Addition';
                 } else {
-                    stockData[stockName][stockDate] = {
+                    stockData[stockName].dates[stockDate] = {
                         quantity: quantity,
                         transaction: 'Addition'
                     };
@@ -101,13 +105,20 @@
             const quantity = parseInt(quantityInput.value);
             const stockDate = stockDateInput.value;
 
-            if (stockName && quantity && stockDate && stockData[stockName] && stockData[stockName][stockDate]) {
-                stockData[stockName][stockDate].quantity -= quantity;
-                stockData[stockName][stockDate].transaction = 'Removal';
+            if (stockName && quantity && stockDate && stockData[stockName]) {
+                // Update quantity by date and total quantity
+                if (stockData[stockName].dates[stockDate]) {
+                    stockData[stockName].dates[stockDate].quantity -= quantity;
+                    stockData[stockName].dates[stockDate].transaction = 'Removal';
+                    stockData[stockName].total -= quantity;
 
-                if (stockData[stockName][stockDate].quantity <= 0) {
-                    delete stockData[stockName][stockDate];
-                    if (Object.keys(stockData[stockName]).length === 0) {
+                    // If quantity goes to zero or below, remove the date entry
+                    if (stockData[stockName].dates[stockDate].quantity <= 0) {
+                        delete stockData[stockName].dates[stockDate];
+                    }
+
+                    // If all date entries are removed, remove the stock entry
+                    if (Object.keys(stockData[stockName].dates).length === 0) {
                         delete stockData[stockName];
                     }
                 }
@@ -122,13 +133,14 @@
         function renderStockList() {
             stockList.innerHTML = '';
             for (const stockName in stockData) {
-                for (const stockDate in stockData[stockName]) {
+                for (const stockDate in stockData[stockName].dates) {
                     const row = document.createElement('tr');
                     row.innerHTML = `
                         <td>${stockName}</td>
-                        <td>${stockData[stockName][stockDate].quantity}</td>
+                        <td>${stockData[stockName].dates[stockDate].quantity}</td>
                         <td>${stockDate}</td>
-                        <td>${stockData[stockName][stockDate].transaction}</td>
+                        <td>${stockData[stockName].dates[stockDate].transaction}</td>
+                        <td>${stockData[stockName].total}</td>
                     `;
                     stockList.appendChild(row);
                 }
@@ -151,4 +163,3 @@
     </script>
 </body>
 </html>
-
