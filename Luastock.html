@@ -32,14 +32,18 @@
         <input type="text" id="stock-name" required>
         <label>Quantity:</label>
         <input type="number" id="quantity" required>
-        <button id="add-stock">Add Stock</button>
-        <button id="remove-stock">Remove Stock</button>
+        <label>Date:</label>
+        <input type="date" id="stock-date" required>
+        <button type="button" id="add-stock">Add Stock</button>
+        <button type="button" id="remove-stock">Remove Stock</button>
     </form>
     <table id="stock-table">
         <thead>
             <tr>
                 <th>Stock Name</th>
                 <th>Quantity</th>
+                <th>Date</th>
+                <th>Transaction</th>
             </tr>
         </thead>
         <tbody id="stock-list">
@@ -51,9 +55,9 @@
         const stockForm = document.getElementById('stock-form');
         const stockNameInput = document.getElementById('stock-name');
         const quantityInput = document.getElementById('quantity');
+        const stockDateInput = document.getElementById('stock-date');
         const addStockButton = document.getElementById('add-stock');
         const removeStockButton = document.getElementById('remove-stock');
-        const stockTable = document.getElementById('stock-table');
         const stockList = document.getElementById('stock-list');
 
         // Initialize local storage
@@ -68,18 +72,26 @@
         function addStock() {
             const stockName = stockNameInput.value.trim();
             const quantity = parseInt(quantityInput.value);
+            const stockDate = stockDateInput.value;
 
-            if (stockName && quantity) {
-                if (stockData[stockName]) {
-                    stockData[stockName] += quantity;
+            if (stockName && quantity && stockDate) {
+                if (!stockData[stockName]) {
+                    stockData[stockName] = {};
+                }
+
+                if (stockData[stockName][stockDate]) {
+                    stockData[stockName][stockDate].quantity += quantity;
+                    stockData[stockName][stockDate].transaction = 'Addition';
                 } else {
-                    stockData[stockName] = quantity;
+                    stockData[stockName][stockDate] = {
+                        quantity: quantity,
+                        transaction: 'Addition'
+                    };
                 }
 
                 updateLocalStorage();
                 renderStockList();
-                stockNameInput.value = '';
-                quantityInput.value = '';
+                clearForm();
             }
         }
 
@@ -87,19 +99,22 @@
         function removeStock() {
             const stockName = stockNameInput.value.trim();
             const quantity = parseInt(quantityInput.value);
+            const stockDate = stockDateInput.value;
 
-            if (stockName && quantity) {
-                if (stockData[stockName]) {
-                    stockData[stockName] -= quantity;
-                    if (stockData[stockName] <= 0) {
+            if (stockName && quantity && stockDate && stockData[stockName] && stockData[stockName][stockDate]) {
+                stockData[stockName][stockDate].quantity -= quantity;
+                stockData[stockName][stockDate].transaction = 'Removal';
+
+                if (stockData[stockName][stockDate].quantity <= 0) {
+                    delete stockData[stockName][stockDate];
+                    if (Object.keys(stockData[stockName]).length === 0) {
                         delete stockData[stockName];
                     }
                 }
 
                 updateLocalStorage();
                 renderStockList();
-                stockNameInput.value = '';
-                quantityInput.value = '';
+                clearForm();
             }
         }
 
@@ -107,21 +122,33 @@
         function renderStockList() {
             stockList.innerHTML = '';
             for (const stockName in stockData) {
-                const row = document.createElement('tr');
-                row.innerHTML = `
-                    <td>${stockName}</td>
-                    <td>${stockData[stockName]}</td>
-                `;
-                stockList.appendChild(row);
+                for (const stockDate in stockData[stockName]) {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${stockName}</td>
+                        <td>${stockData[stockName][stockDate].quantity}</td>
+                        <td>${stockDate}</td>
+                        <td>${stockData[stockName][stockDate].transaction}</td>
+                    `;
+                    stockList.appendChild(row);
+                }
             }
+        }
+
+        // Function to clear form inputs
+        function clearForm() {
+            stockNameInput.value = '';
+            quantityInput.value = '';
+            stockDateInput.value = '';
         }
 
         // Event listeners
         addStockButton.addEventListener('click', addStock);
         removeStockButton.addEventListener('click', removeStock);
 
-        // Initial render
+        // Render stock list on page load
         renderStockList();
     </script>
 </body>
 </html>
+
