@@ -15,7 +15,7 @@
         
         #stock-table {
             border-collapse: collapse;
-            width: 70%;
+            width: 80%;
         }
         
         #stock-table th, #stock-table td {
@@ -29,13 +29,22 @@
     <h1>Stock Tracker</h1>
     <form id="stock-form">
         <label>Stock Name:</label>
-        <input type="text" id="stock-name" required>
+        <select id="stock-name" required>
+            <option value="" disabled selected>Select or Enter Stock</option>
+        </select>
         <label>Quantity:</label>
         <input type="number" id="quantity" required>
         <label>Date:</label>
         <input type="date" id="stock-date" required>
+        <label>Action By:</label>
+        <select id="action-by" required>
+            <option value="Brian">Brian</option>
+            <option value="Favour">Favour</option>
+            <option value="Other">Other</option>
+        </select>
         <button type="button" id="add-stock">Add Stock</button>
         <button type="button" id="remove-stock">Remove Stock</button>
+        <button type="button" id="clear-all">Clear All</button>
     </form>
     <table id="stock-table">
         <thead>
@@ -44,6 +53,7 @@
                 <th>Quantity</th>
                 <th>Date</th>
                 <th>Transaction</th>
+                <th>Action By</th>
                 <th>Total</th>
             </tr>
         </thead>
@@ -56,16 +66,20 @@
         const stockNameInput = document.getElementById('stock-name');
         const quantityInput = document.getElementById('quantity');
         const stockDateInput = document.getElementById('stock-date');
+        const actionByInput = document.getElementById('action-by');
         const addStockButton = document.getElementById('add-stock');
         const removeStockButton = document.getElementById('remove-stock');
+        const clearAllButton = document.getElementById('clear-all');
         const stockList = document.getElementById('stock-list');
 
         // Initialize local storage
         let stockData = JSON.parse(localStorage.getItem('stockData')) || {};
+        let stockNames = JSON.parse(localStorage.getItem('stockNames')) || [];
 
         // Function to update local storage
         function updateLocalStorage() {
             localStorage.setItem('stockData', JSON.stringify(stockData));
+            localStorage.setItem('stockNames', JSON.stringify(stockNames));
         }
 
         // Function to add stock
@@ -73,10 +87,15 @@
             const stockName = stockNameInput.value.trim();
             const quantity = parseInt(quantityInput.value);
             const stockDate = stockDateInput.value;
+            const actionBy = actionByInput.value;
 
-            if (stockName && quantity && stockDate) {
+            if (stockName && quantity && stockDate && actionBy) {
                 if (!stockData[stockName]) {
                     stockData[stockName] = { total: 0, dates: {} };
+                    if (!stockNames.includes(stockName)) {
+                        stockNames.push(stockName);
+                        updateStockDropdown();
+                    }
                 }
 
                 // Update total quantity
@@ -89,7 +108,8 @@
                 } else {
                     stockData[stockName].dates[stockDate] = {
                         quantity: quantity,
-                        transaction: 'Addition'
+                        transaction: 'Addition',
+                        actionBy: actionBy
                     };
                 }
 
@@ -104,15 +124,16 @@
             const stockName = stockNameInput.value.trim();
             const quantity = parseInt(quantityInput.value);
             const stockDate = stockDateInput.value;
+            const actionBy = actionByInput.value;
 
             if (stockName && quantity && stockDate && stockData[stockName]) {
-                // Ensure stock exists and quantity is not greater than existing
                 if (stockData[stockName].dates[stockDate]) {
                     const currentQuantity = stockData[stockName].dates[stockDate].quantity;
 
                     if (currentQuantity >= quantity) {
                         stockData[stockName].dates[stockDate].quantity -= quantity;
                         stockData[stockName].dates[stockDate].transaction = 'Removal';
+                        stockData[stockName].dates[stockDate].actionBy = actionBy;
                         stockData[stockName].total -= quantity;
 
                         // If date-specific quantity becomes zero, remove that date entry
@@ -123,6 +144,8 @@
                         // If there are no more date-specific entries, remove the stock entry
                         if (Object.keys(stockData[stockName].dates).length === 0) {
                             delete stockData[stockName];
+                            stockNames = stockNames.filter(name => name !== stockName);
+                            updateStockDropdown();
                         }
 
                         updateLocalStorage();
@@ -139,6 +162,17 @@
             }
         }
 
+        // Function to clear the entire stock list
+        function clearAll() {
+            if (confirm('Are you sure you want to clear all stock data?')) {
+                stockData = {};
+                stockNames = [];
+                updateLocalStorage();
+                renderStockList();
+                updateStockDropdown();
+            }
+        }
+
         // Function to render stock list
         function renderStockList() {
             stockList.innerHTML = '';
@@ -150,6 +184,7 @@
                         <td>${stockData[stockName].dates[stockDate].quantity}</td>
                         <td>${stockDate}</td>
                         <td>${stockData[stockName].dates[stockDate].transaction}</td>
+                        <td>${stockData[stockName].dates[stockDate].actionBy}</td>
                         <td>${stockData[stockName].total}</td>
                     `;
                     stockList.appendChild(row);
@@ -157,18 +192,32 @@
             }
         }
 
+        // Function to update the stock name dropdown
+        function updateStockDropdown() {
+            stockNameInput.innerHTML = '<option value="" disabled selected>Select or Enter Stock</option>';
+            stockNames.forEach(name => {
+                const option = document.createElement('option');
+                option.value = name;
+                option.textContent = name;
+                stockNameInput.appendChild(option);
+            });
+        }
+
         // Function to clear form inputs
         function clearForm() {
             stockNameInput.value = '';
             quantityInput.value = '';
             stockDateInput.value = '';
+            actionByInput.value = 'Brian';
         }
 
         // Event listeners
         addStockButton.addEventListener('click', addStock);
         removeStockButton.addEventListener('click', removeStock);
+        clearAllButton.addEventListener('click', clearAll);
 
-        // Render stock list on page load
+        // Initial setup
+        updateStockDropdown();
         renderStockList();
     </script>
 </body>
