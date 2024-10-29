@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        #stock-form {
+            margin-bottom: 20px;
+        }
+        
+        #stock-table {
+            border-collapse: collapse;
+            width: 50%;
+        }
+        
+        #stock-table th, #stock-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Stock Tracker</h1>
+    <form id="stock-form">
+        <label>Stock Name:</label>
+        <input type="text" id="stock-name" required>
+        <label>Quantity:</label>
+        <input type="number" id="quantity" required>
+        <button id="add-stock">Add Stock</button>
+        <button id="remove-stock">Remove Stock</button>
+    </form>
+    <table id="stock-table">
+        <thead>
+            <tr>
+                <th>Stock Name</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+        <tbody id="stock-list">
+        </tbody>
+    </table>
+
+    <script>
+        // Get elements
+        const stockForm = document.getElementById('stock-form');
+        const stockNameInput = document.getElementById('stock-name');
+        const quantityInput = document.getElementById('quantity');
+        const addStockButton = document.getElementById('add-stock');
+        const removeStockButton = document.getElementById('remove-stock');
+        const stockTable = document.getElementById('stock-table');
+        const stockList = document.getElementById('stock-list');
+
+        // Initialize local storage
+        let stockData = JSON.parse(localStorage.getItem('stockData')) || {};
+
+        // Function to update local storage
+        function updateLocalStorage() {
+            localStorage.setItem('stockData', JSON.stringify(stockData));
+        }
+
+        // Function to add stock
+        function addStock() {
+            const stockName = stockNameInput.value.trim();
+            const quantity = parseInt(quantityInput.value);
+
+            if (stockName && quantity) {
+                if (stockData[stockName]) {
+                    stockData[stockName] += quantity;
+                } else {
+                    stockData[stockName] = quantity;
+                }
+
+                updateLocalStorage();
+                renderStockList();
+                stockNameInput.value = '';
+                quantityInput.value = '';
+            }
+        }
+
+        // Function to remove stock
+        function removeStock() {
+            const stockName = stockNameInput.value.trim();
+            const quantity = parseInt(quantityInput.value);
+
+            if (stockName && quantity) {
+                if (stockData[stockName]) {
+                    stockData[stockName] -= quantity;
+                    if (stockData[stockName] <= 0) {
+                        delete stockData[stockName];
+                    }
+                }
+
+                updateLocalStorage();
+                renderStockList();
+                stockNameInput.value = '';
+                quantityInput.value = '';
+            }
+        }
+
+        // Function to render stock list
+        function renderStockList() {
+            stockList.innerHTML = '';
+            for (const stockName in stockData) {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${stockName}</td>
+                    <td>${stockData[stockName]}</td>
+                `;
+                stockList.appendChild(row);
+            }
+        }
+
+        // Event listeners
+        addStockButton.addEventListener('click', addStock);
+        removeStockButton.addEventListener('click', removeStock);
+
+        // Initial render
+        renderStockList();
+    </script>
+</body>
+</html>
