@@ -29,9 +29,8 @@
     <h1>Stock Tracker</h1>
     <form id="stock-form">
         <label>Stock Name:</label>
-        <select id="stock-name" required>
-            <option value="" disabled selected>Select or Enter Stock</option>
-        </select>
+        <input list="stock-names" id="stock-name" required placeholder="Select or Enter Stock">
+        <datalist id="stock-names"></datalist>
         <label>Quantity:</label>
         <input type="number" id="quantity" required>
         <label>Date:</label>
@@ -64,6 +63,7 @@
     <script>
         // Get elements
         const stockNameInput = document.getElementById('stock-name');
+        const stockNamesDatalist = document.getElementById('stock-names');
         const quantityInput = document.getElementById('quantity');
         const stockDateInput = document.getElementById('stock-date');
         const actionByInput = document.getElementById('action-by');
@@ -94,14 +94,12 @@
                     stockData[stockName] = { total: 0, dates: {} };
                     if (!stockNames.includes(stockName)) {
                         stockNames.push(stockName);
-                        updateStockDropdown();
+                        updateStockDatalist();
                     }
                 }
 
-                // Update total quantity
                 stockData[stockName].total += quantity;
 
-                // Update quantity by date
                 if (stockData[stockName].dates[stockDate]) {
                     stockData[stockName].dates[stockDate].quantity += quantity;
                     stockData[stockName].dates[stockDate].transaction = 'Addition';
@@ -136,16 +134,14 @@
                         stockData[stockName].dates[stockDate].actionBy = actionBy;
                         stockData[stockName].total -= quantity;
 
-                        // If date-specific quantity becomes zero, remove that date entry
                         if (stockData[stockName].dates[stockDate].quantity <= 0) {
                             delete stockData[stockName].dates[stockDate];
                         }
 
-                        // If there are no more date-specific entries, remove the stock entry
                         if (Object.keys(stockData[stockName].dates).length === 0) {
                             delete stockData[stockName];
                             stockNames = stockNames.filter(name => name !== stockName);
-                            updateStockDropdown();
+                            updateStockDatalist();
                         }
 
                         updateLocalStorage();
@@ -169,7 +165,7 @@
                 stockNames = [];
                 updateLocalStorage();
                 renderStockList();
-                updateStockDropdown();
+                updateStockDatalist();
             }
         }
 
@@ -192,14 +188,13 @@
             }
         }
 
-        // Function to update the stock name dropdown
-        function updateStockDropdown() {
-            stockNameInput.innerHTML = '<option value="" disabled selected>Select or Enter Stock</option>';
+        // Function to update the stock name dropdown using a datalist
+        function updateStockDatalist() {
+            stockNamesDatalist.innerHTML = '';
             stockNames.forEach(name => {
                 const option = document.createElement('option');
                 option.value = name;
-                option.textContent = name;
-                stockNameInput.appendChild(option);
+                stockNamesDatalist.appendChild(option);
             });
         }
 
@@ -217,7 +212,7 @@
         clearAllButton.addEventListener('click', clearAll);
 
         // Initial setup
-        updateStockDropdown();
+        updateStockDatalist();
         renderStockList();
     </script>
 </body>
