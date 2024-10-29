@@ -124,37 +124,31 @@
             const stockDate = stockDateInput.value;
             const actionBy = actionByInput.value;
 
-            if (stockName && quantity && stockDate && stockData[stockName]) {
-                if (stockData[stockName].dates[stockDate]) {
-                    const currentQuantity = stockData[stockName].dates[stockDate].quantity;
-
-                    if (currentQuantity >= quantity) {
-                        stockData[stockName].dates[stockDate].quantity -= quantity;
-                        stockData[stockName].dates[stockDate].transaction = 'Removal';
-                        stockData[stockName].dates[stockDate].actionBy = actionBy;
-                        stockData[stockName].total -= quantity;
-
-                        if (stockData[stockName].dates[stockDate].quantity <= 0) {
-                            delete stockData[stockName].dates[stockDate];
-                        }
-
-                        if (Object.keys(stockData[stockName].dates).length === 0) {
-                            delete stockData[stockName];
-                            stockNames = stockNames.filter(name => name !== stockName);
-                            updateStockDatalist();
-                        }
-
-                        updateLocalStorage();
-                        renderStockList();
-                        clearForm();
-                    } else {
-                        alert('Cannot remove more than the existing quantity.');
+            if (stockName && quantity && stockDate && actionBy) {
+                if (!stockData[stockName]) {
+                    stockData[stockName] = { total: 0, dates: {} };
+                    if (!stockNames.includes(stockName)) {
+                        stockNames.push(stockName);
+                        updateStockDatalist();
                     }
-                } else {
-                    alert('Stock does not exist on the specified date.');
                 }
-            } else {
-                alert('Invalid input or stock not found.');
+
+                stockData[stockName].total -= quantity;
+
+                if (stockData[stockName].dates[stockDate]) {
+                    stockData[stockName].dates[stockDate].quantity -= quantity;
+                    stockData[stockName].dates[stockDate].transaction = 'Removal';
+                } else {
+                    stockData[stockName].dates[stockDate] = {
+                        quantity: -quantity,
+                        transaction: 'Removal',
+                        actionBy: actionBy
+                    };
+                }
+
+                updateLocalStorage();
+                renderStockList();
+                clearForm();
             }
         }
 
