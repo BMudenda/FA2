@@ -15,7 +15,7 @@
         
         #stock-table {
             border-collapse: collapse;
-            width: 50%;
+            width: 70%;
         }
         
         #stock-table th, #stock-table td {
@@ -106,26 +106,36 @@
             const stockDate = stockDateInput.value;
 
             if (stockName && quantity && stockDate && stockData[stockName]) {
-                // Update quantity by date and total quantity
+                // Ensure stock exists and quantity is not greater than existing
                 if (stockData[stockName].dates[stockDate]) {
-                    stockData[stockName].dates[stockDate].quantity -= quantity;
-                    stockData[stockName].dates[stockDate].transaction = 'Removal';
-                    stockData[stockName].total -= quantity;
+                    const currentQuantity = stockData[stockName].dates[stockDate].quantity;
 
-                    // If quantity goes to zero or below, remove the date entry
-                    if (stockData[stockName].dates[stockDate].quantity <= 0) {
-                        delete stockData[stockName].dates[stockDate];
-                    }
+                    if (currentQuantity >= quantity) {
+                        stockData[stockName].dates[stockDate].quantity -= quantity;
+                        stockData[stockName].dates[stockDate].transaction = 'Removal';
+                        stockData[stockName].total -= quantity;
 
-                    // If all date entries are removed, remove the stock entry
-                    if (Object.keys(stockData[stockName].dates).length === 0) {
-                        delete stockData[stockName];
+                        // If date-specific quantity becomes zero, remove that date entry
+                        if (stockData[stockName].dates[stockDate].quantity <= 0) {
+                            delete stockData[stockName].dates[stockDate];
+                        }
+
+                        // If there are no more date-specific entries, remove the stock entry
+                        if (Object.keys(stockData[stockName].dates).length === 0) {
+                            delete stockData[stockName];
+                        }
+
+                        updateLocalStorage();
+                        renderStockList();
+                        clearForm();
+                    } else {
+                        alert('Cannot remove more than the existing quantity.');
                     }
+                } else {
+                    alert('Stock does not exist on the specified date.');
                 }
-
-                updateLocalStorage();
-                renderStockList();
-                clearForm();
+            } else {
+                alert('Invalid input or stock not found.');
             }
         }
 
