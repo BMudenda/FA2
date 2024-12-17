@@ -49,227 +49,210 @@
       
     
     <h2>HEALTH-Indicator Tracking Table</h2>
-    <table class="dataframe" id="myTable">  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Province</th>
-      <th>District</th>
-      <th>Health Facility</th>
-      <th>TX_CURR&lt;20</th>
-      <th>OVC_SERV Comp (Active)</th>
-      <th>OVC_SERV Comp (Graduated)</th>
-      <th>OVC_SERV Comp (Comprehensive)</th>
-      <th>OVC_SERV Comp (Preventive)</th>
-      <th>OVC_SERV</th>
-      <th>OVC_HIVSTAT</th>
-      <th>HTS_TST</th>
-      <th>OVC_OFFER</th>
-      <th>OVC_ENROLL</th>
-      <th>OVC_VL_ELIGIBLE</th>
-      <th>OVC_VLR</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Copperbelt</td>
-      <td>Luanshya</td>
-      <td>Thompson District Hospital</td>
-      <td>232</td>
-      <td>1711</td>
-      <td>189</td>
-      <td>1900</td>
-      <td>457</td>
-      <td>2357</td>
-      <td>1422</td>
-      <td>296</td>
-      <td>95.0%</td>
-      <td>90.0%</td>
-      <td>95.0%</td>
-      <td>95.0%</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Copperbelt</td>
-      <td>Luanshya</td>
-      <td>Roan Antelope General Hospital</td>
-      <td>218</td>
-      <td>1608</td>
-      <td>178</td>
-      <td>1786</td>
-      <td>430</td>
-      <td>2216</td>
-      <td>1336</td>
-      <td>279</td>
-      <td>95.0%</td>
-      <td>90.0%</td>
-      <td>95.0%</td>
-      <td>95.0%</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Copperbelt</td>
-      <td>Luanshya</td>
-      <td>Mpatamatu Section 26 Clinic</td>
-      <td>76</td>
-      <td>562</td>
-      <td>62</td>
-      <td>624</td>
-      <td>150</td>
-      <td>774</td>
-      <td>466</td>
-      <td>97</td>
-      <td>95.0%</td>
-      <td>90.0%</td>
-      <td>95.0%</td>
-      <td>95.0%</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Copperbelt</td>
-      <td>Luanshya</td>
-      <td>Malaika Clinic</td>
-      <td>54</td>
-      <td>398</td>
-      <td>44</td>
-      <td>442</td>
-      <td>106</td>
-      <td>548</td>
-      <td>331</td>
-      <td>69</td>
-      <td>95.0%</td>
-      <td>90.0%</td>
-      <td>95.0%</td>
-      <td>95.0%</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Copperbelt</td>
-      <td>Luanshya</td>
-      <td>Mikomfwa Health Centre</td>
-      <td>75</td>
-      <td>553</td>
-      <td>60</td>
-      <td>613</td>
-      <td>148</td>
-      <td>761</td>
-      <td>460</td>
-      <td>96</td>
-      <td>95.0%</td>
-      <td>90.0%</td>
-      <td>95.0%</td>
-      <td>95.0%</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>Copperbelt</td>
-      <td>Luanshya</td>
-      <td>Kawama Urban Health Centre (Lua)</td>
-      <td>32</td>
-      <td>236</td>
-      <td>26</td>
-      <td>262</td>
-      <td>63</td>
-      <td>325</td>
-      <td>196</td>
-      <td>41</td>
-      <td>95.0%</td>
-      <td>90.0%</td>
-      <td>95.0%</td>
-      <td>95.0%</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>Copperbelt</td>
-      <td>Luanshya</td>
-      <td>Poleline (Baluba) Health Post</td>
-      <td>51</td>
-      <td>376</td>
-      <td>42</td>
-      <td>418</td>
-      <td>100</td>
-      <td>518</td>
-      <td>313</td>
-      <td>65</td>
-      <td>95.0%</td>
-      <td>90.0%</td>
-      <td>95.0%</td>
-      <td>95.0%</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>Copperbelt</td>
-      <td>Mpongwe</td>
-      <td>Mpongwe Mission Hospital</td>
-      <td>212</td>
-      <td>1374</td>
-      <td>153</td>
-      <td>1527</td>
-      <td>0</td>
-      <td>1527</td>
-      <td>1205</td>
-      <td>251</td>
-      <td>95.0%</td>
-      <td>90.0%</td>
-      <td>95.0%</td>
-      <td>95.0%</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>Copperbelt</td>
-      <td>Mpongwe</td>
-      <td>St Theresa Mission Hospital</td>
-      <td>131</td>
-      <td>849</td>
-      <td>94</td>
-      <td>943</td>
-      <td>0</td>
-      <td>943</td>
-      <td>745</td>
-      <td>155</td>
-      <td>95.0%</td>
-      <td>90.0%</td>
-      <td>95.0%</td>
-      <td>95.0%</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>Copperbelt</td>
-      <td>Mpongwe</td>
-      <td>Kalweo Rural Health Centre</td>
-      <td>79</td>
-      <td>512</td>
-      <td>57</td>
-      <td>569</td>
-      <td>0</td>
-      <td>569</td>
-      <td>449</td>
-      <td>94</td>
-      <td>95.0%</td>
-      <td>90.0%</td>
-      <td>95.0%</td>
-      <td>95.0%</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>Copperbelt</td>
-      <td>Mpongwe</td>
-      <td>Ipumbu Rural Health Centre</td>
-      <td>30</td>
-      <td>194</td>
-      <td>22</td>
-      <td>216</td>
-      <td>0</td>
-      <td>216</td>
-      <td>170</td>
-      <td>36</td>
-      <td>95.0%</td>
-      <td>90.0%</td>
-      <td>95.0%</td>
-      <td>95.0%</td>
-    </tr>
-  </tbody>
-</table>
+    <table class="dataframe" id="myTable"> 
+        
+<thead>
+        <tr style="text-align: right;">
+          <th></th>
+          <th>Health Facility</th>
+          <th>TX_CURR&lt;15</th>
+          <th>TX_CURR&lt;20</th>
+          <th>OVC_SERV Comp (Active)</th>
+          <th>OVC_SERV Comp (Graduated)</th>
+          <th>OVC_SERV Comp (Comprehensive)</th>
+          <th>OVC_SERV Comp (Preventive)</th>
+          <th>OVC_SERV</th>
+          <th>OVC_HIVSTAT</th>
+          <th>HTS_TST</th>
+          <th>OVC_OFFER</th>
+          <th>OVC_ENROLL</th>
+          <th>OVC_VL_ELIGIBLE</th>
+          <th>OVC_VLR</th>
+          <th>OVC_VLS</th>
+          <th>VCA_STABLE</th>
+          <th>VCA_REACH</th>
+          <th>VCA_SCHOOL</th>
+          <th>VCA_ENROLLED</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>0</th>
+          <td>Thompson District Hospital</td>
+          <td>84</td>
+          <td>171</td>
+          <td>1697</td>
+          <td>198</td>
+          <td>1896</td>
+          <td>459</td>
+          <td>2354</td>
+          <td>1422</td>
+          <td>30</td>
+          <td>95%</td>
+          <td>90%</td>
+          <td>95%</td>
+          <td>95%</td>
+          <td>95%</td>
+          <td>147</td>
+          <td>953</td>
+          <td>953</td>
+          <td>953</td>
+        </tr>
+        <tr>
+          <th>1</th>
+          <td>Roan Antelope General Hospital</td>
+          <td>71</td>
+          <td>186</td>
+          <td>1595</td>
+          <td>187</td>
+          <td>1782</td>
+          <td>431</td>
+          <td>2214</td>
+          <td>1336</td>
+          <td>29</td>
+          <td>95%</td>
+          <td>90%</td>
+          <td>95%</td>
+          <td>95%</td>
+          <td>95%</td>
+          <td>139</td>
+          <td>932</td>
+          <td>932</td>
+          <td>932</td>
+        </tr>
+        <tr>
+          <th>2</th>
+          <td>Mpatamatu Section 26 Clinic</td>
+          <td>33</td>
+          <td>66</td>
+          <td>558</td>
+          <td>65</td>
+          <td>623</td>
+          <td>151</td>
+          <td>773</td>
+          <td>466</td>
+          <td>10</td>
+          <td>95%</td>
+          <td>90%</td>
+          <td>95%</td>
+          <td>95%</td>
+          <td>95%</td>
+          <td>48</td>
+          <td>308</td>
+          <td>308</td>
+          <td>308</td>
+        </tr>
+        <tr>
+          <th>3</th>
+          <td>Malaika Clinic</td>
+          <td>29</td>
+          <td>48</td>
+          <td>395</td>
+          <td>46</td>
+          <td>441</td>
+          <td>106</td>
+          <td>547</td>
+          <td>331</td>
+          <td>7</td>
+          <td>95%</td>
+          <td>90%</td>
+          <td>95%</td>
+          <td>95%</td>
+          <td>95%</td>
+          <td>34</td>
+          <td>264</td>
+          <td>264</td>
+          <td>264</td>
+        </tr>
+        <tr>
+          <th>4</th>
+          <td>Mikomfwa Health Centre</td>
+          <td>26</td>
+          <td>59</td>
+          <td>549</td>
+          <td>63</td>
+          <td>612</td>
+          <td>149</td>
+          <td>760</td>
+          <td>460</td>
+          <td>10</td>
+          <td>95%</td>
+          <td>90%</td>
+          <td>95%</td>
+          <td>95%</td>
+          <td>95%</td>
+          <td>47</td>
+          <td>304</td>
+          <td>304</td>
+          <td>304</td>
+        </tr>
+        <tr>
+          <th>5</th>
+          <td>Kawama Urban Health Centre (Lua)</td>
+          <td>21</td>
+          <td>33</td>
+          <td>234</td>
+          <td>27</td>
+          <td>261</td>
+          <td>63</td>
+          <td>325</td>
+          <td>196</td>
+          <td>4</td>
+          <td>95%</td>
+          <td>90%</td>
+          <td>95%</td>
+          <td>95%</td>
+          <td>95%</td>
+          <td>20</td>
+          <td>97</td>
+          <td>97</td>
+          <td>97</td>
+        </tr>
+        <tr>
+          <th>6</th>
+          <td>Poleline (Baluba) Health Post</td>
+          <td>32</td>
+          <td>51</td>
+          <td>371</td>
+          <td>43</td>
+          <td>414</td>
+          <td>100</td>
+          <td>514</td>
+          <td>313</td>
+          <td>7</td>
+          <td>95%</td>
+          <td>90%</td>
+          <td>95%</td>
+          <td>95%</td>
+          <td>95%</td>
+          <td>32</td>
+          <td>191</td>
+          <td>191</td>
+          <td>191</td>
+        </tr>
+        <tr>
+          <th>7</th>
+          <td>Luanshya</td>
+          <td>296</td>
+          <td>614</td>
+          <td>5399</td>
+          <td>630</td>
+          <td>6029</td>
+          <td>1459</td>
+          <td>7488</td>
+          <td>4524</td>
+          <td>97</td>
+          <td>95%</td>
+          <td>90%</td>
+          <td>95%</td>
+          <td>95%</td>
+          <td>95%</td>
+          <td>468</td>
+          <td>3049</td>
+          <td>3049</td>
+          <td>3049</td>
+        </tr>
+      </tbody></table>
     <script>
 function filterTable() {
         var selectElement = document.getElementById("selectOption");
@@ -278,7 +261,7 @@ function filterTable() {
         var rows = table.getElementsByTagName("tr");
 
         for (var i = 0; i < rows.length; i++) {
-            var site = rows[i].getElementsByTagName("td")[3];
+            var site = rows[i].getElementsByTagName("td")[1];
             if (site) {
                 var siteText = site.textContent || site.innerText;
                 if (siteText.toLowerCase() === selectedValue) {
