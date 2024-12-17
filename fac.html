@@ -36,22 +36,15 @@
         <option value="Kawama Urban Health Centre (Lua)">Kawama</option>
         <option value="Mikomfwa Health Centre">Mikonfwa</option>
         <option value="Poleline (Baluba) Health Post">Baluba</option>
-        <option value="Mpatamatu Section 26 Clinic">Section_26</option>
-        <option value="Luanshya District">Luanshya</option>
-        <option value="Mpongwe Mission Hospital">Mpongwe_Hsp</option>
-        <option value="Kalweo Rural Health Centre">Kalweo</option>
-        <option value="St Theresa Mission Hospital">St_Theresa</option>
-        <option value="Ipumbu Rural Health Centre">Ipumbu</option>
-        <option value="Mpongwe District">Mpongwe_Dis</option>
+        
     </select>
     <br>
     <br>
       
     
-    <h2>HEALTH-Indicator Tracking Table</h2>
-    <table class="dataframe" id="myTable"> 
-        
-<thead>
+    <h2>Facility Targets</h2>
+    <table class="dataframe" id="myTable">
+  <thead>
         <tr style="text-align: right;">
           <th></th>
           <th>Health Facility</th>
@@ -252,8 +245,11 @@
           <td>3049</td>
           <td>3049</td>
         </tr>
-      </tbody></table>
-    <script>
+      </tbody>
+</table>
+   
+
+<script>
 function filterTable() {
         var selectElement = document.getElementById("selectOption");
         var selectedValue = selectElement.options[selectElement.selectedIndex].value.toLowerCase();
@@ -261,7 +257,7 @@ function filterTable() {
         var rows = table.getElementsByTagName("tr");
 
         for (var i = 0; i < rows.length; i++) {
-            var site = rows[i].getElementsByTagName("td")[1];
+            var site = rows[i].getElementsByTagName("td")[0];
             if (site) {
                 var siteText = site.textContent || site.innerText;
                 if (siteText.toLowerCase() === selectedValue) {
