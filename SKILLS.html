@@ -1,9 +1,9 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html> 
+<html lang="en">
 <head>
-   <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Indicator Tracking Table</title>
+    <title>SKILLS FROM INCEPTION</title>
     <style>
         table {
             border-collapse: collapse;
@@ -12,19 +12,186 @@
         th, td {
             border: 1px solid black;
             padding: 8px;
-            text-align: center;width: 10px;
+            text-align: center;
+            width: 10px;
+            font-size: smaller;
         }
         th {
             background-color: #f2f2f2;
         }
         tr:nth-child(even) {
             background-color: #f2f2f2;
-
+        }
+        section {
+            background-color: #fff;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 2px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         
+        select:focus {
+            background-color: lightblue;
+        }
+        .dropbtn {
+    background-color: hsl(184, 96%, 69%);
+    color: white;
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f7fc;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(9, 6, 204, 0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+  }
+  
+  .dropdown-content a:hover {background-color: #c1f5bc}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown:hover .dropbtn {
+    background-color: #f3f8f4;
+  }
+
     </style>
-    <title>SKILLS</title>
 </head>
+<body>
+
+      
+<section>
+    <!-- ccw Filter Dropdown -->
+    <section>
+      <!-- PASTE BUTTON -->
+      
+      <div class="dropdown">
+        <button class="dropbtn">SELECT HERE👈</button>
+        <div class="dropdown-content" style="text-align: center;">
+          
+           <br><br>
+            <!-- ccw Filter Dropdown -->
+              <!-- ccw Filter Dropdown -->
+              <label for="ccwSelect">CCW:</label>
+              <select id="ccwSelect" onchange="filterTable()">
+                  <option value="">Select All</option>
+                  <option value="amos_kasonde">Amos Kasonde</option>
+                  <option value="angela_mwenya">Angela Mwenya</option>
+                  <option value="banda_david">Banda David</option>
+                  <option value="banda_misozi">Banda Misozi</option>
+                  <option value="brandina_tembo">Brandina Tembo</option>
+                  <option value="martha_muchimba">Martha Muchimba</option>
+                  <option value="chitambala_stanslous">Chitambala Stanslous</option>
+                  <option value="matildah_kunda">Matildah Kunda</option>
+                  <option value="emmanuel_kapambwe">Emmanuel Kapambwe</option>
+                  <option value="gondwe_fanny">Gondwe Fanny</option>
+                  <option value="grace_kebende">Grace Kebende</option>
+                  <option value="hector_banda">Hector Banda</option>
+                  <option value="hellen_mwansa">Hellen Mwansa</option>
+                  <option value="jane_kasaka1">Jane Kasaka1</option>
+                  <option value="janny_mutampuka">Janny Mutampuka</option>
+                  <option value="joe_nyanga">Joe Nyanga</option>
+                  <option value="aliyah_daka">Aliyah Daka</option>
+                  <option value="joseph_kaimana">Joseph Kaimana</option>
+                  <option value="joshua_malole">Joshua Malole</option>
+                  <option value="kabesha_mary">Kabesha Mary</option>
+                  <option value="kapasula_edith">Kapasula Edith</option>
+                  <option value="kumwenda_mary">Kumwenda Mary</option>
+                  <option value="makashini_christopher">Makashini Christopher</option>
+                  <option value="mary_mwape">Mary Mwape</option>
+                  <option value="mikabo_mildred">Mikabo Mildred</option>
+                  <option value="musa_joyce">Musa Joyce</option>
+                  <option value="mwaba_rodgers">Mwaba Rodgers</option>
+                  <option value="natasha_musonda">Natasha Musonda</option>
+                  <option value="sakala_veronica">Sakala Veronica</option>
+                  <option value="moses_banda">Moses Banda</option>
+                  <option value="soteli_winfridah">Soteli Winfridah</option>
+                  <option value="tembo_ireen">Tembo Ireen</option>
+                  <!-- Add more options here -->
+              </select>
+                <!-- other options... -->
+            </select>
+            <br><br>
+            <!-- Facility Filter Dropdown -->
+            <label for="facilitySelect">FACILITY:</label>
+            <select id="facilitySelect" onchange="filterTable()">
+                <option value="">Select All</option>
+                <option value="Thompson District Hospital">Thompson</option>
+                <option value="Roan A. Gen Hospital">Roan</option>
+                 <option value="Mpatamatu Section 26 Clinic">Section 26</option>
+                <option value="Malaika Clinic">Malaika</option>
+                <option value="Kawama Urban Health Centre (Lua)">Kawama</option>
+                <option value="Mikomfwa Health Centre">Mikonfwa</option>
+                <option value="Poleline (Baluba) Health Post">Baluba</option>
+                <!-- other options... -->
+            </select>
+            <br><br>
+            <!-- Gender Filter Dropdown change femele male-->
+            <label for="suppresionSelect">GENDER TYPE:</label>
+            <select id="suppresionSelect" onchange="filterTable()">
+                <option value="">Select All</option>
+                <option value="M">M</option>
+                <option value="F">F</option>
+            </select>
+            <br><br>
+            <!-- Age Band Filter Dropdown create age band -->
+            <label for="ageBandSelect">AGE:</label>
+            <select id="ageBandSelect" onchange="filterTable()">
+                <option value="">Select All</option>
+                <option value="0"><1</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              
+                
+                
+                <!-- add other age bands as necessary -->
+            </select>
+        <br><br>
+            <!-- ELIGIBLE MONTH Status Filter Dropdown change to serv and create serv formula -->
+            <label for="hivStatusSelect">SKILLS PROGRAM STATUS:</label>
+            <select id="hivStatusSelect" onchange="filterTable()">
+                <option value="">Select All</option>
+                <option value="PROGRESS">PROGRESS</option>
+                
+                <option value="Graduated">Graduated</option>
+                <option value="DROPEDOUT">AGEOUT</option>
+                
+                
+            </select>
+    <br><br>
+        </div>
+
+        <br><br>
+
+  </div>
+    
+
+</div>
+</section>
+
+
+<h2>SKILLS List👶</h2>
+<p style="background-color: aqua;">Total Beneficiaries Filtered: <span id="rowCount">0</span></p>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1514,10 +1681,55 @@
       <td>NaN</td>
       <td>Yet to complete the course</td>
     </tr>
-     
+  </tbody>
+</table>
+
+<script>
+    function filterTable() {
+        var ccwSelect = document.getElementById("ccwSelect").value.toLowerCase();
+        var facilitySelect = document.getElementById("facilitySelect").value.toLowerCase();
+        var suppresionSelect = document.getElementById("suppresionSelect").value.toLowerCase();
+        var ageBandSelect = document.getElementById("ageBandSelect").value.toLowerCase();
+        var hivStatusSelect = document.getElementById("hivStatusSelect").value.toLowerCase();
+
+        var table = document.getElementById("myTable");
+        var rows = table.getElementsByTagName("tr");
+
+        var rowCount = 0;
+
+        for (var i = 1; i < rows.length; i++) {
+            var ccwCell = rows[i].getElementsByTagName("td")[1];
+            var facilityCell = rows[i].getElementsByTagName("td")[0];
+            var suppresionCell = rows[i].getElementsByTagName("td")[3];
+            var ageBandCell = rows[i].getElementsByTagName("td")[5];
+            var hivStatusCell = rows[i].getElementsByTagName("td")[12];
+
+            var ccwText = ccwCell.textContent || ccwCell.innerText;
+            var facilityText = facilityCell.textContent || facilityCell.innerText;
+            var suppresionText = suppresionCell.textContent || suppresionCell.innerText;
+            var ageBandText = ageBandCell.textContent || ageBandCell.innerText;
+            var hivStatusText = hivStatusCell.textContent || hivStatusCell.innerText;
+
+            // Check if row matches the selected filters
+            if ((ccwText.toLowerCase() === ccwSelect || ccwSelect === "") &&
+                (facilityText.toLowerCase() === facilitySelect || facilitySelect === "") &&
+                (suppresionText.toLowerCase() === suppresionSelect || suppresionSelect === "") &&
+                (ageBandText.toLowerCase() === ageBandSelect || ageBandSelect === "") &&
+                (hivStatusText.toLowerCase() === hivStatusSelect || hivStatusSelect === "")) {
+                rows[i].style.display = "";
+                rowCount++;  // Increase count for visible rows
+            } else {
+                rows[i].style.display = "none";
+            }
+        }
+
+        // Display the count of visible rows
+        document.getElementById("rowCount").innerText = rowCount;
+    }
+</script>
 <footer>
     
    <p>&copy; BM Inc. 05-01-25.</p>
 </footer>
-  </tbody>
-</table>
+</body>
+</html>
