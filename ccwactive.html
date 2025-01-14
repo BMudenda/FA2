@@ -177,6 +177,7 @@
                 
             </select>
     <br><br>
+    <input id="myInput" type="text" placeholder="Search..">
         </div>
 
         <br><br>
@@ -191,6 +192,18 @@
 <p style="background-color: aqua;">Total Beneficiaries Filtered: <span id="rowCount">0</span></p>
 <table class="dataframe" id="myTable">
     <thead>
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script>
+      $(document).ready(function(){
+        $("#myInput").on("keyup", function() {
+          var value = $(this).val().toLowerCase();
+          $("#myTable tr").filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+          });
+        });
+      });
+      </script>
+
     <tr style="text-align: right;">
       <th>Serial#</th>
       <th>HH_RED_#</th>
