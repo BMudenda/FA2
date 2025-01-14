@@ -98,6 +98,7 @@
             <option value="YES">YES</option>
             <option value="NO">NO</option>
         </select>
+    <input id="myInput" type="text" placeholder="Search.."> 
     </section>
     <br>
     <br>
@@ -107,6 +108,17 @@
     <p>Total Count: <span id="rowCount">0</span></p>
     <table class="dataframe" id="myTable">
       <thead>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script>
+      $(document).ready(function(){
+        $("#myInput").on("keyup", function() {
+          var value = $(this).val().toLowerCase();
+          $("#myTable tr").filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+          });
+        });
+      });
+      </script>
         <tr style="text-align: right;">
           <th></th>
           <th>Facility</th>
