@@ -85,7 +85,7 @@
       <!-- PASTE BUTTON -->
       
       <div class="dropdown">
-        <button class="dropbtn">CLICK👈</button>
+        <button class="dropbtn" style="border-radius:8px;">CLICK👈</button>
         <div class="dropdown-content" style="text-align: center;">
           
            <br><br>
@@ -177,6 +177,9 @@
                 
                 
             </select>
+            
+    <br><br>
+    <input id="myInput" type="text" placeholder="Search..">
     <br><br>
         </div>
 
@@ -189,10 +192,29 @@
 
 
 
-<h2>SKILLS SUPPORTED</h2>
-<p style="font-style: oblique;">Total Beneficiaries Filtered: <span id="rowCount">0</span></p>
+
+<p>
+  
+
+  
+  <h2>SKILLS SUPPORTED:<span id="rowCount">0</span></h2>
+</p>
 <table class="dataframe" id="myTable">
     <thead>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script>
+      $(document).ready(function(){
+        $("#myInput").on("keyup", function() {
+          var value = $(this).val().toLowerCase();
+          $("#myTable tr").filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+          });
+        });
+      });
+      </script>
+      
+
+
       <tr style="text-align: right;">
         <th></th>
       <th>CCW</th>
@@ -1838,6 +1860,7 @@
         document.getElementById("rowCount").innerText = rowCount;
     }
 </script>
+
 <footer>
     
    <p>&copy; BM Inc. 14-01-25.</p>
