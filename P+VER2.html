@@ -95,6 +95,8 @@
             <option value="YES">YES</option>
             <option value="NO">NO</option>
         </select>
+        
+        <input id="myInput" type="text" placeholder="Search..">
     </section>
     <script>
       var password = "pass12345";
@@ -113,6 +115,17 @@
     <!-- Add table data frame and table head here -->
     <table class="dataframe" id="myTable">
         <thead>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script>
+      $(document).ready(function(){
+        $("#myInput").on("keyup", function() {
+          var value = $(this).val().toLowerCase();
+          $("#myTable tr").filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+          });
+        });
+      });
+      </script>
             <tr>
               <th></th>
               <th>CCW</th>
