@@ -23,28 +23,88 @@
             padding: 8px;
             text-align: left;
         }
+	   
+        
+        select:focus {
+            background-color: lightblue;
+        }
+
+		.dropbtn {
+    background-color: hsl(107, 82%, 89%);
+    color: white;
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f7fc;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(9, 6, 204, 0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+  }
+  
+  .dropdown-content a:hover {background-color: #c1f5bc}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown:hover .dropbtn {
+    background-color: #f3f8f4;
+  }
     </style>
 </head>
 <body>
     <h1>Stock Tracker</h1>
+	<div class="dropdown">
+		<button class="dropbtn" style="border-radius:8px;">CLICK👈</button>
+		<div class="dropdown-content" style="text-align: center;">
+		  
+		   <br><br>
     <form id="stock-form">
+			
         <label>Stock Name:</label>
         <input list="stock-names" id="stock-name" required placeholder="Select or Enter Stock">
         <datalist id="stock-names"></datalist>
+		<br><br>
         <label>Quantity:</label>
         <input type="number" id="quantity" required>
-        <label>Date:</label>
+		<br><br>
+        <label>Date:</label><br>
         <input type="date" id="stock-date" required>
-        <label>Action By:</label>
+		<br><br>
+        <label>Action By:</label><br>
         <select id="action-by" required>
             <option value="Brian">Brian</option>
             <option value="Favour">Favour</option>
             <option value="Other">Other</option>
         </select>
-        <button type="button" id="add-stock">Add Stock</button>
-        <button type="button" id="remove-stock">Remove Stock</button>
-        <button type="button" id="clear-all">Clear All</button>
+		<br><br>
+        <button type="button" id="add-stock">Add Stock</button><br><br>
+        <button type="button" id="remove-stock">Remove Stock</button><br><br>
+        <button type="button" id="clear-all">Clear All</button><br><br>
+	
     </form>
+		</div>
+	</div>
+	<br><br>
     <table id="stock-table">
         <thead>
             <tr>
@@ -54,6 +114,7 @@
                 <th>Transaction</th>
                 <th>Action By</th>
                 <th>Total</th>
+				<th>Sign</th>
             </tr>
         </thead>
         <tbody id="stock-list">
@@ -123,8 +184,8 @@
             const quantity = parseInt(quantityInput.value);
             const stockDate = stockDateInput.value;
             const actionBy = actionByInput.value;
-
-            if (stockName && quantity && stockDate && actionBy) {
+			
+            if (stockName && quantity && stockDate && actionBy ) {
                 if (!stockData[stockName]) {
                     stockData[stockName] = { total: 0, dates: {} };
                     if (!stockNames.includes(stockName)) {
@@ -176,6 +237,8 @@
                         <td>${stockData[stockName].dates[stockDate].transaction}</td>
                         <td>${stockData[stockName].dates[stockDate].actionBy}</td>
                         <td>${stockData[stockName].total}</td>
+						<td></td>
+						
                     `;
                     stockList.appendChild(row);
                 }
