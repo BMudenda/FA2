@@ -7,29 +7,72 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
         }
-        
+        h1 {
+            text-align: center;
+            color: #333;
+        }
         #stock-form {
             margin-bottom: 20px;
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            width: 80%;
+            margin: auto;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        
+        #stock-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        #stock-form select,
+        #stock-form input,
+        #stock-form button {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
         #stock-table {
             border-collapse: collapse;
-            width: 80%;
+            width: 90%;
+            margin: auto;
         }
-        
-        #stock-table th, #stock-table td {
+        #stock-table th,
+        #stock-table td {
             border: 1px solid #ddd;
-            padding: 8px;
+            padding: 10px;
             text-align: left;
         }
-	   
-        
-        select:focus {
-            background-color: lightblue;
+        #stock-table th {
+            background-color: #f4f4f4;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        @media (max-width: 600px) {
+            #stock-form,
+            #stock-table {
+                width: 100%;
+            }
         }
 
-		.dropbtn {
+
+        .dropbtn {
     background-color: hsl(107, 82%, 89%);
     color: white;
     padding: 8px;
@@ -38,10 +81,7 @@
     cursor: pointer;
   }
   
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
+ 
   
   .dropdown-content {
     display: none;
@@ -72,8 +112,8 @@
     </style>
 </head>
 <body>
-    <h1>DQA</h1>
-	<div class="dropdown">
+    <h1>DQA Application</h1>
+    <div class="dropdown">
 		<button class="dropbtn" style="border-radius:8px;"></button>
 		<div class="dropdown-content" style="text-align: center;">
 		  
@@ -119,23 +159,24 @@
         <button type="button" id="clear-all">Clear All</button>
     </form>
 
-		</div>
-	</div>
-	<br><br>
+</div>
+</div>
+
+    <br>
+
     <table id="stock-table">
         <thead>
             <tr>
-                <th>Form_Name</th>
-                <th>Individual_Score <br>2=pass<br>1=aveerage<br>0=fail</th>
+                <th>Form Name</th>
+                <th>Score</th>
                 <th>CCW_NAME FILE_ID</th>
-                <th>comment</th>
-                <th>Checkby</th>
-                <th>Total_Score</th>
-				<th>Sign</th>
+                <th>Comment</th>
+                <th>Checked By</th>
+                <th>Total Score</th>
+                <th>Sign</th>
             </tr>
         </thead>
-        <tbody id="stock-list">
-        </tbody>
+        <tbody id="stock-list"></tbody>
     </table>
 
     <script>
@@ -287,7 +328,7 @@
 
         // Initial setup
         updateStockDatalist();
-        renderStockList();
-    </script>
+        renderStockList();    </script>
 </body>
 </html>
+
