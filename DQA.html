@@ -79,11 +79,9 @@
 		  
 		   <br><br>
     <form id="stock-form">
-			
-        
-       
-        <label>Form Type:</label><br>
+        <label for="stock-name">Form Type:</label>
         <select id="stock-name" required>
+            <option value="" disabled selected>Select a form type</option>
             <option value="Consent">Consent</option>
             <option value="HH-Summary">HH-Summary</option>
             <option value="HH-Vulnarability">HH-Vulnarability</option>
@@ -97,35 +95,30 @@
             <option value="School-form">School-form</option>
             <option value="Case-Closure">Case-Closure</option>
             <option value="Graduation-form">Graduation-form</option>
-            <option value="Index-form">Index-form</option>
-            <option value="Attrition-form">Attrition-form</option>
         </select>
-		<br><br>
-        <label>Score:</label>
-        
+
+        <label for="quantity">Score (2=pass, 1=average, 0=fail):</label>
         <select id="quantity" required>
+            <option value="" disabled selected>Select score</option>
             <option value="2">2</option>
             <option value="1">1</option>
             <option value="0">0</option>
         </select>
-		<br><br>
-        <label>CCW_NAME FILE_ID:</label><br>
-        <input type="text" id="stock-date" placeholder="Full_Name_ID">
-        
-		<br> <br>
 
-        <label>Checkby:</label><br>
+        <label for="stock-date">CCW_NAME FILE_ID:</label>
+        <input type="text" id="stock-date" placeholder="Enter Full_Name_ID" required>
+
+        <label for="action-by">Checkby:</label>
         <select id="action-by" required>
             <option value="Brian">Brian</option>
-            
             <option value="Other">Other</option>
         </select>
-		<br><br>
-        <button type="button" id="add-stock">submit entry</button><br><br>
-        <button type="button" id="remove-stock">Remove enty</button><br><br>
-        <button type="button" id="clear-all">Clear All</button><br><br>
-	
+
+        <button type="button" id="add-stock">Submit Entry</button>
+        <button type="button" id="remove-stock">Remove Entry</button>
+        <button type="button" id="clear-all">Clear All</button>
     </form>
+
 		</div>
 	</div>
 	<br><br>
