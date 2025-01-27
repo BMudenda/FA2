@@ -22,6 +22,30 @@
 
         }
         
+
+
+        
+          
+         
+          
+          thead,
+          tr>th {
+            position: sticky;
+           
+          }
+          
+          thead {
+            top: 0;
+            z-index: 2;
+          }
+          tr>th {
+            left: 0;
+            z-index: 1;
+          }
+          thead tr>th:first-child {
+            z-index: 3;
+          }
+
     </style>
 
 </head>
@@ -30,220 +54,370 @@
     <label for="selectOption">Select by Site:</label>
     <select name="selectOption" id="selectOption" onchange="filterTable()">
         <option value="non"></option>
-        <option value="Thompson District Hospital">Thompson</option>
-        <option value="Roan Antelope General Hospital">Roan</option>
-        <option value="Malaika Clinic">Malaika</option>
-        <option value="Kawama Urban Health Centre (Lua)">Kawama</option>
-        <option value="Mikomfwa Health Centre">Mikonfwa</option>
-        <option value="Poleline (Baluba) Health Post">Baluba</option>
+        <option value="TX_CURR<20">TX_CURR<20</option>
+        <option value="OVC_SERV Comp (Active)">OVC_SERV Comp (Active)</option>
+        <option value="OVC_SERV Comp (Graduated)">OVC_SERV Comp (Graduated)</option>
+        <option value="OVC_SERV Comp (Comprehensive">OVC_SERV Comp (Comprehensive</option>
+        <option value="OVC_HIVSTAT">OVC_HIVSTAT</option>
+        <option value="HTS_TST">HTS_TST</option>
         
     </select>
     <br>
     <br>
-      
     
-    <h2>Facility Targets</h2>
+    
+    <h2>Facility Targets and Reach</h2>
     <table class="dataframe" id="myTable">
-  <thead>
+      <thead>
         <tr style="text-align: right;">
           <th></th>
-          <th>Health Facility</th>
-          <th>TX_CURR&lt;15</th>
-          <th>TX_CURR&lt;20</th>
-          <th>OVC_SERV Comp (Active)</th>
-          <th>OVC_SERV Comp (Graduated)</th>
-          <th>OVC_SERV Comp (Comprehensive)</th>
-          <th>OVC_SERV Comp (Preventive)</th>
-          <th>OVC_SERV</th>
-          <th>OVC_HIVSTAT</th>
-          <th>HTS_TST</th>
-          <th>OVC_OFFER</th>
-          <th>OVC_ENROLL</th>
-          <th>OVC_VL_ELIGIBLE</th>
-          <th>OVC_VLR</th>
-          <th>OVC_VLS</th>
-          <th>VCA_STABLE</th>
-          <th>VCA_REACH</th>
-          <th>VCA_SCHOOL</th>
-          <th>VCA_ENROLLED</th>
+          <th>Health Facility TARGET</th>
+          <th>Thompson District Hospital</th>
+          <th>Roan Antelope General Hospital</th>
+          <th>Mpatamatu Section 26 Clinic</th>
+          <th>Malaika Clinic</th>
+          <th>Mikomfwa Health Centre</th>
+          <th>Kawama Urban Health Centre (Lua)</th>
+          <th>Poleline (Baluba) Health Post</th>
+          <th>Luanshya</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <th>0</th>
-          <td>Thompson District Hospital</td>
-          <td>84</td>
+          <td>TX_CURR&lt;20</td>
           <td>171</td>
-          <td>1697</td>
-          <td>198</td>
-          <td>1896</td>
-          <td>459</td>
-          <td>2354</td>
-          <td>1422</td>
-          <td>30</td>
-          <td>95%</td>
-          <td>90%</td>
-          <td>95%</td>
-          <td>95%</td>
-          <td>95%</td>
-          <td>147</td>
-          <td>953</td>
-          <td>953</td>
-          <td>953</td>
+          <td>186</td>
+          <td>66</td>
+          <td>48</td>
+          <td>59</td>
+          <td>33</td>
+          <td>51</td>
+          <td>614</td>
         </tr>
         <tr>
           <th>1</th>
-          <td>Roan Antelope General Hospital</td>
-          <td>71</td>
-          <td>186</td>
-          <td>1595</td>
-          <td>187</td>
-          <td>1782</td>
-          <td>431</td>
-          <td>2214</td>
-          <td>1336</td>
-          <td>29</td>
-          <td>95%</td>
-          <td>90%</td>
-          <td>95%</td>
-          <td>95%</td>
-          <td>95%</td>
-          <td>139</td>
-          <td>932</td>
-          <td>932</td>
-          <td>932</td>
+          <td>TX_CURR&lt;20_REACH</td>
+          <td>168</td>
+          <td>183</td>
+          <td>66</td>
+          <td>48</td>
+          <td>55</td>
+          <td>33</td>
+          <td>51</td>
+          <td>604</td>
         </tr>
         <tr>
           <th>2</th>
-          <td>Mpatamatu Section 26 Clinic</td>
-          <td>33</td>
-          <td>66</td>
+          <td>OVC_SERV Comp (Active)</td>
+          <td>1697</td>
+          <td>1595</td>
           <td>558</td>
-          <td>65</td>
-          <td>623</td>
-          <td>151</td>
-          <td>773</td>
-          <td>466</td>
-          <td>10</td>
-          <td>95%</td>
-          <td>90%</td>
-          <td>95%</td>
-          <td>95%</td>
-          <td>95%</td>
-          <td>48</td>
-          <td>308</td>
-          <td>308</td>
-          <td>308</td>
+          <td>395</td>
+          <td>549</td>
+          <td>234</td>
+          <td>371</td>
+          <td>5399</td>
         </tr>
         <tr>
           <th>3</th>
-          <td>Malaika Clinic</td>
-          <td>29</td>
-          <td>48</td>
-          <td>395</td>
-          <td>46</td>
-          <td>441</td>
-          <td>106</td>
-          <td>547</td>
-          <td>331</td>
-          <td>7</td>
-          <td>95%</td>
-          <td>90%</td>
-          <td>95%</td>
-          <td>95%</td>
-          <td>95%</td>
-          <td>34</td>
-          <td>264</td>
-          <td>264</td>
-          <td>264</td>
+          <td>OVC_SERV Comp (Active)_REACH</td>
+          <td>1482</td>
+          <td>1421</td>
+          <td>696</td>
+          <td>528</td>
+          <td>674</td>
+          <td>394</td>
+          <td>556</td>
+          <td>5751</td>
         </tr>
         <tr>
           <th>4</th>
-          <td>Mikomfwa Health Centre</td>
-          <td>26</td>
-          <td>59</td>
-          <td>549</td>
+          <td>OVC_SERV Comp (Graduated)</td>
+          <td>198</td>
+          <td>187</td>
+          <td>65</td>
+          <td>46</td>
           <td>63</td>
-          <td>612</td>
-          <td>149</td>
-          <td>760</td>
-          <td>460</td>
-          <td>10</td>
-          <td>95%</td>
-          <td>90%</td>
-          <td>95%</td>
-          <td>95%</td>
-          <td>95%</td>
-          <td>47</td>
-          <td>304</td>
-          <td>304</td>
-          <td>304</td>
+          <td>27</td>
+          <td>43</td>
+          <td>629</td>
         </tr>
         <tr>
           <th>5</th>
-          <td>Kawama Urban Health Centre (Lua)</td>
-          <td>21</td>
-          <td>33</td>
-          <td>234</td>
-          <td>27</td>
-          <td>261</td>
-          <td>63</td>
-          <td>325</td>
-          <td>196</td>
-          <td>4</td>
-          <td>95%</td>
-          <td>90%</td>
-          <td>95%</td>
-          <td>95%</td>
-          <td>95%</td>
-          <td>20</td>
-          <td>97</td>
-          <td>97</td>
-          <td>97</td>
+          <td>OVC_SERV Comp (Graduated)_REACH</td>
+          <td>84</td>
+          <td>0</td>
+          <td>44</td>
+          <td>18</td>
+          <td>28</td>
+          <td>17</td>
+          <td>9</td>
+          <td>200</td>
         </tr>
         <tr>
           <th>6</th>
-          <td>Poleline (Baluba) Health Post</td>
-          <td>32</td>
-          <td>51</td>
-          <td>371</td>
-          <td>43</td>
+          <td>OVC_SERV Comp (Comprehensive)</td>
+          <td>1896</td>
+          <td>1782</td>
+          <td>623</td>
+          <td>441</td>
+          <td>612</td>
+          <td>261</td>
           <td>414</td>
-          <td>100</td>
-          <td>514</td>
-          <td>313</td>
-          <td>7</td>
-          <td>95%</td>
-          <td>90%</td>
-          <td>95%</td>
-          <td>95%</td>
-          <td>95%</td>
-          <td>32</td>
-          <td>191</td>
-          <td>191</td>
-          <td>191</td>
+          <td>6029</td>
         </tr>
         <tr>
           <th>7</th>
-          <td>Luanshya</td>
-          <td>296</td>
-          <td>614</td>
-          <td>5399</td>
-          <td>630</td>
-          <td>6029</td>
+          <td>OVC_SERV Comp (Comprehensive)_REACH</td>
+          <td>1566</td>
+          <td>1421</td>
+          <td>740</td>
+          <td>546</td>
+          <td>702</td>
+          <td>411</td>
+          <td>565</td>
+          <td>5951</td>
+        </tr>
+        <tr>
+          <th>8</th>
+          <td>OVC_SERV Comp (Preventive)</td>
+          <td>459</td>
+          <td>431</td>
+          <td>151</td>
+          <td>106</td>
+          <td>149</td>
+          <td>63</td>
+          <td>100</td>
           <td>1459</td>
-          <td>7488</td>
+        </tr>
+        <tr>
+          <th>9</th>
+          <td>OVC_SERV Comp (Preventive)_REACH</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>999</td>
+        </tr>
+        <tr>
+          <th>10</th>
+          <td>OVC_HIVSTAT</td>
+          <td>1422</td>
+          <td>1336</td>
+          <td>466</td>
+          <td>331</td>
+          <td>460</td>
+          <td>196</td>
+          <td>313</td>
           <td>4524</td>
+        </tr>
+        <tr>
+          <th>11</th>
+          <td>OVC_HIVSTAT_REACH</td>
+          <td>1070</td>
+          <td>962</td>
+          <td>509</td>
+          <td>344</td>
+          <td>411</td>
+          <td>278</td>
+          <td>382</td>
+          <td>3956</td>
+        </tr>
+        <tr>
+          <th>12</th>
+          <td>HTS_TST</td>
+          <td>30</td>
+          <td>29</td>
+          <td>10</td>
+          <td>7</td>
+          <td>10</td>
+          <td>4</td>
+          <td>7</td>
           <td>97</td>
+        </tr>
+        <tr>
+          <th>13</th>
+          <td>HTS_TST_REACH</td>
+          <td>17</td>
+          <td>22</td>
+          <td>37</td>
+          <td>22</td>
+          <td>15</td>
+          <td>40</td>
+          <td>55</td>
+          <td>208</td>
+        </tr>
+        <tr>
+          <th>14</th>
+          <td>OVC_OFFER</td>
           <td>95%</td>
+          <td>95%</td>
+          <td>95%</td>
+          <td>95%</td>
+          <td>95%</td>
+          <td>95%</td>
+          <td>95%</td>
+          <td>95%</td>
+        </tr>
+        <tr>
+          <th>15</th>
+          <td>OVC_OFFER_REACH</td>
+          <td>171</td>
+          <td>186</td>
+          <td>66</td>
+          <td>48</td>
+          <td>59</td>
+          <td>33</td>
+          <td>51</td>
+          <td>614</td>
+        </tr>
+        <tr>
+          <th>16</th>
+          <td>OVC_ENROLL</td>
+          <td>90%</td>
+          <td>90%</td>
+          <td>90%</td>
+          <td>90%</td>
+          <td>90%</td>
+          <td>90%</td>
           <td>90%</td>
           <td>95%</td>
+        </tr>
+        <tr>
+          <th>17</th>
+          <td>OVC_ENROLL_REACH</td>
+          <td>168</td>
+          <td>183</td>
+          <td>66</td>
+          <td>48</td>
+          <td>55</td>
+          <td>33</td>
+          <td>51</td>
+          <td>604</td>
+        </tr>
+        <tr>
+          <th>18</th>
+          <td>OVC_VL_ELIGIBLE</td>
           <td>95%</td>
           <td>95%</td>
-          <td>468</td>
+          <td>95%</td>
+          <td>95%</td>
+          <td>95%</td>
+          <td>95%</td>
+          <td>95%</td>
+          <td>95%</td>
+        </tr>
+        <tr>
+          <th>19</th>
+          <td>OVC_VL_ELIGIBLE_REACH</td>
+          <td>167</td>
+          <td>181</td>
+          <td>65</td>
+          <td>48</td>
+          <td>52</td>
+          <td>33</td>
+          <td>51</td>
+          <td>597</td>
+        </tr>
+        <tr>
+          <th>20</th>
+          <td>OVC_VLR</td>
+          <td>95%</td>
+          <td>95%</td>
+          <td>95%</td>
+          <td>95%</td>
+          <td>95%</td>
+          <td>95%</td>
+          <td>95%</td>
+          <td>95%</td>
+        </tr>
+        <tr>
+          <th>21</th>
+          <td>OVC_VLR_REACH</td>
+          <td>161</td>
+          <td>181</td>
+          <td>65</td>
+          <td>48</td>
+          <td>52</td>
+          <td>33</td>
+          <td>51</td>
+          <td>591</td>
+        </tr>
+        <tr>
+          <th>22</th>
+          <td>OVC_VLS</td>
+          <td>95%</td>
+          <td>95%</td>
+          <td>95%</td>
+          <td>95%</td>
+          <td>95%</td>
+          <td>95%</td>
+          <td>95%</td>
+          <td>95%</td>
+        </tr>
+        <tr>
+          <th>23</th>
+          <td>OVC_VLS_REACH</td>
+          <td>158</td>
+          <td>176</td>
+          <td>60</td>
+          <td>48</td>
+          <td>50</td>
+          <td>32</td>
+          <td>51</td>
+          <td>575</td>
+        </tr>
+        <tr>
+          <th>24</th>
+          <td>VCA_STABLE</td>
+          <td>147</td>
+          <td>139</td>
+          <td>48</td>
+          <td>34</td>
+          <td>47</td>
+          <td>20</td>
+          <td>32</td>
+          <td>467</td>
+        </tr>
+        <tr>
+          <th>25</th>
+          <td>VCA_STABLE_REACH</td>
+          <td>84</td>
+          <td>0</td>
+          <td>44</td>
+          <td>18</td>
+          <td>28</td>
+          <td>17</td>
+          <td>9</td>
+          <td>200</td>
+        </tr>
+        <tr>
+          <th>26</th>
+          <td>VCA_SCHOOL</td>
+          <td>953</td>
+          <td>932</td>
+          <td>308</td>
+          <td>264</td>
+          <td>304</td>
+          <td>97</td>
+          <td>191</td>
           <td>3049</td>
-          <td>3049</td>
-          <td>3049</td>
+        </tr>
+        <tr>
+          <th>27</th>
+          <td>VCA_SCHOOL_REACH</td>
+          <td>790</td>
+          <td>748</td>
+          <td>490</td>
+          <td>398</td>
+          <td>419</td>
+          <td>211</td>
+          <td>425</td>
+          <td>3481</td>
         </tr>
       </tbody>
 </table>
