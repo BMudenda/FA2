@@ -70,6 +70,17 @@
     <h2>Facility Targets and Reach</h2>
     <table class="dataframe" id="myTable">
       <thead>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script>
+      $(document).ready(function(){
+        $("#myInput").on("keyup", function() {
+          var value = $(this).val().toLowerCase();
+          $("#myTable tr").filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+          });
+        });
+      });
+      </script>
         <tr style="text-align: right;">
           <th></th>
           <th>Health Facility TARGET</th>
