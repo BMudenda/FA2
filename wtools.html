@@ -1,0 +1,320 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working tools</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <label for="bicycleFilter">Bicycle:</label>
+    <select id="bicycleFilter" onchange="filterTable()">
+        <option value="">All</option>
+        <option value="!">!</option>
+        <option value="NO">NO</option>
+        <option value="YES">YES</option>
+    </select>
+
+    <label for="tabletFilter">Tablet:</label>
+    <select id="tabletFilter" onchange="filterTable()">
+        <option value="">All</option>
+        <option value="!">!</option>
+        <option value="NO">NO</option>
+        <option value="YES">YES</option>
+    </select>
+
+    <input id="myInput" type="text" placeholder="Search.." onkeyup="filterTable()">
+    <p>Total Rows: <span id="rowCount">0</span></p>
+
+    <h2>collected working tools</h2>
+    <table id="myTable">
+        <thead>
+            <tr style="text-align: right;">
+              <th></th>
+              <th>SITE</th>
+              <th>CCW</th>
+              <th>Bicyclye</th>
+              <th>TABLET</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>0</th>
+              <td>Kawama Urban Health Centre (Lua)</td>
+              <td>angela_mwenya</td>
+              <td>!</td>
+              <td>YES</td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td>Kawama Urban Health Centre (Lua)</td>
+              <td>aliyah_daka</td>
+              <td>!</td>
+              <td>YES</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>Malaika Clinic</td>
+              <td>joe_nyanga</td>
+              <td>!</td>
+              <td>YES</td>
+            </tr>
+            <tr>
+              <th>3</th>
+              <td>Malaika Clinic</td>
+              <td>matildah_kunda</td>
+              <td>!</td>
+              <td>NaN</td>
+            </tr>
+            <tr>
+              <th>4</th>
+              <td>Mikomfwa Health Centre</td>
+              <td>martha_muchimba</td>
+              <td>!</td>
+              <td>YES</td>
+            </tr>
+            <tr>
+              <th>5</th>
+              <td>Mikomfwa Health Centre</td>
+              <td>natasha_musonda</td>
+              <td>YES</td>
+              <td>YES</td>
+            </tr>
+            <tr>
+              <th>6</th>
+              <td>Mikomfwa Health Centre</td>
+              <td>mary_mwape</td>
+              <td>!</td>
+              <td>YES</td>
+            </tr>
+            <tr>
+              <th>7</th>
+              <td>Mpatamatu Section 26 Clinic</td>
+              <td>banda_david</td>
+              <td>!</td>
+              <td>YES</td>
+            </tr>
+            <tr>
+              <th>8</th>
+              <td>Mpatamatu Section 26 Clinic</td>
+              <td>tembo_ireen</td>
+              <td>!</td>
+              <td>YES</td>
+            </tr>
+            <tr>
+              <th>9</th>
+              <td>Mpatamatu Section 26 Clinic</td>
+              <td>makashini_christopher</td>
+              <td>!</td>
+              <td>YES</td>
+            </tr>
+            <tr>
+              <th>10</th>
+              <td>Mpatamatu Section 26 Clinic</td>
+              <td>gondwe_fanny</td>
+              <td>!</td>
+              <td>YES</td>
+            </tr>
+            <tr>
+              <th>11</th>
+              <td>Poleline (Baluba) Health Post</td>
+              <td>amos_kasonde</td>
+              <td>!</td>
+              <td>NO</td>
+            </tr>
+            <tr>
+              <th>12</th>
+              <td>Poleline (Baluba) Health Post</td>
+              <td>hector_banda</td>
+              <td>!</td>
+              <td>NO</td>
+            </tr>
+            <tr>
+              <th>13</th>
+              <td>Poleline (Baluba) Health Post</td>
+              <td>grace_kebende</td>
+              <td>!</td>
+              <td>NO</td>
+            </tr>
+            <tr>
+              <th>14</th>
+              <td>Roan Antelope General Hospital</td>
+              <td>banda_misozi</td>
+              <td>!</td>
+              <td>YES</td>
+            </tr>
+            <tr>
+              <th>15</th>
+              <td>Roan Antelope General Hospital</td>
+              <td>mikabo_mildred</td>
+              <td>!</td>
+              <td>YES</td>
+            </tr>
+            <tr>
+              <th>16</th>
+              <td>Roan Antelope General Hospital</td>
+              <td>soteli_winfridah</td>
+              <td>!</td>
+              <td>NO</td>
+            </tr>
+            <tr>
+              <th>17</th>
+              <td>Roan Antelope General Hospital</td>
+              <td>mwaba_rodgers</td>
+              <td>!</td>
+              <td>YES</td>
+            </tr>
+            <tr>
+              <th>18</th>
+              <td>Roan Antelope General Hospital</td>
+              <td>brandina_tembo</td>
+              <td>!</td>
+              <td>YES</td>
+            </tr>
+            <tr>
+              <th>19</th>
+              <td>Roan Antelope General Hospital</td>
+              <td>chitambala_stanslous</td>
+              <td>!</td>
+              <td>YES</td>
+            </tr>
+            <tr>
+              <th>20</th>
+              <td>Roan Antelope General Hospital</td>
+              <td>kapasula_edith</td>
+              <td>!</td>
+              <td>YES</td>
+            </tr>
+            <tr>
+              <th>21</th>
+              <td>Roan Antelope General Hospital</td>
+              <td>hellen_mwansa</td>
+              <td>!</td>
+              <td>YES</td>
+            </tr>
+            <tr>
+              <th>22</th>
+              <td>Roan Antelope General Hospital</td>
+              <td>jane_kasaka1</td>
+              <td>!</td>
+              <td>NO</td>
+            </tr>
+            <tr>
+              <th>23</th>
+              <td>Roan Antelope General Hospital</td>
+              <td>moses_banda</td>
+              <td>!</td>
+              <td>YES/td>
+            </tr>
+            <tr>
+              <th>24</th>
+              <td>Thompson District Hospital</td>
+              <td>janny_mutampuka</td>
+              <td>!</td>
+              <td>YES</td>
+            </tr>
+            <tr>
+              <th>25</th>
+              <td>Thompson District Hospital</td>
+              <td>joseph_kaimana</td>
+              <td>!</td>
+              <td>YES</td>
+            </tr>
+            <tr>
+              <th>26</th>
+              <td>Thompson District Hospital</td>
+              <td>kumwenda_mary</td>
+              <td>YES</td>
+              <td>YES</td>
+            </tr>
+            <tr>
+              <th>27</th>
+              <td>Thompson District Hospital</td>
+              <td>musa_joyce</td>
+              <td>!</td>
+              <td>NO</td>
+            </tr>
+            <tr>
+              <th>28</th>
+              <td>Thompson District Hospital</td>
+              <td>kabesha_mary</td>
+              <td>!</td>
+              <td>YES</td>
+            </tr>
+            <tr>
+              <th>29</th>
+              <td>Thompson District Hospital</td>
+              <td>joshua_malole</td>
+              <td>!</td>
+              <td>YES</td>
+            </tr>
+            <tr>
+              <th>30</th>
+              <td>Thompson District Hospital</td>
+              <td>emmanuel_kapambwe</td>
+              <td>!</td>
+              <td>NO</td>
+            </tr>
+            <tr>
+              <th>31</th>
+              <td>Thompson District Hospital</td>
+              <td>sakala_veronica</td>
+              <td>!</td>
+              <td>YES</td>
+            </tr>
+          </tbody>
+        </table>
+<script>
+function filterTable() {
+    var bicycleValue = document.getElementById("bicycleFilter").value.toUpperCase();
+    var tabletValue = document.getElementById("tabletFilter").value.toUpperCase();
+    var searchValue = document.getElementById("myInput").value.toLowerCase();
+
+    var table = document.getElementById("myTable");
+    var rows = table.getElementsByTagName("tr");
+
+    var count = 0; // Counter for visible rows
+
+    for (var i = 1; i < rows.length; i++) {
+        var cols = rows[i].getElementsByTagName("td");
+        if (cols.length < 4) continue; // Skip empty rows
+
+        var bicycleText = cols[2].textContent.toUpperCase();
+        var tabletText = cols[3].textContent.toUpperCase();
+        var rowText = rows[i].textContent.toLowerCase();
+
+        var matchesBicycle = (bicycleValue === "" || bicycleText === bicycleValue);
+        var matchesTablet = (tabletValue === "" || tabletText === tabletValue);
+        var matchesSearch = rowText.includes(searchValue);
+
+        if (matchesBicycle && matchesTablet && matchesSearch) {
+            rows[i].style.display = "";
+            count++; // Count visible rows
+        } else {
+            rows[i].style.display = "none";
+        }
+    }
+    document.getElementById("rowCount").textContent = count; // Update count
+}
+</script>
+
+</body>
+</html>
